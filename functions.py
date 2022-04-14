@@ -1,13 +1,14 @@
 import json 
 from config import *
+from datetime import date, datetime
 
 def getDatabase(database = DATABASE):
         with open(database, "r") as read_file:
                 data = json.load(read_file)
         return data
     
-def writeDatabase(data):
-    with open(DATABASE, "w") as write_file:
+def writeDatabase(data, database = DATABASE):
+    with open(database, "w") as write_file:
             json.dump(data, write_file, indent=4)
     return True
 
@@ -55,3 +56,18 @@ def employeeLogin(email, password):
                         if password == data[id][SENHA]:
                                 return id
         return False
+
+def registerModification(client_id, quantity, employee_id, order):
+        data = getDatabase(DATABASE_EMPLOYEES)
+        today = date.today()
+        now = datetime.now().time()
+        data_new = {
+                ID: client_id,
+                DATA: str(today.strftime("%d/%m/%Y")),
+                HORARIO: str(now),
+                QUANTIDADE: quantity,
+                PEDIDO: order
+        }
+        data[employee_id][CUPONS].append(data_new)
+        writeDatabase(data, DATABASE_EMPLOYEES)
+

@@ -1,0 +1,24 @@
+{
+    "0": {
+        "Nome": "Fernando",
+        "CPF": "02576698506",
+        "E-mail": "fernando@agenciazop.com.br",
+        "password": "burgos",
+        "Cupons": [
+            {
+                "Id": "0",
+                "Data": "14/04/2022",
+                "Horário": "16:00",
+                "Quantidade": 2,
+                "Pedido": "5646546"
+            },
+            {
+                "Id": "0",
+                "Data": "14/04/2022",
+                "Horário": "16:00",
+                "Quantidade": -1,
+                "Pedido": "84525"
+            }
+        ]
+    }
+}
