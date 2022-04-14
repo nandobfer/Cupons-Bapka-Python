@@ -1,0 +1,16 @@
+{
+    "0": {
+        "Nome": "Fernando",
+        "CPF": "02576698506",
+        "E-mail": "fernando@agenciazop.com.br",
+        "Cupons": 6,
+        "password": "burgos"
+    },
+    "1": {
+        "Nome": "Yasmin",
+        "CPF": "123123123",
+        "E-mail": "fernando@agenciazop.com.br",
+        "Cupons": 2,
+        "password": "burgos"
+    }
+}
