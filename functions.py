@@ -1,8 +1,8 @@
 import json 
 from config import *
 
-def getDatabase():
-        with open(DATABASE, "r") as read_file:
+def getDatabase(database = DATABASE):
+        with open(database, "r") as read_file:
                 data = json.load(read_file)
         return data
     
@@ -47,4 +47,11 @@ def clientLogin(email, password):
                         if password == data[id][SENHA]:
                                 return id
         return False
-        
+
+def employeeLogin(email, password):
+        data = getDatabase(DATABASE_EMPLOYEES)
+        for id in data:
+                if email == data[id][EMAIL]:
+                        if password == data[id][SENHA]:
+                                return id
+        return False

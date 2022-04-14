@@ -7,6 +7,14 @@ EMAIL = "E-mail"
 CUPONS = "Cupons"
 SENHA = "password"
 
+# employees database
+DATABASE_EMPLOYEES = 'database_employees.json'
+# constants
+ID = "Id"
+DATA = "Data"
+HORARIO = "Horário"
+QUANTIDADE = "Quantidade"
+PEDIDO = "Pedido"
 
 
 

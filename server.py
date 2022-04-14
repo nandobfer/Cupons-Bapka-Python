@@ -15,7 +15,7 @@ def index():
 def home():
     if request.method == 'POST':
         if request.form.get('employee'):
-            return redirect(url_for('homeEmployee'))
+            return redirect(url_for('loginEmployee'))
         elif request.form.get('client'):
             return redirect(url_for('homeClient'))
     return render_template('index.html')
@@ -51,6 +51,22 @@ def panelClient():
         pass
 
     return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
+
+# employee login page
+@app.route('/funcionario/login/', methods=['GET', 'POST'])
+def loginEmployee():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        id = employeeLogin(email, password)
+        if not id:
+            error = 'E-mail ou senha inválido'
+            return render_template('login_employee.html', error=error)
+        else:
+            return redirect(url_for('homeEmployee', id=id))
+
+    return render_template('login_employee.html')
 
 # home page for employee
 @app.route('/funcionario/home/', methods=['GET', 'POST'])
