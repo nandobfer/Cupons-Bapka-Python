@@ -5,7 +5,7 @@ NOME = "Nome"
 CPF = "CPF"
 EMAIL = "E-mail"
 CUPONS = "Cupons"
-PASSWORD = "password"
+SENHA = "password"
 
 
 

@@ -1,9 +1,26 @@
-<h3>Agência BOZ<h3/>
+<h3>Agência BOZ</h3>
+    <!-- insert client's document -->
+    <div>
+        <p>Digite o CPF do cliente</p>
+    </div>
+    <form method="post">
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf">
+        <input type="submit" value="OK" name="to_panel"/>
+    </form>
+    <div>
+        <p>{{error}}</p>
+    </div>
+
+    <!-- client's data panel -->
+    <div>
+        <form action="/funcionario/home/" method="get"><input type="submit" value="Voltar"></form>
+    </div>
     <h2>Cliente:</h2>
     <h2>Nome: {{name}}</h2>
     <h2>CPF: {{cpf}}</h2>
     <h2>E-mail: {{email}}</h2>
-    <h1>Cupons: {{cupons}}</h1>
+    <h2>Cupons: {{cupons}}</h2>
     <form method="post">
         <label for="quantity">Quantidade:</label>
         <input type="number" id="quantity" name="quantity">

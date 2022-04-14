@@ -4,32 +4,74 @@ from functions import *
 
 app = Flask(__name__)
 
-# url
+# index page
 @app.route('/', methods=['GET', 'POST'])
 def index():
     # redirecting to another endpoint
-    return redirect(url_for('homeEmployee'))
+    return redirect(url_for('home'))
+
+# home page
+@app.route('/home/', methods=['GET', 'POST'])
+def home():
+    if request.method == 'POST':
+        if request.form.get('employee'):
+            return redirect(url_for('homeEmployee'))
+        elif request.form.get('client'):
+            return redirect(url_for('homeClient'))
+    return render_template('index.html')
+
+# client home page
+@app.route('/cliente/home/', methods=['GET', 'POST'])
+def homeClient():
+    if request.method == 'POST':
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        id = clientLogin(email, password)
+        if not id:
+            error = 'E-mail ou senha inválido'
+            return render_template('home_client.html', error=error)
+        else:
+            return redirect(url_for('panelClient', id=id))
+
+    return render_template('home_client.html')
+
+# client panel page
+@app.route('/cliente/painel/', methods=['GET', 'POST'])
+def panelClient():
+    # get id from argument
+    try:
+        id = request.args.get('id')
+    except:
+        # error not args
+        return redirect(url_for('homeClient'))
+
+    data = getData(id)
+    if request.method == 'POST':
+        pass
+
+    return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
 
 # home page for employee
-@app.route('/employee/home/', methods=['GET', 'POST'])
+@app.route('/funcionario/home/', methods=['GET', 'POST'])
 def homeEmployee():
     if request.method == 'POST':
         cpf = request.form['cpf']
         try:
-            # id = getId(cpf)
-            data = getDatabase()
-            for id in data:
-                if cpf in data[id][CPF]:
-                    print(id)
-            # print(id)
+             id = getId(cpf)
+
         except:
             # error alert TODO
             return redirect(url_for('homeEmployee'))
+
+        if not id:
+            error = 'CPF não encontrado.'
+            return render_template('home_employee.html', error=error)
         
         return redirect(url_for('panelEmployee', id=id))
     return render_template("home_employee.html")
 
-@app.route('/employee/panel/', methods=['GET','POST'])
+@app.route('/funcionario/painel/', methods=['GET','POST'])
 def panelEmployee():
     try:
         id = request.args.get('id')
@@ -40,18 +82,24 @@ def panelEmployee():
     if request.method == 'POST':
 
         try:
-            quantity = request.form.get('quantity')
+            quantity = int(request.form.get('quantity'))
         except:
             # erro alerta insert a quantity number
             return redirect(url_for('panelEmployee', id=id))
                                   
         if request.form.get('insert_coupon'):
             modifyCoupons(id, quantity) 
+            return redirect(url_for('panelEmployee', id=id))    
         elif request.form.get('remove_coupon'):
             modifyCoupons(id, -quantity) 
-    
+            print('menos')
+            return redirect(url_for('panelEmployee', id=id))    
+        elif request.form.get('redirect_home'):
+            print('deu')
+            return redirect(url_for('index'))
+
     # return render_template("panel_employee.html")
-    return render_template("panel_employee.html", name=data[0], cpf=data[1], email=data[2], cupons=data[3])
+    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
 
 # @app.route('/homeuser/', methods=['GET', 'POST'])
 # def homeuser():

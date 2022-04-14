@@ -15,7 +15,7 @@ def getId(cpf):
         ''' function scans database looking for a matching cpf and returns the matched id '''
         data = getDatabase()
         for id in data:
-                if cpf in data[id]:
+                if cpf == data[id][CPF]:
                         return id
         
         return False
@@ -39,4 +39,12 @@ def validateId(id):
                 return False
         else:
                 return True
+
+def clientLogin(email, password):
+        data = getDatabase()
+        for id in data:
+                if email == data[id][EMAIL]:
+                        if password == data[id][SENHA]:
+                                return id
+        return False
         
