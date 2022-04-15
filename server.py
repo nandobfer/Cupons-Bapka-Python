@@ -122,7 +122,7 @@ def panelEmployee():
         return redirect(f'{url}?employee={employee_id}')
 
     # return render_template("panel_employee.html")
-    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
+    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS], employee_id=employee_id)
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="5000")
