@@ -1,22 +1,33 @@
-<h3>Agência BOZ</h3>
-    <!-- client's data panel -->
-    <!-- button VOLTAR -->
-    <div>
-        <a href="/funcionario/home/?employee={{employee_id}}" >
-            <button>Voltar</button>
-        </a>
-    </div>
-    <h2>Cliente:</h2>
-    <h2>Nome: {{name}}</h2>
-    <h2>CPF: {{cpf}}</h2>
-    <h2>E-mail: {{email}}</h2>
-    <h2>Cupons: {{cupons}}</h2>
-    <form method="post">
-        <label for="quantity">Quantidade:</label>
-        <input type="number" id="quantity" name="quantity">
-        <input type="submit" value="Inserir Cupom" name="insert_coupon"/>
-        <input type="submit" value="Remover Cupom" name="remove_coupon"/>
-    </form>
+<html>
+    <head>
+        <title>Cupons - Bapka Sorvetes</title>
+    </head>
+
+    <body>
+
+        <h3>Bapka Sorvetes</h3>
+        <!-- client's data panel -->
+        <!-- button VOLTAR -->
+        <div>
+            <a href="/funcionario/home/?employee={{employee_id}}" >
+                <button>Voltar</button>
+            </a>
+        </div>
+        <h2>Cliente:</h2>
+        <h2>Nome: {{name}}</h2>
+        <h2>CPF: {{cpf}}</h2>
+        <h2>E-mail: {{email}}</h2>
+        <h2>Cupons: {{cupons}}</h2>
+        <form method="post">
+            <label for="quantity">Quantidade:</label>
+            <input type="number" id="quantity" name="quantity">
+            <input type="submit" value="Inserir Cupom" name="insert_coupon"/>
+            <input type="submit" value="Remover Cupom" name="remove_coupon"/>
+        </form>
+        
+    </body>
+</html>
+    
     <!-- <script>
         alert('{{employee_id}}')
     </script> -->

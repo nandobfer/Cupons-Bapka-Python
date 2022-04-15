@@ -1,15 +1,27 @@
-<h3>Agência BOZ</h3>
-    <div>
-        <form action="/funcionario/login/" method="get"><input type="submit" value="Deslogar"></form>
-    </div>
-    <div>
-        <p>Digite o CPF do cliente</p>
-    </div>
-    <form method="post">
-        <label for="cpf">CPF:</label>
-        <input type="text" id="cpf" name="cpf">
-        <input type="submit" value="OK" name="to_panel"/>
-    </form>
-    <div>
-        <p>{{error}}</p>
-    </div>
+<html>
+    <head>
+        <title>Cupons - Bapka Sorvetes</title>
+    </head>
+
+    <body>
+
+        <h3>Bapka Sorvetes</h3>
+        <div>
+            <a href="/funcionario/login/"><button>Deslogar</button></a>
+        </div>
+        <div>
+            <p>Digite o CPF do cliente</p>
+        </div>
+        <form method="post">
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf">
+            <input type="submit" value="OK" name="to_panel"/>
+        </form>
+        <div>
+            <p>{{error}}</p>
+        </div>
+        
+    </body>
+</html>
+
+    
