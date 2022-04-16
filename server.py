@@ -62,7 +62,7 @@ def loginEmployee():
 
         id = employeeLogin(email, password)
         if not id:
-            error = 'E-mail ou senha inválido'
+            error = 'E-mail ou senha inválidos'
             return render_template('login_employee.html', error=error)
         else:
             return redirect(url_for('homeEmployee', employee=id))

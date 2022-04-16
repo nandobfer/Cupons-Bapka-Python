@@ -1,13 +1,17 @@
 <html>
     <head>
         <title>Cupons - Bapka Sorvetes</title>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
     </head>
 
     <body>
 
         <h3>Bapka Sorvetes</h3>
-            <a href="/cliente/home/"><button>Cliente</button></a>
-            <a href="/funcionario/login/"><button>Funcionário</button></a>
+            <a href="/cliente/home/" target="iframe"><button>Cliente</button></a>
+            <a href="/funcionario/login/" target="iframe"><button>Funcionário</button></a>
 
+        <div><br>
+            <iframe src="" frameborder="2" name="iframe" height="600" width="500"></iframe>
+        </div>
     </body>
 </html>

@@ -1,0 +1,12 @@
+body {
+    background-color: rgb(248, 255, 157);
+  }
+  h1 {
+    color: blue;
+  }
+
+
+.error {
+  color: red;
+}
+

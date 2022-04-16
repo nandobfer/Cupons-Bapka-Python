@@ -5,16 +5,30 @@
 
     <body>
 
-        <h3>Bapka Sorvetes</h3>
+        <h3>Bapka Sorvetes - Cliente</h3>
         <div>
             <p>Faça login usando seu e-mail e senha</p>
         </div>
         <form method="post">
-            <label for="email">E-Mail:</label>
-            <input type="text" id="email" name="email">
-            <!-- <br> -->
-            <label for="password">Senha:</label>
-            <input type="text" id="password" name="password">
+            <table>
+                <tr>
+                    <td>
+                        <label for="email">E-Mail:</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" name="email" placeholder="cliente@bapka.com.br" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="password">Senha:</label>
+                    </td>
+                    <td>
+                        <input type="password" id="password" name="password" placeholder="1234" required>
+                    </td>
+                </tr>
+            </table>
+            
             <input type="submit" value="Entrar" name="to_panel"/>
         </form>
         <div>
