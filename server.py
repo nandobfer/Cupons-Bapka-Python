@@ -53,6 +53,13 @@ def panelClient():
 
     return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
 
+# client history
+@app.route('/cliente/historico/', methods=['GET', 'POST'])
+def historyClient():
+    id = request.args.get('id')
+    data = getDatabase()
+    data = data[id]
+
 # employee login page
 @app.route('/funcionario/login/', methods=['GET', 'POST'])
 def loginEmployee():
@@ -122,10 +129,10 @@ def panelEmployee():
         return redirect(f'{url}?employee={employee_id}')
 
     # return render_template("panel_employee.html")
-    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS], employee_id=employee_id)
+    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS], employee_id=employee_id, historico=data[HISTORICO])
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port="5000")
+    app.run(debug=True, host="0.0.0.0", port="80")
 
 """ flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) """

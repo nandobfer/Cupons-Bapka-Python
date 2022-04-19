@@ -3,14 +3,221 @@
         "Nome": "Fernando",
         "CPF": "02576698506",
         "E-mail": "fernando@agenciazop.com.br",
-        "Cupons": 51,
-        "password": "burgos"
+        "Cupons": 30,
+        "password": "burgos",
+        "Hist\u00d3rico": [
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "08:29:28.853273",
+                "Quantidade": 1,
+                "Pedido": "737"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "10:59:45.229201",
+                "Quantidade": 1,
+                "Pedido": "849"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:03:44.262226",
+                "Quantidade": 1,
+                "Pedido": "274"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:05:36.326378",
+                "Quantidade": 1,
+                "Pedido": "313"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:06:33.413483",
+                "Quantidade": 1,
+                "Pedido": "64"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:06:34.758352",
+                "Quantidade": 1,
+                "Pedido": "85"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:06:51.342287",
+                "Quantidade": 1,
+                "Pedido": "725"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:07:44.265396",
+                "Quantidade": 1,
+                "Pedido": "753"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:07:52.560384",
+                "Quantidade": 1,
+                "Pedido": "782"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:07:55.687584",
+                "Quantidade": 1,
+                "Pedido": "546"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:09:47.528435",
+                "Quantidade": 1,
+                "Pedido": "787"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:11:28.007592",
+                "Quantidade": 1,
+                "Pedido": "220"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:12:58.199291",
+                "Quantidade": 1,
+                "Pedido": "354"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:14:22.833602",
+                "Quantidade": 1,
+                "Pedido": "566"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:15:01.665568",
+                "Quantidade": 1,
+                "Pedido": "29"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:15:29.048606",
+                "Quantidade": 1,
+                "Pedido": "418"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:15:33.694728",
+                "Quantidade": 1,
+                "Pedido": "338"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:15:48.424779",
+                "Quantidade": 1,
+                "Pedido": "124"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:16:29.426961",
+                "Quantidade": 1,
+                "Pedido": "458"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:16:31.054693",
+                "Quantidade": -1,
+                "Pedido": "832"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:16:31.262877",
+                "Quantidade": -1,
+                "Pedido": "850"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:18:03.266582",
+                "Quantidade": 1,
+                "Pedido": "916"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:30:05.961826",
+                "Quantidade": 1,
+                "Pedido": "41"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:30:15.031081",
+                "Quantidade": 1,
+                "Pedido": "570"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:30:28.087354",
+                "Quantidade": 1,
+                "Pedido": "291"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:03.713155",
+                "Quantidade": 1,
+                "Pedido": "115"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:16.314465",
+                "Quantidade": 1,
+                "Pedido": "886"
+            },
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:48.750395",
+                "Quantidade": 1,
+                "Pedido": "66"
+            }
+        ]
     },
     "1": {
         "Nome": "Yasmin",
         "CPF": "123123123",
         "E-mail": "yahabelaira@gmail.com",
         "Cupons": 11,
-        "password": "yahlinda"
+        "password": "yahlinda",
+        "Hist\u00d3rico": [
+            {
+                "Id": "0",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "08:29:28.853273",
+                "Quantidade": 1,
+                "Pedido": "737"
+            }
+        ]
     }
 }

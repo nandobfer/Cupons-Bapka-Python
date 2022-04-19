@@ -61,6 +61,7 @@ def registerModification(client_id, quantity, employee_id, order):
         data = getDatabase(DATABASE_EMPLOYEES)
         today = date.today()
         now = datetime.now().time()
+        # Employee register
         data_new = {
                 ID: client_id,
                 DATA: str(today.strftime("%d/%m/%Y")),
@@ -70,4 +71,17 @@ def registerModification(client_id, quantity, employee_id, order):
         }
         data[employee_id][CUPONS].append(data_new)
         writeDatabase(data, DATABASE_EMPLOYEES)
+
+        # Client reg
+        data_client = getDatabase(DATABASE)
+        data_new_client = {
+                ID: employee_id,
+                DATA: str(today.strftime("%d/%m/%Y")),
+                HORARIO: str(now),
+                QUANTIDADE: quantity,
+                PEDIDO: order
+        }
+        data_client[client_id][HISTORICO].append(data_new_client)
+        writeDatabase(data_client, DATABASE)
+
 

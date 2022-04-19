@@ -1,6 +1,20 @@
 <html>
     <head>
         <title>Cupons - Bapka Sorvetes</title>
+        <style>
+            nav {
+                float: left;
+                width: 30%;
+            }
+            table {
+                float: left;
+            }
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
     </head>
 
     <body>
@@ -13,11 +27,38 @@
                 <button>Voltar</button>
             </a>
         </div>
-        <h2>Cliente:</h2>
-        <h2>Nome: {{name}}</h2>
-        <h2>CPF: {{cpf}}</h2>
-        <h2>E-mail: {{email}}</h2>
-        <h2>Cupons: {{cupons}}</h2>
+        <section>
+            <h2>Cliente:</h2>
+            <table>
+                <tr>
+                    <td><h2>Nome: </h2></td>
+                    <td><h2>{{name}}</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>CPF: </h2></td>
+                    <td><h2>{{cpf}}</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>E-mail: </h2></td>
+                    <td><h2>{{email}}</h2></td>
+                </tr>
+                <tr>
+                    <td><h2>Cupons: </h2></td>
+                    <td><h2>{{cupons}}</h2></td>
+                </tr>
+            </table>
+            <nav>
+                <script>
+                    alert( '{{historico}}' )
+                </script>
+                <a href=""><button>Histórico</button></a>
+            </nav>
+        </section>
+        
+        
+        
+        
+        
         <form method="post">
             <label for="quantity">Quantidade:</label>
             <input type="number" id="quantity" name="quantity" min="1" max="5" value="1" required>
