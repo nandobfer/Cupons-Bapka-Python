@@ -132,7 +132,7 @@ def panelEmployee():
     return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS], employee_id=employee_id, history=data[HISTORICO])
 
 if __name__ == '__main__':
-    app.run(debug=True, host="0.0.0.0", port="80")
+    app.run(debug=True, host="0.0.0.0", port="5000")
 
 """ flask run
  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit) """
