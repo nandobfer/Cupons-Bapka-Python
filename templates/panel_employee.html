@@ -29,7 +29,7 @@
         </div>
         <section>
             <h1>Cliente:</h1>
-            <table>
+            <table width="500">
                 <tr>
                     <td><h1>Nome: </h1></td>
                     <td><h1>{{name}}</h1></td>
@@ -48,11 +48,24 @@
                 </tr>
             </table>
             <nav>
-                <script>
-                    const history_json = '{{history}}';
-                    const history = JSON.parse(history_json);
-                </script>
-                <a href=""><button>Histórico</button></a>
+                <h1>Histórico</h1>
+                <div id="client_history">
+                    <script>
+                        const history_json = '{{history|tojson}}';
+                        const history = JSON.parse(history_json);
+                        text = '<h3>';
+                        for (let i = history.length-1; i >= history.length-3; i--) {
+                            text += "<br>"
+                            text += 'Id: ' + history[i]['Id'] + "<br>"
+                            text += 'Data: ' + history[i]['Data'] + "<br>";
+                            text += 'Horário: ' + history[i]['Horário'] + "<br>";
+                            text += 'Quantidade: ' + history[i]['Quantidade'] + "<br>";
+                        }
+                        text += '</h3>'
+                        document.getElementById("client_history").innerHTML = text
+                    </script>
+                    </div>
+                <a href=""><button>Ver tudo</button></a>
             </nav>
         </section>
         
