@@ -41,10 +41,10 @@ def validateId(id):
         else:
                 return True
 
-def clientLogin(email, password):
+def clientLogin(telefone, password):
         data = getDatabase()
         for id in data:
-                if email == data[id][EMAIL]:
+                if telefone == data[id][TELEFONE]:
                         if password == data[id][SENHA]:
                                 return id
         return False

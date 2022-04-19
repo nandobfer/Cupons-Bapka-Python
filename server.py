@@ -25,10 +25,10 @@ def home():
 @app.route('/cliente/home/', methods=['GET', 'POST'])
 def homeClient():
     if request.method == 'POST':
-        email = request.form.get('email')
+        telefone = request.form.get('telefone')
         password = request.form.get('password')
 
-        id = clientLogin(email, password)
+        id = clientLogin(telefone, password)
         if not id:
             error = 'E-mail ou senha inválido'
             return render_template('home_client.html', error=error)
@@ -51,7 +51,7 @@ def panelClient():
     if request.method == 'POST':
         pass
 
-    return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS])
+    return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS])
 
 # client history
 @app.route('/cliente/historico/', methods=['GET', 'POST'])
@@ -129,7 +129,7 @@ def panelEmployee():
         return redirect(f'{url}?employee={employee_id}')
 
     # return render_template("panel_employee.html")
-    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], email=data[EMAIL], cupons=data[CUPONS], employee_id=employee_id, historico=data[HISTORICO])
+    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS], employee_id=employee_id, history=data[HISTORICO])
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="80")

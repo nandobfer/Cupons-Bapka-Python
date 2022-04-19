@@ -7,6 +7,7 @@ EMAIL = "E-mail"
 CUPONS = "Cupons"
 SENHA = "password"
 HISTORICO = "Hist\u00d3rico"
+TELEFONE = "Telefone"
 
 # employees database
 DATABASE_EMPLOYEES = 'database_employees.json'
