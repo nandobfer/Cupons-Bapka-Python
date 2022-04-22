@@ -15,7 +15,7 @@ def getRequirements():
             print(f'Não foi possivel baixar o modulo: {requirement}')
 
 def installModule(requirement):
-    # MODULO PyPDF2
+
     try:
         module = importlib.import_module(requirement)
         print(f'Modulo {requirement} ja instalado')
@@ -29,3 +29,5 @@ def installModule(requirement):
             return True
         except:
             return False
+
+getRequirements()

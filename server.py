@@ -1,3 +1,4 @@
+import RequirementsHandler
 from flask import Flask, escape, request, url_for, redirect, json, render_template
 from config import *
 from functions import *
