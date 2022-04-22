@@ -128,7 +128,7 @@ def panelEmployee():
         print('url', url)
         return redirect(f'{url}?employee={employee_id}')
 
-    # return render_template("panel_employee.html")
+    ## return render_template("panel_employee.html")
     return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS], employee_id=employee_id, history=data[HISTORICO])
 
 if __name__ == '__main__':
