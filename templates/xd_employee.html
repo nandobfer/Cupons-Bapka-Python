@@ -970,7 +970,7 @@
 	}
 	#IDP_12 {
 		left: 845px;
-		top: 385px;
+		top: 325px;
 		position: absolute;
 		overflow: visible;
 		width: 59px;
@@ -982,6 +982,17 @@
 		font-size: 15px;
 		color: rgba(238,230,67,1);
 	}
+	.CPF_Form {
+		background-color: rgba(255, 255, 255, 0);
+		height:45px;
+		font-size: 1.5vw;
+	}
+	.Buttons {
+		background:none;
+		border:none;
+		color:#FFF;
+		cursor:pointer;
+	  }
 </style>
 <script id="applicationScript">
 ///////////////////////////////////////
@@ -3923,10 +3934,10 @@ window.application = new Application();
 	<div id="Ara_do_Parceiro">
 		<span>Aréa do Parceiro</span>
 	</div>
-	<img id="Grupo_de_mscara_1" src="Grupo_de_mscara_1.png" srcset="Grupo_de_mscara_1.png 1x, Grupo_de_mscara_1@2x.png 2x">
+	<img id="Grupo_de_mscara_1" src="/static/images/Grupo_de_mscara_1.png" srcset="/static/images/Grupo_de_mscara_1.png 1x, /static/images/Grupo_de_mscara_1@2x.png 2x">
 		
 	</svg>
-	<img id="Grupo_de_mscara_2" src="Grupo_de_mscara_2.png" srcset="Grupo_de_mscara_2.png 1x, Grupo_de_mscara_2@2x.png 2x">
+	<img id="Grupo_de_mscara_2" src="/static/images/Grupo_de_mscara_2.png" srcset="/static/images/Grupo_de_mscara_2.png 1x, /static/images/Grupo_de_mscara_2@2x.png 2x">
 		
 	</svg>
 	<svg class="elemento_u" viewBox="0 0 183.776 183.776">
@@ -3941,10 +3952,10 @@ window.application = new Application();
 		<rect id="Retngulo_10" rx="0" ry="0" x="0" y="0" width="96" height="80">
 		</rect>
 	</svg>
-	<img id="Logo_-_Vetorizada-01" src="Logo_-_Vetorizada-01.png" srcset="Logo_-_Vetorizada-01.png 1x, Logo_-_Vetorizada-01@2x.png 2x">
+	<img id="Logo_-_Vetorizada-01" src="/static/images/Logo_-_Vetorizada-01.png" srcset="/static/images/Logo_-_Vetorizada-01.png 1x, /static/images/Logo_-_Vetorizada-01@2x.png 2x">
 		
 	<div id="Ol_Parceiro">
-		<span>Olá, Parceiro!</span>
+		<span>Olá, {{name}}!</span>
 	</div>
 	<div id="Histrico_do_Parceiro">
 		<span>Histórico do Parceiro</span>
@@ -4061,9 +4072,11 @@ window.application = new Application();
 			</div>
 		</div>
 	</div>
-	<div id="Sair">
-		<span>Sair</span>
-	</div>
+	<a href="/home/">
+		<div id="Sair">
+			<span>Sair</span>
+		</div>
+	</a>
 	<div id="Grupo_8">
 		<svg class="Retngulo_6">
 			<rect id="Retngulo_6" rx="0" ry="0" x="0" y="0" width="639" height="222">
@@ -4076,26 +4089,33 @@ window.application = new Application();
 		</div>
 	</div>
 	<div id="Grupo_4">
-		<div id="Grupo_3">
-			<div id="CPF">
-				<span>CPF:</span>
-			</div>
-			<svg class="Retngulo_4">
-				<rect id="Retngulo_4" rx="26" ry="26" x="0" y="0" width="388" height="52">
-				</rect>
-			</svg>
-		</div>
-		<div id="Grupo_6">
-			<div id="Grupo_1">
-				<svg class="Retngulo_6_ce">
-					<rect id="Retngulo_6_ce" rx="26" ry="26" x="0" y="0" width="123" height="52">
+		<form method="post">
+			<div id="Grupo_3">
+				<div id="CPF">
+					<span>CPF:</span>
+				</div>
+				<svg class="Retngulo_4">
+					<rect id="Retngulo_4" rx="26" ry="26" x="0" y="0" width="388" height="52">
 					</rect>
+					<foreignObject width="322" height="52" x="23" y="5">
+						<input type="text" class="CPF_Form" size="17" id="form_cpf" name="form_cpf" placeholder="123.456.789-00" required>
+					</foreignObject>
 				</svg>
 			</div>
-			<div id="OK">
-				<span>OK</span>
-			</div>
-		</div>
+			<button type="submit" name="employee_panel" class="Buttons">
+				<div id="Grupo_6">
+					<div id="Grupo_1">
+						<svg class="Retngulo_6_ce">
+							<rect id="Retngulo_6_ce" rx="26" ry="26" x="0" y="0" width="123" height="52">
+							</rect>
+						</svg>
+					</div>
+					<div id="OK">
+						<span>OK</span>
+					</div>
+				</div>
+			</button>
+		</form>
 	</div>
 	<div id="Grupo_6_cg">
 		<div id="Grupo_1_ch">
@@ -4112,19 +4132,19 @@ window.application = new Application();
 		<span>CPF:</span>
 	</div>
 	<div id="n__999999-9">
-		<span>9 999.999-9</span>
+		<span>{{cpf}}</span>
 	</div>
 	<div id="E-mail">
 		<span>E-mail:</span>
 	</div>
 	<div id="parceirobapkasorvetescombr">
-		<span>parceiro@bapkasorvetes.com.br</span>
+		<span>{{email}}</span>
 	</div>
 	<div id="Alterar">
 		<span>Alterar</span>
 	</div>
 	<div id="IDP_12">
-		<span>IDP: 12</span>
+		<span>IDP: 0{{employee_id}}</span>
 	</div>
 </div>
 </body>

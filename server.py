@@ -99,22 +99,23 @@ def loginEmployee():
 @app.route('/funcionario/home/', methods=['GET', 'POST'])
 def homeEmployee():
     employee_id = request.args.get('employee')
+    data = getData(employee_id, DATABASE_EMPLOYEES)
     if request.method == 'POST':
-        cpf = request.form['cpf']
+        cpf = request.form['form_cpf']
         try:
              id = getId(cpf)
 
         except:
             # error alert TODO
-            return redirect(url_for('homeEmployee'))
+            return redirect(url_for('xd_employee'))
 
         if not id:
             error = 'CPF não encontrado.'
-            return render_template('home_employee.html', error=error)
+            return render_template('xd_employee.html', error=error)
         
         url = url_for('panelEmployee')
         return redirect(f'{url}?id={id}&employee={employee_id}')
-    return render_template("home_employee.html")
+    return render_template("xd_employee.html", name=data[NOME], cpf=formatCPF(data[CPF]), email=data[EMAIL], employee_id=employee_id)
 
 @app.route('/funcionario/painel/', methods=['GET','POST'])
 def panelEmployee():

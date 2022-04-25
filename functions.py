@@ -22,9 +22,9 @@ def getId(cpf):
         
         return False
 
-def getData(id):
+def getData(id, database = DATABASE):
         ''' function scans database looking for ID and returns it's table '''
-        data = getDatabase()
+        data = getDatabase(database)
         if id in data:
                 return data[id]
         
