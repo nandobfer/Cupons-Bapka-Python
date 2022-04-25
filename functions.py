@@ -1,4 +1,5 @@
-import json 
+import json
+import re 
 from config import *
 from datetime import date, datetime
 
@@ -84,4 +85,20 @@ def registerModification(client_id, quantity, employee_id, order):
         data_client[client_id][HISTORICO].append(data_new_client)
         writeDatabase(data_client, DATABASE)
 
+def formatCPF(cpf):
+        cpf = list(cpf)
+        cpf.insert(3, '.')
+        cpf.insert(7, '.')
+        cpf.insert(11, '-')
+
+        return ''.join(cpf)
+
+def formatTelefone(telefone):
+        #41 99999-9999
+        telefone = list(telefone)
+        telefone.insert(2, ' ')
+        telefone.insert(8, '-')
+        
+        return ''.join(telefone)
+        
 

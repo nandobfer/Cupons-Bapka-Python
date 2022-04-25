@@ -70,7 +70,7 @@ def panelClient():
     if request.method == 'POST':
         pass
 
-    return render_template('panel_client.html', name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS])
+    return render_template('xd_client.html', name=data[NOME], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], id=id)
 
 # client history
 @app.route('/cliente/historico/', methods=['GET', 'POST'])
