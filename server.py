@@ -16,11 +16,29 @@ def index():
 @app.route('/home/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
-        if request.form.get('employee'):
-            return redirect(url_for('loginEmployee'))
-        elif request.form.get('client'):
-            return redirect(url_for('homeClient'))
-    return render_template('index.html')
+        if 'client_panel' in request.form:
+            telefone = request.form.get('telefone')
+            password = request.form.get('password_client')
+
+            id = clientLogin(telefone, password)
+            if not id:
+                error = 'Telefone ou senha inválido'
+                return render_template('xd_login.html', error=error)
+            else:
+                return redirect(url_for('panelClient', id=id))
+            
+        elif 'employee_panel' in request.form:
+            email = request.form.get('email')
+            password = request.form.get('password_employee')
+
+            id = employeeLogin(email, password)
+            if not id:
+                error = 'E-mail ou senha inválidos'
+                return render_template('xd_login.html', error=error)
+            else:
+                return redirect(url_for('homeEmployee', employee=id))
+        
+    return render_template('xd_login.html')
 
 # client home page
 @app.route('/cliente/home/', methods=['GET', 'POST'])
