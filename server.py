@@ -134,11 +134,11 @@ def panelEmployee():
             # erro alerta insert a quantity number
             return redirect(f'{url}?id={id}&employee={employee_id}') 
 
-        if request.form.get('insert_coupon'):
+        if 'insert_coupon' in request.form:
             modifyCoupons(id, quantity)
             registerModification(id, quantity, employee_id, str(random.randint(0, 1000)))
             return redirect(f'{url}?id={id}&employee={employee_id}')    
-        elif request.form.get('remove_coupon'):
+        elif 'remove_coupon' in request.form:
             modifyCoupons(id, -quantity)
             registerModification(id, -quantity, employee_id, str(random.randint(0, 1000)))
             return redirect(f'{url}?id={id}&employee={employee_id}')
@@ -149,7 +149,7 @@ def panelEmployee():
         return redirect(f'{url}?employee={employee_id}')
 
     ## return render_template("panel_employee.html")
-    return render_template("panel_employee.html", name=data[NOME], cpf=data[CPF], telefone=data[TELEFONE], cupons=data[CUPONS], employee_id=employee_id, history=data[HISTORICO])
+    return render_template("xd_employee_client.html", name=data[NOME], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], employee_id=employee_id, history=data[HISTORICO])
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="5000")

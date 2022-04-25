@@ -3,7 +3,7 @@
         "Nome": "Fernando",
         "CPF": "02576698506",
         "Telefone": "41984556795",
-        "Cupons": 42,
+        "Cupons": 47,
         "password": "burgos",
         "Hist\u00d3rico": [
             {
@@ -320,6 +320,69 @@
                 "Hor\u00e1rio": "13:27:42.899870",
                 "Quantidade": -2,
                 "Pedido": "128"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "18:58:52.974298",
+                "Quantidade": 1,
+                "Pedido": "170"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "18:58:55.455409",
+                "Quantidade": 1,
+                "Pedido": "730"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "18:58:58.652942",
+                "Quantidade": 1,
+                "Pedido": "3"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "18:59:51.199840",
+                "Quantidade": -1,
+                "Pedido": "210"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "19:04:35.247209",
+                "Quantidade": 1,
+                "Pedido": "774"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "19:04:36.945121",
+                "Quantidade": -1,
+                "Pedido": "668"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "19:05:26.910048",
+                "Quantidade": 1,
+                "Pedido": "673"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "19:05:28.566314",
+                "Quantidade": 1,
+                "Pedido": "683"
+            },
+            {
+                "Id": "0",
+                "Data": "25/04/2022",
+                "Hor\u00e1rio": "19:05:29.906549",
+                "Quantidade": 1,
+                "Pedido": "954"
             }
         ]
     },
