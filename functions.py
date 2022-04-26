@@ -101,4 +101,15 @@ def formatTelefone(telefone):
         
         return ''.join(telefone)
         
+def getHistory(id, database = DATABASE):
+        data = getDatabase(database)
+        if id in data:
+                return data[id][HISTORICO]
+                
 
+def getLastHistory(history):
+        list = []
+        for i in range(len(history)-1, len(history)-4, -1):
+                list.append(history[i])
+        
+        return list
