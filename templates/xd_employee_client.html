@@ -4118,21 +4118,29 @@ window.application = new Application();
 		<div id="Grupo_28">
 			<div id="Grupo_23">
 				<div id="Marcelo_-_IDP02">
-					<span>Marcelo - IDP:02</span>
+					<span>{{history1_name}} - IDP:{{history1_idp}}</span>
 				</div>
 				<div id="n_9042022">
-					<span>19/04/2022</span>
+					<span>{{history1_data}}</span>
 				</div>
 				<div id="n_63312">
-					<span>16:33:12</span>
+					<span>{{history1_time}}</span>
 				</div>
 				<div id="n_3">
-					<span>03</span>
+					<span>{{history1_quantity}}</span>
 				</div>
 			</div>
 			<div id="Adicionados">
-				<span>Adicionado(s)</span>
+				<span>{{history1_modified}}</span>
 			</div>
+			<script>
+				if (parseInt("{{history1_quantity}}") > 0) {
+					document.getElementById("Adicionados").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+					document.getElementById("Adicionados").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 			<div id="Grupo_22">
 				<div id="Atualizado_por_">
 					<span>Atualizado por: </span>
@@ -4154,21 +4162,29 @@ window.application = new Application();
 		<div id="Grupo_27">
 			<div id="Grupo_24">
 				<div id="Luiz_-_IDP43">
-					<span>Luiz - IDP:43</span>
+					<span>{{history2_name}} - IDP:{{history2_idp}}</span>
 				</div>
 				<div id="n_4042022">
-					<span>14/04/2022</span>
+					<span>{{history2_data}}</span>
 				</div>
 				<div id="n_21342">
-					<span>12:13:42</span>
+					<span>{{history2_time}}</span>
 				</div>
 				<div id="n_0">
-					<span>10</span>
+					<span>{{history2_quantity}}</span>
 				</div>
 			</div>
 			<div id="Removidos">
-				<span>Removido(s)</span>
+				<span>{{history2_modified}}</span>
 			</div>
+			<script>
+				if (parseInt("{{history2_quantity}}") > 0) {
+					document.getElementById("Removidos").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+					document.getElementById("Removidos").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 			<div id="Grupo_21">
 				<div id="Atualizado_por__ce">
 					<span>Atualizado por: </span>
@@ -4190,21 +4206,29 @@ window.application = new Application();
 		<div id="Grupo_26">
 			<div id="Grupo_25">
 				<div id="Joo_-_IDP41">
-					<span>João - IDP:41</span>
+					<span>{{history3_name}} - IDP:{{history3_idp}}</span>
 				</div>
 				<div id="n_1042022">
-					<span>11/04/2022</span>
+					<span>{{history3_data}}</span>
 				</div>
 				<div id="n_94302">
-					<span>09:43:02</span>
+					<span>{{history3_time}}</span>
 				</div>
 				<div id="n_7">
-					<span>17</span>
+					<span>{{history3_quantity}}</span>
 				</div>
 			</div>
 			<div id="Adicionados_cp">
-				<span>Adicionado(s)</span>
+				<span>{{history3_modified}}</span>
 			</div>
+			<script>
+				if (parseInt("{{history3_quantity}}") > 0) {
+					document.getElementById("Adicionados_ci").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+					document.getElementById("Adicionados_ci").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 			<div id="Grupo_20">
 				<div id="Atualizado_por__cr">
 					<span>Atualizado por: </span>

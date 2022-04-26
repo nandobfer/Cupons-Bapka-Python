@@ -3975,29 +3975,37 @@ window.application = new Application();
 					<span>Cliente:</span>
 				</div>
 				<div id="Maria_-_IDC86">
-					<span>Maria - IDC:86</span>
+					<span>{{history1_name}} - IDC:{{history1_idc}}</span>
 				</div>
 				<div id="Data">
 					<span>Data:</span>
 				</div>
 				<div id="n_7042022">
-					<span>17/04/2022</span>
+					<span>{{history1_data}}</span>
 				</div>
 				<div id="Horrio">
 					<span>Horário:</span>
 				</div>
 				<div id="n_33312">
-					<span>13:33:12</span>
+					<span>{{history1_time}}</span>
 				</div>
 				<div id="Quantidade">
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_5">
-					<span>05</span>
+					<span>{{history1_quantity}}</span>
 				</div>
 				<div id="Adicionados">
-					<span>Adicionado(s)</span>
+					<span>{{history1_modified}}</span>
 				</div>
+				<script>
+					if (parseInt("{{history1_quantity}}") > 0) {
+						document.getElementById("Adicionados").style.color = "rgba(32,206,119,1)";
+					}
+					else {
+						document.getElementById("Adicionados").style.color = "rgba(206,32,49,1)";
+					}
+				</script>
 			</div>
 			<div id="Text">
 				<span>●</span>
@@ -4009,29 +4017,37 @@ window.application = new Application();
 					<span>Data:</span>
 				</div>
 				<div id="n_0032022">
-					<span>10/03/2022</span>
+					<span>{{history2_data}}</span>
 				</div>
 				<div id="Horrio_bj">
 					<span>Horário:</span>
 				</div>
 				<div id="n_81342">
-					<span>18:13:42</span>
+					<span>{{history2_time}}</span>
 				</div>
 				<div id="Quantidade_bl">
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_0">
-					<span>50</span>
+					<span>{{history2_quantity}}</span>
 				</div>
 				<div id="Removidos">
-					<span>Removido(s)</span>
+					<span>{{history2_modified}}</span>
 				</div>
 				<div id="Cliente_bo">
 					<span>Cliente:</span>
 				</div>
 				<div id="Rogrio_-_IDC673">
-					<span>Rogério - IDC:673</span>
+					<span>{{history2_name}} - IDC:{{history2_idc}}</span>
 				</div>
+				<script>
+					if (parseInt("{{history2_quantity}}") > 0) {
+						document.getElementById("Removidos").style.color = "rgba(32,206,119,1)";
+					}
+					else {
+						document.getElementById("Removidos").style.color = "rgba(206,32,49,1)";
+					}
+				</script>
 			</div>
 			<div id="Text_bq">
 				<span>●</span>
@@ -4043,29 +4059,37 @@ window.application = new Application();
 					<span>Data:</span>
 				</div>
 				<div id="n_1032022">
-					<span>01/03/2022</span>
+					<span>{{history3_data}}</span>
 				</div>
 				<div id="Horrio_bv">
 					<span>Horário:</span>
 				</div>
 				<div id="n_24302">
-					<span>02:43:02</span>
+					<span>{{history3_time}}</span>
 				</div>
 				<div id="Quantidade_bx">
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_1">
-					<span>01</span>
+					<span>{{history3_quantity}}</span>
 				</div>
 				<div id="Adicionados_bz">
-					<span>Adicionado(s)</span>
+					<span>{{history3_modified}}</span>
 				</div>
 				<div id="Cliente_b">
 					<span>Cliente:</span>
 				</div>
 				<div id="Lucas_-_IDC73">
-					<span>Lucas - IDC:73</span>
+					<span>{{history3_name}} - IDC:{{history3_idc}}</span>
 				</div>
+				<script>
+					if (parseInt("{{history3_quantity}}") > 0) {
+						document.getElementById("Adicionados_bz").style.color = "rgba(32,206,119,1)";
+					}
+					else {
+						document.getElementById("Adicionados_bz").style.color = "rgba(206,32,49,1)";
+					}
+				</script>
 			</div>
 			<div id="Text_b">
 				<span>●</span>
@@ -4098,7 +4122,7 @@ window.application = new Application();
 					<rect id="Retngulo_4" rx="26" ry="26" x="0" y="0" width="388" height="52">
 					</rect>
 					<foreignObject width="322" height="52" x="23" y="5">
-						<input type="text" class="CPF_Form" size="17" id="form_cpf" name="form_cpf" placeholder="123.456.789-00" required>
+						<input type="text" class="CPF_Form" size="18.5" id="form_cpf" name="form_cpf" placeholder="123.456.789-00" required>
 					</foreignObject>
 				</svg>
 			</div>

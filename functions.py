@@ -66,16 +66,19 @@ def employeeLogin(email, password):
 def registerModification(client_id, quantity, employee_id, order):
         data = getDatabase(DATABASE_EMPLOYEES)
         today = date.today()
-        now = datetime.now().time()
+        now = str(datetime.now().time())
+        time = ''
+        for i in range(8):
+                time += now[i]
         # Employee register
         data_new = {
                 ID: client_id,
                 DATA: str(today.strftime("%d/%m/%Y")),
-                HORARIO: str(now),
+                HORARIO: time,
                 QUANTIDADE: quantity,
                 PEDIDO: order
         }
-        data[employee_id][CUPONS].append(data_new)
+        data[employee_id][HISTORICO].append(data_new)
         writeDatabase(data, DATABASE_EMPLOYEES)
 
         # Client reg
@@ -83,7 +86,7 @@ def registerModification(client_id, quantity, employee_id, order):
         data_new_client = {
                 ID: employee_id,
                 DATA: str(today.strftime("%d/%m/%Y")),
-                HORARIO: str(now),
+                HORARIO: time,
                 QUANTIDADE: quantity,
                 PEDIDO: order
         }

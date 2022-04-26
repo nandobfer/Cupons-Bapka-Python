@@ -4,7 +4,7 @@
         "CPF": "02576698506",
         "E-mail": "fernando@agenciazop.com.br",
         "password": "burgos",
-        "Cupons": [
+        "Hist\u00d3rico": [
             {
                 "Id": "0",
                 "Data": "14/04/2022",
@@ -669,6 +669,62 @@
                 "Hor\u00e1rio": "10:13:29.327439",
                 "Quantidade": -2,
                 "Pedido": "751"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "10:27:03.201384",
+                "Quantidade": -1,
+                "Pedido": "481"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "10:35:24.591173",
+                "Quantidade": 1,
+                "Pedido": "103"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:20",
+                "Quantidade": 1,
+                "Pedido": "363"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:23",
+                "Quantidade": -1,
+                "Pedido": "243"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:27",
+                "Quantidade": 3,
+                "Pedido": "274"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:38",
+                "Quantidade": 5,
+                "Pedido": "832"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:42",
+                "Quantidade": -2,
+                "Pedido": "96"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:43",
+                "Quantidade": 1,
+                "Pedido": "396"
             }
         ]
     },
@@ -677,7 +733,7 @@
         "CPF": "123456789",
         "E-mail": "yahabelaira@gmail.com",
         "password": "yahlinda",
-        "Cupons": [
+        "Hist\u00d3rico": [
             {
                 "Id": "0",
                 "Data": "19/04/2022",
@@ -692,7 +748,7 @@
         "CPF": "123",
         "E-mail": "priscila.varela@bapka.com.br",
         "password": "123",
-        "Cupons": [
+        "Hist\u00d3rico": [
             {
                 "Id": "0",
                 "Data": "14/04/2022",
