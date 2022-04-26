@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Versão 1 – Área do Cliente – 2</title>
 <style id="applicationStylesheet" type="text/css">
+	@font-face {
+		font-family: Arciform Sans;
+		src: url("/static/fonts/Arciform.ttf") ;
+	}
 	.mediaViewInfo {
 		--web-view-name: Versão 1 – Área do Cliente – 2;
 		--web-view-id: Verso_1__rea_do_Cliente__2;
@@ -4086,7 +4090,7 @@ window.application = new Application();
 			<div id="Grupo_18">
 				<div id="Grupo_1_bj">
 					<svg class="Retngulo_6_bk">
-						<rect id="Retngulo_6_bk" rx="0" ry="0" x="0" y="0" width="173" height="52">
+						<rect id="Retngulo_6_bk" rx="26" ry="26" x="0" y="0" width="173" height="52">
 						</rect>
 					</svg>
 				</div>
@@ -4127,7 +4131,7 @@ window.application = new Application();
 					<span>{{history1_time}}</span>
 				</div>
 				<div id="n_3">
-					<span>{{history1_quantity}}</span>
+					<span>{{history1_quantity_abs}}</span>
 				</div>
 			</div>
 			<div id="Adicionados">
@@ -4171,7 +4175,7 @@ window.application = new Application();
 					<span>{{history2_time}}</span>
 				</div>
 				<div id="n_0">
-					<span>{{history2_quantity}}</span>
+					<span>{{history2_quantity_abs}}</span>
 				</div>
 			</div>
 			<div id="Removidos">
@@ -4215,7 +4219,7 @@ window.application = new Application();
 					<span>{{history3_time}}</span>
 				</div>
 				<div id="n_7">
-					<span>{{history3_quantity}}</span>
+					<span>{{history3_quantity_abs}}</span>
 				</div>
 			</div>
 			<div id="Adicionados_cp">

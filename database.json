@@ -446,7 +446,7 @@
         "Nome": "Luiz",
         "CPF": "06332793902",
         "Telefone": "41996122074",
-        "Cupons": 31,
+        "Cupons": 33,
         "password": "123",
         "Hist\u00d3rico": [
             {
@@ -679,6 +679,71 @@
                 "Hor\u00e1rio": "16:14:43",
                 "Quantidade": 1,
                 "Pedido": "396"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:52:39",
+                "Quantidade": -3,
+                "Pedido": "923"
+            },
+            {
+                "Id": "03",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:54:05",
+                "Quantidade": 5,
+                "Pedido": "5"
+            }
+        ]
+    },
+    "02": {
+        "Nome": "Yasmin",
+        "CPF": "12345678901",
+        "Telefone": "41988776655",
+        "Cupons": 9,
+        "password": "123",
+        "Hist\u00d3rico": [
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:38",
+                "Quantidade": 1,
+                "Pedido": "832"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:42",
+                "Quantidade": 1,
+                "Pedido": "96"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:14:43",
+                "Quantidade": 1,
+                "Pedido": "396"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:03",
+                "Quantidade": 2,
+                "Pedido": "65"
+            },
+            {
+                "Id": "00",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:08",
+                "Quantidade": -1,
+                "Pedido": "291"
+            },
+            {
+                "Id": "03",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:47",
+                "Quantidade": 5,
+                "Pedido": "430"
             }
         ]
     }

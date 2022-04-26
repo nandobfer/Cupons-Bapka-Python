@@ -725,6 +725,27 @@
                 "Hor\u00e1rio": "16:14:43",
                 "Quantidade": 1,
                 "Pedido": "396"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:52:39",
+                "Quantidade": -3,
+                "Pedido": "923"
+            },
+            {
+                "Id": "02",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:03",
+                "Quantidade": 2,
+                "Pedido": "65"
+            },
+            {
+                "Id": "02",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:08",
+                "Quantidade": -1,
+                "Pedido": "291"
             }
         ]
     },
@@ -1196,6 +1217,49 @@
                 "Hor\u00e1rio": "11:33:48.750395",
                 "Quantidade": 1,
                 "Pedido": "66"
+            }
+        ]
+    },
+    "03": {
+        "Nome": "Mizael",
+        "CPF": "12345678901",
+        "E-mail": "mizael@agenciazop.com.br",
+        "password": "123",
+        "Hist\u00d3rico": [
+            {
+                "Id": "00",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:03.713155",
+                "Quantidade": 1,
+                "Pedido": "115"
+            },
+            {
+                "Id": "00",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:16.314465",
+                "Quantidade": 1,
+                "Pedido": "886"
+            },
+            {
+                "Id": "00",
+                "Data": "19/04/2022",
+                "Hor\u00e1rio": "11:33:48.750395",
+                "Quantidade": 1,
+                "Pedido": "66"
+            },
+            {
+                "Id": "02",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:53:47",
+                "Quantidade": 5,
+                "Pedido": "430"
+            },
+            {
+                "Id": "01",
+                "Data": "26/04/2022",
+                "Hor\u00e1rio": "16:54:05",
+                "Quantidade": 5,
+                "Pedido": "5"
             }
         ]
     }

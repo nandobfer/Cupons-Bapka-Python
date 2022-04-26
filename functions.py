@@ -124,7 +124,13 @@ def getLastHistory(history):
 
 def modifiedCouponHTML(quantity):
         if quantity > 0:
-                text = 'Adicionado(s)'
+                if quantity == 1:
+                        text = 'Adicionado'
+                else:
+                        text = 'Adicionados'
         else:
-                text = 'Removido(s)'
+                if quantity == -1:
+                        text = 'Removido'
+                else:
+                        text = 'Removidos'
         return text

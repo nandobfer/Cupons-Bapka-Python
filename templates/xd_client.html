@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Versão 1 – Área do Cliente</title>
 <style id="applicationStylesheet" type="text/css">
+	@font-face {
+		font-family: Arciform Sans;
+		src: url("/static/fonts/Arciform.ttf") ;
+	}
 	.mediaViewInfo {
 		--web-view-name: Versão 1 – Área do Cliente;
 		--web-view-id: Verso_1__rea_do_Cliente;
@@ -4130,7 +4134,7 @@ window.application = new Application();
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_3">
-					<span>{{history1_quantity}}</span>
+					<span>{{history1_quantity_abs}}</span>
 				</div>
 				<div id="Adicionados">
 					<span>{{history1_modified}}</span>
@@ -4194,7 +4198,7 @@ window.application = new Application();
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_0">
-					<span>{{history2_quantity}}</span>
+					<span>{{history2_quantity_abs}}</span>
 				</div>
 				<div id="Removidos">
 					<span>{{history2_modified}}</span>
@@ -4236,7 +4240,7 @@ window.application = new Application();
 					<span>Quantidade:</span>
 				</div>
 				<div id="n_7">
-					<span>{{history3_quantity}}</span>
+					<span>{{history3_quantity_abs}}</span>
 				</div>
 				<div id="Adicionados_ci">
 					<span>{{history3_modified}}</span>
