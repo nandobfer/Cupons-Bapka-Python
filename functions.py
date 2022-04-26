@@ -13,14 +13,19 @@ def writeDatabase(data, database = DATABASE):
             json.dump(data, write_file, indent=4)
     return True
 
-def getId(cpf):
+def getId(cpf, database = DATABASE):
         ''' function scans database looking for a matching cpf and returns the matched id '''
-        data = getDatabase()
+        data = getDatabase(database)
         for id in data:
                 if cpf == data[id][CPF]:
                         return id
         
         return False
+
+def getName(id, database = DATABASE):
+        data = getDatabase(database)
+        if id in data:
+                return data[id][NOME]
 
 def getData(id, database = DATABASE):
         ''' function scans database looking for ID and returns it's table '''
@@ -113,3 +118,10 @@ def getLastHistory(history):
                 list.append(history[i])
         
         return list
+
+def modifiedCouponHTML(quantity):
+        if quantity > 0:
+                text = 'Adicionado(s)'
+        else:
+                text = 'Removido(s)'
+        return text
