@@ -38,6 +38,10 @@ def home():
             else:
                 return redirect(url_for('homeEmployee', employee=id))
         
+    return render_template('login.html')
+
+@app.route('/home2')
+def home2():
     return render_template('xd_login.html')
 
 # client home page

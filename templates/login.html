@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container-titulo">
+            <img class="logo" src="/static/images/logo.png" alt="Bapka Sorvetes" title="Bapka Sorvetes">
+            <h1>Lorem ipsum dolor sit amet</h1>
+        </div>
+        <div class="container-forms">
+            <form method="post">
+                <h2>Cliente</h2>
+                <div class="input-group">
+                    <label for="telefone">Telefone:</label>
+                    <input type="text" class="login-field" id="telefone"
+                           name="telefone" placeholder="xx xxxxx-xxxx" required="">
+                </div>
+                <div class="input-group">
+                    <label for="password_client">Senha:</label>
+                    <input type="password" class="login-field" id="password_client"
+                           name="password_client" placeholder="123" required="">
+                </div>
+
+                <div class="input-group">
+                    <button type="submit" name="client_panel" class="btn">Entrar</button>
+                </div>
+            </form>
+            <form method="post">
+                <h2>Parceiro</h2>
+                <div class="input-group">
+                    <label for="telefone">E-mail:</label>
+                    <input type="email" class="login-field" id="telefone"
+                           name="telefone" placeholder="41 988776655" required="">
+                </div>
+                <div class="input-group">
+                    <label for="password_employee">Senha:</label>
+                    <input type="password" class="login-field" id="password_employee"
+                           name="password_employee" placeholder="123" required="">
+                </div>
+
+                <div class="input-group">
+                    <button type="submit" name="client_panel" class="btn">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
