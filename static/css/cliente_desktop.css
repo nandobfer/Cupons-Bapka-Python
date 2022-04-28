@@ -1030,8 +1030,9 @@
 	font-size: 70px;
 	color: rgba(255,255,255,1);
 }
+
 #IDC_02 {
-	left: 369px;
+	right: 0px;
 	top: 53px;
 	position: absolute;
 	overflow: visible;
