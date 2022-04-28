@@ -189,6 +189,12 @@ def signUp():
     
     return render_template("cadastro.html")
 
+@app.route('/cliente/recuperar_senha/', methods=['GET', 'POST'])
+def recoverPass():
+    
+    
+    return render_template("recover.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="5000")
 
