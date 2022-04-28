@@ -134,3 +134,70 @@
     max-width: 100%;
     height: auto;
   }
+
+  .input-field {
+	background-color: #fffffff0;
+	position: absolute;
+	overflow: visible;
+    border-radius: 71px;
+	padding: 5px 20px;
+	font-size: 25px;
+	width: 322px;
+	height: 52px;
+	left: 153px;
+	top: 0px;
+}
+
+#input-telefone {
+
+	width: 322px;
+	height: 52px;
+	left: 153px;
+	top: 0px;
+}
+
+#input-email {
+	width: 322px;
+	height: 52px;
+	left: 153px;
+	top: 0px;
+}
+
+#input-password-client {
+
+	width: 322px;
+	height: 52px;
+	left: 153px;
+	top: 71px;
+}
+
+#input-password-partner {
+	
+	width: 322px;
+	height: 52px;
+	left: 153px;
+	top: 71px;
+}
+
+.button {
+	background-color: rgba(9,78,147,1);
+	border: 8px solid rgba(238,230,67,1);
+	color: white;
+    font-family: Arciform Sans, "sans-serif";
+    border-radius: 71px;
+    cursor: pointer;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	height: 56px;
+	left: 0px;
+	top: 0px;
+	font-size: 32px;
+	transition: all .2s;
+  }
+  
+  .button:hover {
+    border-color: rgba(9,78,147,1);
+    background-color: rgba(238,230,67,1);
+	color: rgba(9,78,147,1);
+  }
