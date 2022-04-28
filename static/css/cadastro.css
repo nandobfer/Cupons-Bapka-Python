@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #eee643;
+    --secondary-color: #094e93;
+    --secondary-color-dark: #074583;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+  }
+  
+  
+  html {
+    background-color: var(--primary-color);
+  }
+  
+  body {
+    display: flex;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 8px;
+    border-radius: 42px;
+    max-width: 100%;
+    width: auto;
+    
+  }
+  
+  .container-titulo {
+    text-align: center;
+    color: white;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .container-titulo h1 {
+    font-size: 24px;
+    font-family: Arciform Sans, "sans-serif";
+  }
+  
+  .container-forms {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary-color-dark);
+    border-radius: 30px;
+    padding: 10px 20px;
+  }
+  
+  .container-forms form {
+    max-width: 100%;
+  }
+  
+  
+  .container-forms form + form {
+    margin-left: 50px;
+    position: relative;
+  }
+  
+  .container-forms form + form::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -28px;
+    background-color: var(--secondary-color);
+    width: 5px;
+    border-radius: 10px;
+  }
+  
+  .container-forms form h2 {
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    margin-bottom: 16px;
+    font-family: Arciform Sans, "sans-serif";
+  }
+  
+  .container-forms form button {
+    margin-left: auto;
+  }
+  
+  /* Global */
+  
+  .input-group {
+    margin-bottom: 10px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .input-group label {
+    white-space: nowrap;
+    color: white;
+    font-family: Arciform Sans, "sans-serif";
+    text-align: right;
+    margin-right: 5px;
+  }
+  
+  .input-group input {
+    background-color: #f0f4f8;
+    border-radius: 16px;
+    padding: 5px 8px;
+    max-width: 100%;
+  }
+  
+  .btn {
+    background-color: var(--secondary-color);
+    border: 3px solid var(--primary-color);
+    padding: 4px 8px;
+    color: white;
+    font-family: Arciform Sans, "sans-serif";
+    border-radius: 18px;
+    cursor: pointer;
+    transition: all .2s;
+    width: 50%;
+  }
+  
+  .btn:hover {
+    background-color: var(--primary-color);
+    border-color: var(--secondary-color);
+  }
+  
+  .logo {
+    max-width: 100%;
+    height: auto;
+  }

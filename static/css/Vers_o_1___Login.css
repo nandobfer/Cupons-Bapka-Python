@@ -1,0 +1,417 @@
+.mediaViewInfo {
+	--web-view-name: Versão 1 - Login;
+	--web-view-id: Verso_1_-_Login;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: Verso_1_-_Login;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#Verso_1_-_Login {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(238,230,67,1);
+	overflow: hidden;
+	--web-view-name: Versão 1 - Login;
+	--web-view-id: Verso_1_-_Login;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#elemento {
+	fill: rgba(255,255,255,1);
+}
+.elemento {
+	overflow: visible;
+	position: absolute;
+	width: 261.657px;
+	height: 261.657px;
+	left: 960px;
+	top: 744.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#elemento_s {
+	fill: rgba(255,255,255,1);
+}
+.elemento_s {
+	overflow: visible;
+	position: absolute;
+	width: 392.485px;
+	height: 392.485px;
+	left: 1282.686px;
+	top: 74.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Retngulo_1 {
+	fill: rgba(9,78,147,1);
+}
+.Retngulo_1 {
+	position: absolute;
+	overflow: visible;
+	width: 1155px;
+	height: 670px;
+	left: 383px;
+	top: 205px;
+}
+#elemento_u {
+	fill: rgba(255,255,255,1);
+}
+.elemento_u {
+	overflow: visible;
+	position: absolute;
+	width: 183.776px;
+	height: 183.776px;
+	left: 409.471px;
+	top: 97.053px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Lorem_ipsum_dolor_sit_amet {
+	left: 594px;
+	top: 348px;
+	position: absolute;
+	overflow: visible;
+	width: 733px;
+	height: 49px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#Retngulo_2 {
+	fill: rgba(7,69,131,1);
+}
+.Retngulo_2 {
+	position: absolute;
+	overflow: visible;
+	width: 1111px;
+	height: 447px;
+	left: 409px;
+	top: 409px;
+}
+#elemento_x {
+	fill: rgba(255,255,255,1);
+}
+.elemento_x {
+	overflow: visible;
+	position: absolute;
+	width: 425.016px;
+	height: 425.016px;
+	left: 76.343px;
+	top: 636.984px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#elemento_y {
+	fill: rgba(255,255,255,1);
+}
+.elemento_y {
+	overflow: visible;
+	position: absolute;
+	width: 315.576px;
+	height: 315.576px;
+	left: 1437.42px;
+	top: 744.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#Retngulo_3 {
+	fill: rgba(9,78,147,1);
+}
+.Retngulo_3 {
+	position: absolute;
+	overflow: visible;
+	width: 9px;
+	height: 406px;
+	left: 956px;
+	top: 427px;
+}
+#Cliente {
+	left: 409px;
+	top: 436px;
+	position: absolute;
+	overflow: visible;
+	width: 548px;
+	height: 62px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#Parceiro {
+	left: 973px;
+	top: 436px;
+	position: absolute;
+	overflow: visible;
+	width: 548px;
+	height: 62px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 50px;
+	color: rgba(255,255,255,1);
+}
+#Grupo_4 {
+	position: absolute;
+	width: 484px;
+	height: 201px;
+	left: 446px;
+	top: 569px;
+	overflow: visible;
+}
+#Grupo_3 {
+	position: absolute;
+	width: 484px;
+	height: 123px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Telefone {
+	left: 0px;
+	top: 6px;
+	position: absolute;
+	overflow: visible;
+	width: 142px;
+	height: 39px;
+	text-align: right;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Senha {
+	left: 0px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 142px;
+	height: 39px;
+	text-align: right;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Retngulo_4 {
+	fill: rgba(255,255,255,0.941);
+}
+.Retngulo_4 {
+	position: absolute;
+	overflow: visible;
+	width: 322px;
+	height: 52px;
+	left: 162px;
+	top: 0px;
+}
+#Retngulo_5 {
+	fill: rgba(255,255,255,0.941);
+}
+.Retngulo_5 {
+	position: absolute;
+	overflow: visible;
+	width: 322px;
+	height: 52px;
+	left: 162px;
+	top: 71px;
+}
+#Grupo_6 {
+	position: absolute;
+	width: 220px;
+	height: 52px;
+	left: 264px;
+	top: 149px;
+	overflow: visible;
+}
+#Grupo_1 {
+	position: absolute;
+	width: 220px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Retngulo_6 {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 8px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Retngulo_6 {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#Entrar {
+	left: 40px;
+	top: 7px;
+	position: absolute;
+	overflow: visible;
+	width: 142px;
+	height: 39px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Grupo_5 {
+	position: absolute;
+	width: 478px;
+	height: 201px;
+	left: 1001px;
+	top: 569px;
+	overflow: visible;
+}
+#Grupo_3_bd {
+	position: absolute;
+	width: 478px;
+	height: 123px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#E-mail {
+	left: 0px;
+	top: 6px;
+	position: absolute;
+	overflow: visible;
+	width: 140px;
+	height: 39px;
+	text-align: right;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Senha_bf {
+	left: 0px;
+	top: 78px;
+	position: absolute;
+	overflow: visible;
+	width: 140px;
+	height: 39px;
+	text-align: right;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Retngulo_4_bg {
+	fill: rgba(255,255,255,0.941);
+}
+.Retngulo_4_bg {
+	position: absolute;
+	overflow: visible;
+	width: 318px;
+	height: 52px;
+	left: 160px;
+	top: 0px;
+}
+#Retngulo_5_bh {
+	fill: rgba(255,255,255,0.941);
+}
+.Retngulo_5_bh {
+	position: absolute;
+	overflow: visible;
+	width: 318px;
+	height: 52px;
+	left: 160px;
+	top: 71px;
+}
+#Grupo_2 {
+	position: absolute;
+	width: 218px;
+	height: 52px;
+	left: 260px;
+	top: 149px;
+	overflow: visible;
+}
+#Grupo_1_bj {
+	position: absolute;
+	width: 218px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Retngulo_6_bk {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 8px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.Retngulo_6_bk {
+	position: absolute;
+	overflow: visible;
+	width: 218px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#Entrar_bl {
+	left: 39px;
+	top: 7px;
+	position: absolute;
+	overflow: visible;
+	width: 140px;
+	height: 39px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#Grupo_de_mscara_1 {
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	left: -40.426px;
+	top: 929px;
+	overflow: visible;
+}
+#Grupo_de_mscara_2 {
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	left: -40.425px;
+	top: 0px;
+	overflow: visible;
+}
+#Logo_-_Vetorizada-01 {
+	position: absolute;
+	width: 133px;
+	height: 133px;
+	left: 894px;
+	top: 215px;
+	overflow: visible;
+}

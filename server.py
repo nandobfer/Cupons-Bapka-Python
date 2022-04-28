@@ -23,26 +23,27 @@ def home():
             id = clientLogin(telefone, password)
             if not id:
                 error = 'Telefone ou senha inválido'
-                return render_template('xd_login.html', error=error)
+                return render_template('login_desktop.html', error=error)
             else:
                 return redirect(url_for('panelClient', id=id))
             
         elif 'employee_panel' in request.form:
             email = request.form.get('email')
             password = request.form.get('password_employee')
+            print(email, password)
 
             id = employeeLogin(email, password)
             if not id:
                 error = 'E-mail ou senha inválidos'
-                return render_template('xd_login.html', error=error)
+                return render_template('login_desktop.html', error=error)
             else:
                 return redirect(url_for('homeEmployee', employee=id))
         
-    return render_template('login.html')
+    return render_template('login_desktop.html')
 
 @app.route('/home2')
 def home2():
-    return render_template('xd_login.html')
+    return render_template('login.html')
 
 # client home page
 @app.route('/cliente/home/', methods=['GET', 'POST'])
@@ -181,6 +182,12 @@ def panelEmployee():
                            history1_name=history[0][NOME], history1_idp=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                            history2_name=history[1][NOME], history2_idp=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                            history3_name=history[2][NOME], history3_idp=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
+
+@app.route('/cliente/cadastro/', methods=['GET','POST'])
+def signUp():
+    
+    
+    return render_template("cadastro.html")
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="5000")
