@@ -1,3 +1,8 @@
+@font-face {
+  font-family: Arciform Sans;
+  src: url("/static/fonts/Arciform.ttf") ;
+}
+
 .mediaViewInfo {
 	--web-view-name: login_desktop;
 	--web-view-id: login_desktop;
@@ -539,19 +544,21 @@
   }
 
   a:link {
-	text-decoration: underline;
+	text-decoration: none;
+	color: rgba(238,230,67,1);
   }
   
   a:visited {
-	text-decoration: underline;
+	text-decoration: none;
 	color: rgba(238,230,67,1);
   }
   
   a:hover {
 	text-decoration: underline;
-	color: white;
+	color: rgba(238,230,67,1);
   }
   
   a:active {
 	text-decoration: underline;
+	color: rgba(238,230,67,1);
   }
