@@ -760,6 +760,13 @@
                 "Hor\u00e1rio": "18:42:30",
                 "Quantidade": -1,
                 "Pedido": "287"
+            },
+            {
+                "Id": "02",
+                "Data": "28/04/2022",
+                "Hor\u00e1rio": "13:18:57",
+                "Quantidade": -5,
+                "Pedido": "375"
             }
         ]
     },

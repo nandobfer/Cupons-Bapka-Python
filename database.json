@@ -742,7 +742,7 @@
         "Nome": "Yasmin",
         "CPF": "12345678901",
         "Telefone": "41988776655",
-        "Cupons": 100,
+        "Cupons": 95,
         "password": "123",
         "Hist\u00d3rico": [
             {
@@ -933,6 +933,13 @@
                 "Hor\u00e1rio": "18:42:30",
                 "Quantidade": -1,
                 "Pedido": "287"
+            },
+            {
+                "Id": "00",
+                "Data": "28/04/2022",
+                "Hor\u00e1rio": "13:18:57",
+                "Quantidade": -5,
+                "Pedido": "375"
             }
         ]
     }
