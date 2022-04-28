@@ -30,6 +30,20 @@
 	--web-application: true;
 	--web-enable-deep-linking: true;
 }
+#texto-titulo {
+	left: 594px;
+	top: 348px;
+	position: absolute;
+	overflow: visible;
+	width: 733px;
+	height: 49px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
 #login-fundo {
 	position: absolute;
 	width: 1732.011px;
@@ -50,10 +64,10 @@
 	top: 670px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_t {
+#circulo-elemento_u {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_t {
+.circulo-elemento_u {
 	overflow: visible;
 	position: absolute;
 	width: 261.657px;
@@ -62,10 +76,10 @@
 	top: 670px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_u {
+#circulo-elemento_v {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_u {
+.circulo-elemento_v {
 	overflow: visible;
 	position: absolute;
 	width: 392.485px;
@@ -107,10 +121,10 @@
 	left: 935.016px;
 	top: 352.829px;
 }
-#circulo-elemento_y {
+#circulo-elemento_z {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_y {
+.circulo-elemento_z {
 	overflow: visible;
 	position: absolute;
 	width: 425.016px;
@@ -119,10 +133,10 @@
 	top: 562.813px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_z {
+#circulo-elemento_ {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_z {
+.circulo-elemento_ {
 	overflow: visible;
 	position: absolute;
 	width: 183.776px;
@@ -131,30 +145,29 @@
 	top: 22.881px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#shape-bottom {
-	fill: rgba(255,255,255,1);
-}
-.shape-bottom {
-	overflow: visible;
+#imagem-bottom {
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
-	transform: matrix(1,0,0,1,-40.4255,929) rotate(180deg);
-	transform-origin: center;
-	left: 0px;
-	top: 0px;
-}
-#shape-top {
-	fill: rgba(255,255,255,1);
-}
-.shape-top {
+	left: -40.426px;
+	top: 929px;
 	overflow: visible;
+}
+#imagem-top {
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
 	left: -40.425px;
 	top: 0px;
-	transform: matrix(1,0,0,1,0,0);
+	overflow: visible;
+}
+#logo {
+	position: absolute;
+	width: 133px;
+	height: 133px;
+	left: 894px;
+	top: 215px;
+	overflow: visible;
 }
 #wrap-login-cliente {
 	position: absolute;
@@ -340,7 +353,7 @@
 	font-size: 32px;
 	color: rgba(255,255,255,1);
 }
-#Senha_bh {
+#Senha_bj {
 	left: 0px;
 	top: 78px;
 	position: absolute;
@@ -355,7 +368,7 @@
 	color: rgba(255,255,255,1);
 }
 #input-parceiro-1 {
-	fill: rgba(255,255,255,0.941);
+	fill: #fffffff0;
 }
 .input-parceiro-1 {
 	position: absolute;
@@ -384,7 +397,7 @@
 	top: 304px;
 	overflow: visible;
 }
-#buttom-fundo_bl {
+#buttom-fundo_bn {
 	fill: rgba(9,78,147,1);
 	stroke: rgba(238,230,67,1);
 	stroke-width: 8px;
@@ -393,7 +406,7 @@
 	stroke-miterlimit: 4;
 	shape-rendering: auto;
 }
-.buttom-fundo_bl {
+.buttom-fundo_bn {
 	position: absolute;
 	overflow: visible;
 	width: 467px;
@@ -401,7 +414,7 @@
 	left: 0px;
 	top: 0px;
 }
-#Entrar_bm {
+#Entrar_bo {
 	left: 40px;
 	top: 7px;
 	position: absolute;
@@ -415,7 +428,7 @@
 	font-size: 32px;
 	color: rgba(255,255,255,1);
 }
-#No_foi_possvel_encontrar_uma_c_bn {
+#No_foi_possvel_encontrar_uma_c_bp {
 	left: 44px;
 	top: 77px;
 	position: absolute;
@@ -469,13 +482,7 @@
 	width: 322px;
 	height: 52px;
 	left: 153px;
-#logo {
-	position: absolute;
-	width: 133px;
-	height: 133px;
-	left: 300px;
 	top: 0px;
-	overflow: visible;
 }
 
 #input-password-client {
@@ -492,17 +499,4 @@
 	height: 52px;
 	left: 153px;
 	top: 71px;
-#texto-titulo {
-	left: 0px;
-	top: 133px;
-	position: absolute;
-	overflow: visible;
-	width: 733px;
-	height: 49px;
-	text-align: center;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 40px;
-	color: rgba(255,255,255,1);
 }
