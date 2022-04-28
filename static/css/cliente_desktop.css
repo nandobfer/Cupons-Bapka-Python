@@ -887,7 +887,7 @@
 	top: 49px;
 	position: absolute;
 	overflow: visible;
-	width: 299px;
+	width: auto;
 	height: 25px;
 	text-align: left;
 	font-family: Arciform Sans;
