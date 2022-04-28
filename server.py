@@ -22,8 +22,8 @@ def home():
 
             id = clientLogin(telefone, password)
             if not id:
-                error = 'Telefone ou senha inválido'
-                return render_template('login_desktop.html', error=error)
+                error = 'Não foi possível encontrar uma conta com esse número de telefone.'
+                return render_template('login_desktop.html', error_client=error)
             else:
                 return redirect(url_for('panelClient', id=id))
             
@@ -34,8 +34,8 @@ def home():
 
             id = employeeLogin(email, password)
             if not id:
-                error = 'E-mail ou senha inválidos'
-                return render_template('login_desktop.html', error=error)
+                error = 'Não foi possível encontrar uma conta com esse email. Por favor, entre em contato com o administrador para recuperar o acesso.'
+                return render_template('login_desktop.html', error_partner=error)
             else:
                 return redirect(url_for('homeEmployee', employee=id))
         
@@ -55,11 +55,11 @@ def homeClient():
         id = clientLogin(telefone, password)
         if not id:
             error = 'E-mail ou senha inválido'
-            return render_template('home_client.html', error=error)
+            return render_template('cliente_desktop.html', error=error)
         else:
             return redirect(url_for('panelClient', id=id))
 
-    return render_template('home_client.html')
+    return render_template('cliente_desktop.html')
 
 # client panel page
 @app.route('/cliente/painel/', methods=['GET', 'POST'])
@@ -81,7 +81,7 @@ def panelClient():
     if request.method == 'POST':
         pass
 
-    return render_template('xd_client.html', name=data[NOME], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], id=id,
+    return render_template('cliente_desktop.html', name=data[NOME], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], id=id,
                            history1_name=history[0][NOME], history1_idp=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                            history2_name=history[1][NOME], history2_idp=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                            history3_name=history[2][NOME], history3_idp=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
