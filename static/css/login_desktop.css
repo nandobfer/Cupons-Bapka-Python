@@ -1,9 +1,9 @@
 @font-face {
-  font-family: Arciform Sans;
-  src: url("/static/fonts/Arciform.ttf") ;
-}
-
-.mediaViewInfo {
+	font-family: Arciform Sans;
+	src: url("/static/fonts/Arciform.ttf") ;
+  }
+  
+  .mediaViewInfo {
 	--web-view-name: login_desktop;
 	--web-view-id: login_desktop;
 	--web-scale-to-fit: true;
@@ -37,10 +37,10 @@
 }
 #login-fundo {
 	position: absolute;
-	width: 1732.011px;
-	height: 987.828px;
-	left: 20.984px;
-	top: 74.171px;
+	width: 2000.851px;
+	height: 1079.801px;
+	left: -40.426px;
+	top: 0px;
 	overflow: visible;
 }
 #circulo-elemento {
@@ -51,8 +51,8 @@
 	position: absolute;
 	width: 315.576px;
 	height: 315.576px;
-	left: 1416.435px;
-	top: 670px;
+	left: 1477.845px;
+	top: 744px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_t {
@@ -63,8 +63,8 @@
 	position: absolute;
 	width: 261.657px;
 	height: 261.657px;
-	left: 939.016px;
-	top: 670px;
+	left: 1000.426px;
+	top: 744px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_u {
@@ -75,8 +75,8 @@
 	position: absolute;
 	width: 392.485px;
 	height: 392.485px;
-	left: 1261.702px;
-	top: 0px;
+	left: 1323.112px;
+	top: 74px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #retangulo-fundo {
@@ -87,8 +87,8 @@
 	overflow: visible;
 	width: 1155px;
 	height: 670px;
-	left: 362.016px;
-	top: 130.829px;
+	left: 423.426px;
+	top: 204.829px;
 }
 #retangulo-menor {
 	fill: rgba(7,69,131,1);
@@ -98,8 +98,8 @@
 	overflow: visible;
 	width: 1111px;
 	height: 447px;
-	left: 388.016px;
-	top: 334.829px;
+	left: 449.426px;
+	top: 408.829px;
 }
 #separador {
 	fill: rgba(9,78,147,1);
@@ -109,8 +109,8 @@
 	overflow: visible;
 	width: 9px;
 	height: 406px;
-	left: 935.016px;
-	top: 352.829px;
+	left: 996.426px;
+	top: 426.829px;
 }
 #circulo-elemento_y {
 	fill: rgba(255,255,255,1);
@@ -120,8 +120,8 @@
 	position: absolute;
 	width: 425.016px;
 	height: 425.016px;
-	left: 0px;
-	top: 562.813px;
+	left: 61.41px;
+	top: 636.813px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_z {
@@ -132,8 +132,8 @@
 	position: absolute;
 	width: 183.776px;
 	height: 183.776px;
-	left: 388.487px;
-	top: 22.881px;
+	left: 449.896px;
+	top: 96.881px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #shape-bottom {
@@ -144,7 +144,7 @@
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
-	transform: matrix(1,0,0,1,-40.4255,929) rotate(180deg);
+	transform: translate(40.426px, -0.171px) matrix(1,0,0,1,-40.4255,929.1715) rotate(180deg);
 	transform-origin: center;
 	left: 0px;
 	top: 0px;
@@ -157,16 +157,16 @@
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
-	left: -40.425px;
+	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #wrap-login-cliente {
 	position: absolute;
 	width: 547px;
-	height: 356px;
-	left: 409px;
-	top: 436px;
+	height: 379px;
+	left: 413px;
+	top: 450px;
 	overflow: visible;
 }
 #Cliente {
@@ -185,39 +185,41 @@
 }
 #campos-login-cliente {
 	position: absolute;
-	width: 475px;
+	width: 457px;
 	height: 123px;
-	left: 46px;
-	top: 133px;
+	left: 45px;
+	top: 99px;
 	overflow: visible;
 }
 #Telefone {
-	left: 0px;
+	opacity: 0.49;
+	left: 22px;
 	top: 6px;
 	position: absolute;
 	overflow: visible;
-	width: 142px;
+	width: 413px;
 	height: 39px;
-	text-align: right;
+	text-align: left;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 32px;
-	color: rgba(255,255,255,1);
+	color: rgba(140,140,140,1);
 }
 #Senha {
-	left: 0px;
+	opacity: 0.49;
+	left: 22px;
 	top: 78px;
 	position: absolute;
 	overflow: visible;
-	width: 142px;
+	width: 413px;
 	height: 39px;
-	text-align: right;
+	text-align: left;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 32px;
-	color: rgba(255,255,255,1);
+	color: rgba(140,140,140,1);
 }
 #input-cleinte-2 {
 	fill: rgba(255,255,255,0.941);
@@ -225,9 +227,9 @@
 .input-cleinte-2 {
 	position: absolute;
 	overflow: visible;
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 71px;
 }
 #input-cliente-1 {
@@ -236,17 +238,18 @@
 .input-cliente-1 {
 	position: absolute;
 	overflow: visible;
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 0px;
 }
+
 #buttom-entrar-cliente {
 	position: absolute;
-	width: 467px;
+	width: 457px;
 	height: 52px;
-	left: 54px;
-	top: 304px;
+	left: 45px;
+	top: 270px;
 	overflow: visible;
 }
 #buttom-fundo {
@@ -261,7 +264,7 @@
 .buttom-fundo {
 	position: absolute;
 	overflow: visible;
-	width: 467px;
+	width: 457px;
 	height: 52px;
 	left: 0px;
 	top: 0px;
@@ -271,7 +274,7 @@
 	top: 7px;
 	position: absolute;
 	overflow: visible;
-	width: 389px;
+	width: 379px;
 	height: 39px;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -281,22 +284,22 @@
 	color: rgba(255,255,255,1);
 }
 #No_foi_possvel_encontrar_uma_c {
-	left: 59px;
-	top: 77px;
+	left: 45px;
+	top: 339px;
 	position: absolute;
 	overflow: visible;
-	width: 463px;
+	width: 458px;
 	height: 40px;
 	text-align: center;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16.5px;
-	color: rgba(255,255,255,1);
+	color: rgba(238,230,67,1);
 }
 #Esqueci_minha_senha {
-	left: 346px;
-	top: 264px;
+	left: 327px;
+	top: 230px;
 	position: absolute;
 	overflow: visible;
 	width: 176px;
@@ -310,47 +313,49 @@
 }
 #wrap-login-parceiro {
 	position: absolute;
-	width: 547px;
-	height: 356px;
-	left: 973px;
-	top: 436px;
+	width: 560px;
+	height: 379px;
+	left: 960px;
+	top: 450px;
 	overflow: visible;
 }
 #campos-login-parceiro {
 	position: absolute;
-	width: 475px;
+	width: 429px;
 	height: 123px;
-	left: 31px;
-	top: 133px;
+	left: 59px;
+	top: 99px;
 	overflow: visible;
 }
 #E-mail {
-	left: 0px;
+	opacity: 0.49;
+	left: 21px;
 	top: 6px;
 	position: absolute;
 	overflow: visible;
-	width: 142px;
+	width: 386px;
 	height: 39px;
-	text-align: right;
+	text-align: left;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 32px;
-	color: rgba(255,255,255,1);
+	color: rgba(140,140,140,1);
 }
-#Senha_bh {
-	left: 0px;
+#Senha_bj {
+	opacity: 0.49;
+	left: 21px;
 	top: 78px;
 	position: absolute;
 	overflow: visible;
-	width: 142px;
+	width: 386px;
 	height: 39px;
-	text-align: right;
+	text-align: left;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 32px;
-	color: rgba(255,255,255,1);
+	color: rgba(140,140,140,1);
 }
 #input-parceiro-1 {
 	fill: rgba(255,255,255,0.941);
@@ -358,9 +363,9 @@
 .input-parceiro-1 {
 	position: absolute;
 	overflow: visible;
-	width: 322px;
+	width: 429px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 0px;
 }
 #input-parceiro-2 {
@@ -369,17 +374,17 @@
 .input-parceiro-2 {
 	position: absolute;
 	overflow: visible;
-	width: 322px;
+	width: 429px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 71px;
 }
 #buttom-entrar-parceiro {
 	position: absolute;
-	width: 467px;
+	width: 429px;
 	height: 52px;
-	left: 39px;
-	top: 304px;
+	left: 59px;
+	top: 270px;
 	overflow: visible;
 }
 #buttom-fundo_bl {
@@ -394,7 +399,7 @@
 .buttom-fundo_bl {
 	position: absolute;
 	overflow: visible;
-	width: 467px;
+	width: 429px;
 	height: 52px;
 	left: 0px;
 	top: 0px;
@@ -404,7 +409,7 @@
 	top: 7px;
 	position: absolute;
 	overflow: visible;
-	width: 389px;
+	width: 351px;
 	height: 39px;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -414,18 +419,18 @@
 	color: rgba(255,255,255,1);
 }
 #No_foi_possvel_encontrar_uma_c_bn {
-	left: 44px;
-	top: 77px;
+	left: 59px;
+	top: 339px;
 	position: absolute;
 	overflow: visible;
-	width: 463px;
+	width: 430px;
 	height: 40px;
 	text-align: center;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16.5px;
-	color: rgba(255,255,255,1);
+	color: rgba(238,230,67,1);
 }
 #Parceiro {
 	left: 0px;
@@ -479,7 +484,7 @@
     border-radius: 71px;
 	padding: 5px 20px;
 	font-size: 25px;
-	width: 322px;
+	width: 457px;
 	height: 52px;
 	left: 153px;
 	top: 0px;
@@ -487,32 +492,32 @@
 
 #input-telefone {
 
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 0px;
 }
 
 #input-email {
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 0px;
 }
 
 #input-password-client {
 
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 71px;
 }
 
 #input-password-partner {
 	
-	width: 322px;
+	width: 457px;
 	height: 52px;
-	left: 153px;
+	left: 0px;
 	top: 71px;
 }
 
@@ -525,7 +530,7 @@
     cursor: pointer;
 	position: absolute;
 	overflow: visible;
-	width: 471px;
+	width: 457px;
 	height: 56px;
 	left: 0px;
 	top: 0px;
