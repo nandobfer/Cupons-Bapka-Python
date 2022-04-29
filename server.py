@@ -1,5 +1,5 @@
 import RequirementsHandler
-from flask import Flask, escape, request, url_for, redirect, json, render_template
+from flask import Flask, request, url_for, redirect, render_template
 from config import *
 from functions import *
 import random
@@ -194,6 +194,11 @@ def recoverPass():
     
     
     return render_template("recover.html")
+
+@app.route('/cliente/alterar_telefone/', methods=['GET', 'POST'])
+def changePhone():
+    
+    return render_template("alterar.html")
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port="5000")
