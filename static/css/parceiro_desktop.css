@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Arciform Sans;
+	src: url("/static/fonts/Arciform.ttf") ;
+  }
+
 .mediaViewInfo {
 	--web-view-name: parceiro_desktop;
 	--web-view-id: parceiro_desktop;
@@ -924,7 +929,7 @@
 	color: rgba(255,255,255,1);
 }
 #n__999999-9999 {
-	left: 64px;
+	left: 70px;
 	top: 102px;
 	position: absolute;
 	overflow: visible;

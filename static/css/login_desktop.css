@@ -2,7 +2,7 @@
 	font-family: Arciform Sans;
 	src: url("/static/fonts/Arciform.ttf") ;
   }
-  
+
   .mediaViewInfo {
 	--web-view-name: login_desktop;
 	--web-view-id: login_desktop;
