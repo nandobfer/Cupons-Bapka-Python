@@ -36,10 +36,10 @@
 }
 #area-do-cliente-fundo {
 	position: absolute;
-	width: 1752.996px;
-	height: 987.828px;
-	left: 0px;
-	top: 74.171px;
+	width: 2000.851px;
+	height: 1079.801px;
+	left: -40.426px;
+	top: 0px;
 	overflow: visible;
 }
 #circulo-elemento {
@@ -50,8 +50,8 @@
 	position: absolute;
 	width: 315.576px;
 	height: 315.576px;
-	left: 1437.42px;
-	top: 670px;
+	left: 1477.845px;
+	top: 744.171px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_t {
@@ -62,8 +62,8 @@
 	position: absolute;
 	width: 261.657px;
 	height: 261.657px;
-	left: 960px;
-	top: 670px;
+	left: 1000.426px;
+	top: 744.171px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_u {
@@ -74,8 +74,8 @@
 	position: absolute;
 	width: 392.485px;
 	height: 392.485px;
-	left: 1282.686px;
-	top: 0px;
+	left: 1323.112px;
+	top: 74.171px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #retangulo-fundo {
@@ -86,8 +86,8 @@
 	position: absolute;
 	width: 1155px;
 	height: 670px;
-	left: 383px;
-	top: 130.829px;
+	left: 423.426px;
+	top: 205px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #retangulo-menor {
@@ -98,8 +98,8 @@
 	overflow: visible;
 	width: 1111px;
 	height: 629px;
-	left: 405px;
-	top: 151.829px;
+	left: 445.426px;
+	top: 226px;
 }
 #circulo-elemento_x {
 	fill: rgba(255,255,255,1);
@@ -109,8 +109,8 @@
 	position: absolute;
 	width: 425.016px;
 	height: 425.016px;
-	left: 0px;
-	top: 562.813px;
+	left: 40.426px;
+	top: 636.984px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #circulo-elemento_y {
@@ -121,8 +121,8 @@
 	position: absolute;
 	width: 183.776px;
 	height: 183.776px;
-	left: 262.224px;
-	top: 24.881px;
+	left: 302.65px;
+	top: 99.053px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #shape-bottom {
@@ -133,7 +133,7 @@
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
-	transform: matrix(1,0,0,1,-40.4257,929) rotate(180deg);
+	transform: translate(40.426px, 0px) matrix(1,0,0,1,-40.4257,929) rotate(180deg);
 	transform-origin: center;
 	left: 0px;
 	top: 0px;
@@ -146,7 +146,7 @@
 	position: absolute;
 	width: 2000.851px;
 	height: 150.801px;
-	left: -40.426px;
+	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
@@ -158,13 +158,110 @@
 	top: 594px;
 	overflow: visible;
 }
-#aba-cliente-1 {
+#aba-cliente-2 {
 	position: absolute;
-	width: 220px;
-	height: 52px;
+	width: 639px;
+	height: 241px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
+}
+#aba-clinte-2-fundo {
+	fill: rgba(7,88,169,1);
+}
+.aba-clinte-2-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 52px;
+	left: 221px;
+	top: 0px;
+}
+#abas-cliente-fundo {
+	fill: rgba(7,88,169,1);
+}
+.abas-cliente-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 639px;
+	height: 191px;
+	left: 0px;
+	top: 50px;
+}
+#Como_ganho_mais {
+	left: 241px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 181px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(255,255,255,1);
+}
+#n_Lorem_ipsum_dolor_sit_amet_c {
+	left: 22px;
+	top: 94px;
+	position: absolute;
+	overflow: visible;
+	width: 481px;
+	height: 52px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#n_Lorem_ipsum_dolor_sit_amet_c_ {
+	left: 22px;
+	top: 156px;
+	position: absolute;
+	overflow: visible;
+	width: 481px;
+	height: 52px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Com_seus_cupons_voc_pode {
+	left: 22px;
+	top: 62px;
+	position: absolute;
+	overflow: visible;
+	width: 481px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#aba-cliente-1 {
+	position: absolute;
+	width: 639px;
+	height: 241px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#abas-cliente-fundo_ba {
+	fill: rgba(6,53,101,1);
+}
+.abas-cliente-fundo_ba {
+	position: absolute;
+	overflow: visible;
+	width: 639px;
+	height: 191px;
+	left: 0px;
+	top: 50px;
 }
 #aba-clinte-1-fundo {
 	fill: rgba(6,53,101,1);
@@ -190,50 +287,6 @@
 	font-weight: normal;
 	font-size: 22px;
 	color: rgba(255,255,255,1);
-}
-#aba-cliente-2 {
-	position: absolute;
-	width: 220px;
-	height: 52px;
-	left: 221px;
-	top: 0px;
-	overflow: visible;
-}
-#aba-clinte-2-fundo {
-	fill: rgba(7,88,169,1);
-}
-.aba-clinte-2-fundo {
-	position: absolute;
-	overflow: visible;
-	width: 220px;
-	height: 52px;
-	left: 0px;
-	top: 0px;
-}
-#Como_ganho_mais {
-	left: 20px;
-	top: 13px;
-	position: absolute;
-	overflow: visible;
-	width: 181px;
-	white-space: nowrap;
-	text-align: center;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 22px;
-	color: rgba(255,255,255,1);
-}
-#abas-cliente-fundo {
-	fill: rgba(6,53,101,1);
-}
-.abas-cliente-fundo {
-	position: absolute;
-	overflow: visible;
-	width: 639px;
-	height: 191px;
-	left: 0px;
-	top: 50px;
 }
 #n_Trocar_10_cupons_por_10_de_d {
 	left: 22px;
@@ -263,7 +316,7 @@
 	font-size: 20px;
 	color: rgba(255,255,255,1);
 }
-#Com_seus_cupons_voc_pode {
+#Com_seus_cupons_voc_pode_bf {
 	left: 22px;
 	top: 62px;
 	position: absolute;
@@ -488,7 +541,7 @@
 	font-size: 25px;
 	color: rgba(7,69,131,1);
 }
-#info-historico-cliente_bs {
+#info-historico-cliente_bw {
 	position: absolute;
 	width: 388px;
 	height: 100px;
@@ -496,7 +549,7 @@
 	top: 96px;
 	overflow: visible;
 }
-#Atualizado_por__bt {
+#Atualizado_por__bx {
 	left: 43px;
 	top: 0px;
 	position: absolute;
@@ -524,7 +577,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Data_bv {
+#Data_bz {
 	left: 43px;
 	top: 25px;
 	position: absolute;
@@ -552,7 +605,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Horrio_bx {
+#Horrio_b {
 	left: 43px;
 	top: 50px;
 	position: absolute;
@@ -580,7 +633,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Quantidade_bz {
+#Quantidade_b {
 	left: 43px;
 	top: 75px;
 	position: absolute;
@@ -672,7 +725,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Data_b {
+#Data_ca {
 	left: 43px;
 	top: 25px;
 	position: absolute;
@@ -700,7 +753,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Horrio_b {
+#Horrio_cc {
 	left: 43px;
 	top: 50px;
 	position: absolute;
@@ -728,7 +781,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Quantidade_ca {
+#Quantidade_ce {
 	left: 43px;
 	top: 75px;
 	position: absolute;
@@ -756,7 +809,7 @@
 	font-size: 20px;
 	color: rgba(7,7,7,1);
 }
-#Adicionados_cc {
+#Adicionados_cg {
 	left: 180px;
 	top: 75px;
 	position: absolute;
@@ -770,7 +823,7 @@
 	font-size: 20px;
 	color: rgba(32,206,119,1);
 }
-#Text_cd {
+#Text_ch {
 	left: 0px;
 	top: 31px;
 	position: absolute;
@@ -891,7 +944,7 @@
 	top: 49px;
 	position: absolute;
 	overflow: visible;
-	width: auto;
+	width: 299px;
 	height: 25px;
 	text-align: left;
 	font-family: Arciform Sans;
@@ -922,12 +975,12 @@
 	font-size: 27px;
 	color: rgba(255,255,255,1);
 }
-#n_2 {
-	left: 145px;
+#n_99 {
+	left: 141px;
 	top: 183px;
 	position: absolute;
 	overflow: visible;
-	width: 49px;
+	width: 88px;
 	white-space: nowrap;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -937,7 +990,7 @@
 	color: rgba(238,230,67,1);
 }
 #cupons {
-	left: 203px;
+	left: 232px;
 	top: 206px;
 	position: absolute;
 	overflow: visible;
@@ -1034,7 +1087,6 @@
 	font-size: 70px;
 	color: rgba(255,255,255,1);
 }
-
 #IDC_02 {
 	right: 0px;
 	top: 53px;
