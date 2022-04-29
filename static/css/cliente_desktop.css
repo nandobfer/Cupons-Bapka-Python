@@ -166,27 +166,27 @@
 	top: 0px;
 	overflow: visible;
 }
-#aba-clinte-2-fundo {
-	fill: rgba(7,88,169,1);
-}
+
 .aba-clinte-2-fundo {
+	background-color: rgba(7,88,169,1);
 	position: absolute;
 	overflow: visible;
 	width: 220px;
 	height: 52px;
 	left: 221px;
 	top: 0px;
+	border-radius: 30px 30px 0 0;
 }
-#abas-cliente-fundo {
-	fill: rgba(7,88,169,1);
-}
-.abas-cliente-fundo {
+
+.abas-cliente-fundo-2 {
+	background-color: rgba(7,88,169,1);
 	position: absolute;
 	overflow: visible;
 	width: 639px;
 	height: 191px;
 	left: 0px;
 	top: 50px;
+	border-radius: 0 30px 30px 50px;
 }
 #Como_ganho_mais {
 	left: 241px;
@@ -252,27 +252,29 @@
 	top: 0px;
 	overflow: visible;
 }
-#abas-cliente-fundo_ba {
+#abas-cliente-fundo-1 {
 	fill: rgba(6,53,101,1);
 }
-.abas-cliente-fundo_ba {
+.abas-cliente-fundo-1 {
+	background-color: rgba(6,53,101,1);
 	position: absolute;
 	overflow: visible;
 	width: 639px;
 	height: 191px;
 	left: 0px;
 	top: 50px;
+	border-radius: 0 30px 30px 50px;
 }
-#aba-clinte-1-fundo {
-	fill: rgba(6,53,101,1);
-}
+
 .aba-clinte-1-fundo {
+	background-color: rgba(6,53,101,1);
 	position: absolute;
 	overflow: visible;
 	width: 220px;
 	height: 52px;
 	left: 0px;
 	top: 0px;
+	border-radius: 30px 30px 0 0;
 }
 #Como_posso_usar {
 	left: 25px;
@@ -502,30 +504,10 @@
 #n_0 {
 	left: 156px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 22px;
-	height: 25px;
-	text-align: left;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(7,7,7,1);
 }
 #Removidos {
 	left: 182px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 121px;
-	height: 25px;
-	text-align: left;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(206,32,49,1);
 }
 #Text {
 	left: 0px;
@@ -650,30 +632,10 @@
 #n_3 {
 	left: 157px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 22px;
-	height: 25px;
-	text-align: left;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(7,7,7,1);
 }
 #Adicionados {
 	left: 183px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 121px;
-	height: 25px;
-	text-align: left;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(32,206,119,1);
 }
 #Text_b {
 	left: 0px;
@@ -798,30 +760,10 @@
 #n_7 {
 	left: 157px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 22px;
-	height: 25px;
-	text-align: left;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(7,7,7,1);
 }
 #Adicionados_cg {
 	left: 180px;
 	top: 75px;
-	position: absolute;
-	overflow: visible;
-	width: 121px;
-	height: 25px;
-	text-align: center;
-	font-family: Arciform Sans;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 20px;
-	color: rgba(32,206,119,1);
 }
 #Text_ch {
 	left: 0px;
@@ -1119,4 +1061,29 @@ a:link {
   a:active {
 	text-decoration: underline;
 	color: rgba(238,230,67,1);
+  }
+
+  .quantidades {
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+  }
+
+  .mod-cupons {
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
   }

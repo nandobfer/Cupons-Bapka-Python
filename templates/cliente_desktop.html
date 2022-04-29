@@ -50,14 +50,12 @@
 	</div>
 	<div id="wrap-abas-cliente">
 		<div id="aba-cliente-2">
-			<svg class="aba-clinte-2-fundo">
-				<rect id="aba-clinte-2-fundo" rx="30" ry="30" x="0" y="0" width="220" height="52">
-				</rect>
-			</svg>
-			<svg class="abas-cliente-fundo">
-				<rect id="abas-cliente-fundo" rx="0" ry="0" x="0" y="0" width="639" height="191">
-				</rect>
-			</svg>
+			<div class="aba-clinte-2-fundo">
+				
+			</div>
+			<div class="abas-cliente-fundo-2">
+				
+			</div>
 			<div id="Como_ganho_mais">
 				<span>Como ganho mais?</span>
 			</div>
@@ -72,14 +70,12 @@
 			</div>
 		</div>
 		<div id="aba-cliente-1">
-			<svg class="abas-cliente-fundo_ba">
-				<rect id="abas-cliente-fundo_ba" rx="0" ry="0" x="0" y="0" width="639" height="191">
-				</rect>
-			</svg>
-			<svg class="aba-clinte-1-fundo">
-				<rect id="aba-clinte-1-fundo" rx="30" ry="30" x="0" y="0" width="220" height="52">
-				</rect>
-			</svg>
+			<div class="abas-cliente-fundo-1">
+				
+			</div>
+			<div class="aba-clinte-1-fundo">
+				
+			</div>
 			<div id="Como_posso_usar">
 				<span>Como posso usar?</span>
 			</div>
@@ -130,10 +126,10 @@
 				<div id="Quantidade">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_0">
+				<div id="n_0" class="quantidades">
 					<span>{{history2_quantity_abs}}</span>
 				</div>
-				<div id="Removidos">
+				<div id="Removidos" class="mod-cupons">
 					<span>{{history2_modified}}</span>
 				</div>
 				<div id="Text">
@@ -172,10 +168,10 @@
 				<div id="Quantidade_b">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_3">
+				<div id="n_3" class="quantidades">
 					<span>{{history1_quantity_abs}}</span>
 				</div>
-				<div id="Adicionados">
+				<div id="Adicionados" class="mod-cupons">
 					<span>{{history1_modified}}</span>
 				</div>
 				<div id="Text_b">
@@ -214,26 +210,26 @@
 				<div id="Quantidade_ce">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_7">
+				<div id="n_7" class="quantidades">
 					<span>{{history3_quantity_abs}}</span>
 				</div>
-				<div id="Adicionados_cg">
+				<div id="Adicionados_cg" class="mod-cupons">
 					<span>{{history3_modified}}</span>
 				</div>
 				<div id="Text_ch">
 					<span>●</span>
 				</div>
+				<script>
+					if (parseInt("{{history3_quantity}}") > 0) {
+					
+						document.getElementById("Adicionados_cg").style.color = "rgba(32,206,119,1)";
+					}
+					else {
+	
+						document.getElementById("Adicionados_cg").style.color = "rgba(206,32,49,1)";
+					}
+				</script>
 			</div>
-			<script>
-				if (parseInt("{{history3_quantity}}") > 0) {
-				
-					document.getElementById("Adicionados_cc").style.color = "rgba(32,206,119,1)";
-				}
-				else {
-
-					document.getElementById("Adicionados_cc").style.color = "rgba(206,32,49,1)";
-				}
-			</script>
 			<div id="Seu_Histrico">
 				<span>Seu Histórico</span>
 			</div>
