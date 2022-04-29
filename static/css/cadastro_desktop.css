@@ -1,0 +1,429 @@
+.mediaViewInfo {
+	--web-view-name: cadastro_desktop;
+	--web-view-id: cadastro_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: cadastro_desktop;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#cadastro_desktop {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(238,230,67,1);
+	overflow: hidden;
+	--web-view-name: cadastro_desktop;
+	--web-view-id: cadastro_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#login-fundo {
+	position: absolute;
+	width: 2000.851px;
+	height: 1079.801px;
+	left: -40.426px;
+	top: 0px;
+	overflow: visible;
+}
+#circulo-elemento {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento {
+	overflow: visible;
+	position: absolute;
+	width: 315.576px;
+	height: 315.576px;
+	left: 1477.846px;
+	top: 744px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_w {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_w {
+	overflow: visible;
+	position: absolute;
+	width: 261.657px;
+	height: 261.657px;
+	left: 1000.426px;
+	top: 744px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_x {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_x {
+	overflow: visible;
+	position: absolute;
+	width: 392.485px;
+	height: 392.485px;
+	left: 1323.111px;
+	top: 74px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#retangulo-fundo {
+	fill: rgba(9,78,147,1);
+}
+.retangulo-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 1155px;
+	height: 670px;
+	left: 423.426px;
+	top: 205px;
+}
+#retangulo-menor-2 {
+	fill: rgba(7,69,131,1);
+}
+.retangulo-menor-2 {
+	position: absolute;
+	overflow: visible;
+	width: 1110.529px;
+	height: 627px;
+	left: 445.426px;
+	top: 226px;
+}
+#retangulo-menor-1 {
+	fill: rgba(7,69,131,1);
+}
+.retangulo-menor-1 {
+	position: absolute;
+	overflow: visible;
+	width: 559.5px;
+	height: 627px;
+	left: 1000.926px;
+	top: 226px;
+}
+#circulo-elemento_ {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_ {
+	overflow: visible;
+	position: absolute;
+	width: 425.016px;
+	height: 425.016px;
+	left: 61.41px;
+	top: 636.813px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_ba {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_ba {
+	overflow: visible;
+	position: absolute;
+	width: 183.775px;
+	height: 183.776px;
+	left: 449.896px;
+	top: 96.881px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#shape-bottom {
+	fill: rgba(255,255,255,1);
+}
+.shape-bottom {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	transform: translate(40.426px, -0.171px) matrix(1,0,0,1,-40.4255,929.1715) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#shape-top {
+	fill: rgba(255,255,255,1);
+}
+.shape-top {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#wrap-login-cadastro {
+	position: absolute;
+	width: 470px;
+	height: 584px;
+	left: 1005px;
+	top: 257px;
+	overflow: visible;
+}
+#campos-login-cadastro {
+	position: absolute;
+	width: 470px;
+	height: 446px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#input-cadastro-1 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-1 {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 0px;
+}
+#input-cadastro-2 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-2 {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 98px;
+}
+#input-cadastro-3 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-3 {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 50px;
+	left: 0px;
+	top: 198px;
+}
+#input-cadastro-4 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-4 {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 298px;
+}
+#input-cadastro-5 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-5 {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 397px;
+}
+#Nome {
+	opacity: 0.49;
+	left: 22px;
+	top: 5px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#Telefone {
+	opacity: 0.49;
+	left: 22px;
+	top: 104px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#E-mail {
+	opacity: 0.49;
+	left: 22px;
+	top: 204px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#Senha {
+	opacity: 0.49;
+	left: 22px;
+	top: 301px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#Confirme_a_senha {
+	opacity: 0.49;
+	left: 22px;
+	top: 402px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#buttom-entrar-cadastro {
+	position: absolute;
+	width: 470px;
+	height: 52px;
+	left: 0px;
+	top: 475px;
+	overflow: visible;
+}
+#buttom-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 8px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#Cadastrar-se {
+	left: 40px;
+	top: 7px;
+	position: absolute;
+	overflow: visible;
+	width: 392px;
+	height: 39px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#No_foi_possvel_encontrar_uma_c {
+	left: 0px;
+	top: 544px;
+	position: absolute;
+	overflow: visible;
+	width: 471px;
+	height: 40px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16.5px;
+	color: rgba(238,230,67,1);
+}
+#title-logo {
+	position: absolute;
+	width: 577px;
+	height: 460px;
+	left: 401px;
+	top: 330px;
+	overflow: visible;
+}
+#texto-titulo {
+	left: 0px;
+	top: 64px;
+	position: absolute;
+	overflow: visible;
+	width: 578px;
+	height: 49px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 40px;
+	color: rgba(255,255,255,1);
+}
+#texto-titulo_bn {
+	left: 41px;
+	top: 130px;
+	position: absolute;
+	overflow: visible;
+	width: 496px;
+	height: 90px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#logo {
+	position: absolute;
+	width: 141px;
+	height: 141px;
+	left: 218px;
+	top: 319px;
+	overflow: visible;
+}
+#texto-titulo_bp {
+	left: 66px;
+	top: 237px;
+	position: absolute;
+	overflow: visible;
+	width: 447px;
+	height: 37px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#Crie_uma_conta {
+	left: 110px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 359px;
+	height: 64px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 52px;
+	color: rgba(255,255,255,1);
+}

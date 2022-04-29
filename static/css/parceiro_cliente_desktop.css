@@ -1,0 +1,1195 @@
+.mediaViewInfo {
+	--web-view-name: parceiro_cliente_desktop;
+	--web-view-id: parceiro_cliente_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: parceiro_cliente_desktop;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#parceiro_cliente_desktop {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(238,230,67,1);
+	overflow: hidden;
+	--web-view-name: parceiro_cliente_desktop;
+	--web-view-id: parceiro_cliente_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#area-do-parceiro-cliente-fundo {
+	position: absolute;
+	width: 2000.851px;
+	height: 1079.801px;
+	left: -40.426px;
+	top: 0px;
+	overflow: visible;
+}
+#circulo-elemento {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento {
+	overflow: visible;
+	position: absolute;
+	width: 261.657px;
+	height: 261.657px;
+	left: 1229.668px;
+	top: 744.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_t {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_t {
+	overflow: visible;
+	position: absolute;
+	width: 425.016px;
+	height: 425.016px;
+	left: 40.426px;
+	top: 636.984px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_u {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_u {
+	overflow: visible;
+	position: absolute;
+	width: 183.776px;
+	height: 183.776px;
+	left: 237.389px;
+	top: 97.053px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_v {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_v {
+	overflow: visible;
+	position: absolute;
+	width: 315.576px;
+	height: 315.576px;
+	left: 1505.846px;
+	top: 300.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_w {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_w {
+	overflow: visible;
+	position: absolute;
+	width: 392.485px;
+	height: 392.485px;
+	left: 1033.426px;
+	top: 74.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#retangulo-fundo {
+	fill: rgba(9,78,147,1);
+}
+.retangulo-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 1155px;
+	height: 670px;
+	left: 423.426px;
+	top: 205px;
+}
+#retangulo-menor {
+	fill: rgba(7,69,131,1);
+}
+.retangulo-menor {
+	position: absolute;
+	overflow: visible;
+	width: 1111px;
+	height: 629px;
+	left: 445.426px;
+	top: 226px;
+}
+#area-parceiro-cliente-overlay {
+	fill: rgba(6,53,101,1);
+}
+.area-parceiro-cliente-overlay {
+	position: absolute;
+	overflow: visible;
+	width: 1067px;
+	height: 496px;
+	left: 465.426px;
+	top: 339px;
+}
+#shape-bottom {
+	fill: rgba(255,255,255,1);
+}
+.shape-bottom {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	transform: translate(40.426px, 0px) matrix(1,0,0,1,-40.4257,929) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#shape-top {
+	fill: rgba(255,255,255,1);
+}
+.shape-top {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#area-do-parceiro-cliente {
+	position: absolute;
+	width: 321px;
+	height: 74px;
+	left: 447px;
+	top: 248px;
+	overflow: visible;
+}
+#rea_do_Parceiro {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 322px;
+	height: 55px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+	color: rgba(255,255,255,1);
+}
+#Sair {
+	left: 0px;
+	top: 49px;
+	position: absolute;
+	overflow: visible;
+	width: 299px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#historico {
+	position: absolute;
+	width: 395px;
+	height: 550px;
+	left: 1105px;
+	top: 248px;
+	overflow: visible;
+}
+#historico-fundo {
+	fill: rgba(6,53,101,1);
+}
+.historico-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 387px;
+	height: 496px;
+	left: 0px;
+	top: 0px;
+}
+#info-historico-parceiro-client {
+	position: absolute;
+	width: 388px;
+	height: 100px;
+	left: 7px;
+	top: 112px;
+	overflow: visible;
+}
+#grupo-texto-2 {
+	position: absolute;
+	width: 295px;
+	height: 100px;
+	left: 93px;
+	top: 0px;
+	overflow: visible;
+}
+#Marcelo_-_IDP02 {
+	left: 82px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_9042022 {
+	left: 0px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_63312 {
+	left: 23px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_3 {
+	left: 64px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#Adicionados {
+	left: 183px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(32,206,119,1);
+}
+#grupo-texto-1 {
+	position: absolute;
+	width: 175px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Atualizado_por_ {
+	left: 43px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 133px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Data {
+	left: 43px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Horrio {
+	left: 43px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Quantidade {
+	left: 43px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Text {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#info-historico-parceiro-client_bk {
+	position: absolute;
+	width: 387px;
+	height: 100px;
+	left: 8px;
+	top: 281px;
+	overflow: visible;
+}
+#grupo-texto-2_bl {
+	position: absolute;
+	width: 295px;
+	height: 100px;
+	left: 92px;
+	top: 0px;
+	overflow: visible;
+}
+#Luiz_-_IDP43 {
+	left: 82px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_4042022 {
+	left: 0px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_21342 {
+	left: 23px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_0 {
+	left: 64px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#Removidos {
+	left: 182px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(206,32,49,1);
+}
+#grupo-texto-1_br {
+	position: absolute;
+	width: 174px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Atualizado_por__bs {
+	left: 42px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 133px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Data_bt {
+	left: 42px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Horrio_bu {
+	left: 42px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Quantidade_bv {
+	left: 42px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Text_bw {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#info-historico-parceiro-client_bx {
+	position: absolute;
+	width: 388px;
+	height: 100px;
+	left: 7px;
+	top: 450px;
+	overflow: visible;
+}
+#grupo-texto-2_by {
+	position: absolute;
+	width: 295px;
+	height: 100px;
+	left: 93px;
+	top: 0px;
+	overflow: visible;
+}
+#Joo_-_IDP41 {
+	left: 82px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_1042022 {
+	left: 0px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_94302 {
+	left: 23px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#n_7 {
+	left: 64px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#Adicionados_b {
+	left: 180px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(32,206,119,1);
+}
+#grupo-texto-1_b {
+	position: absolute;
+	width: 175px;
+	height: 100px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#Atualizado_por__b {
+	left: 43px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 133px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Data_b {
+	left: 43px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Horrio_b {
+	left: 43px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Quantidade_b {
+	left: 43px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#Text_b {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#Histrico_do_Cliente {
+	left: 21px;
+	top: 16px;
+	position: absolute;
+	overflow: visible;
+	width: 283px;
+	height: 33px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 27px;
+	color: rgba(240,243,246,1);
+}
+#logo-canto {
+	position: absolute;
+	width: 96px;
+	height: 80px;
+	left: 1408px;
+	top: 235px;
+	overflow: visible;
+}
+#fundo-logo {
+	fill: rgba(7,69,131,1);
+}
+.fundo-logo {
+	position: absolute;
+	overflow: visible;
+	width: 96px;
+	height: 80px;
+	left: 0px;
+	top: 0px;
+}
+#logo {
+	position: absolute;
+	width: 63px;
+	height: 63px;
+	left: 21px;
+	top: 10px;
+	overflow: visible;
+}
+#informacoes-parceiro-cliente {
+	position: absolute;
+	width: 639px;
+	height: 244px;
+	left: 447px;
+	top: 360px;
+	overflow: visible;
+}
+#CPF {
+	left: 0px;
+	top: 121px;
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#n__999999-9 {
+	left: 72px;
+	top: 121px;
+	position: absolute;
+	overflow: visible;
+	width: 488px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#Telefone {
+	left: 0px;
+	top: 164px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#n_1_99999-9999 {
+	left: 130px;
+	top: 164px;
+	position: absolute;
+	overflow: visible;
+	width: 488px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#Usurio {
+	left: 0px;
+	top: 35px;
+	position: absolute;
+	overflow: visible;
+	width: 275px;
+	height: 86px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+#IDC_12 {
+	left: 225px;
+	top: 84px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	height: 19px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(238,230,67,1);
+}
+#Cupons {
+	left: 0px;
+	top: 207px;
+	position: absolute;
+	overflow: visible;
+	width: 157px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(255,255,255,1);
+}
+#n_99 {
+	left: 115px;
+	top: 207px;
+	position: absolute;
+	overflow: visible;
+	width: 488px;
+	height: 37px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 30px;
+	color: rgba(238,230,67,1);
+}
+#buttom-voltar {
+	position: absolute;
+	width: 150px;
+	height: 34px;
+	left: 489px;
+	top: 5px;
+	overflow: visible;
+}
+#buttom-voltar-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-voltar-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 34px;
+	left: 0px;
+	top: 0px;
+}
+#Voltar {
+	left: 49px;
+	top: 3px;
+	position: absolute;
+	overflow: visible;
+	width: 54px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(255,255,255,1);
+}
+#Cliente {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 43px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(255,255,255,1);
+}
+#atualizar-cupons {
+	position: absolute;
+	width: 648px;
+	height: 170px;
+	left: 451px;
+	top: 642px;
+	overflow: visible;
+}
+#Cliente_possui {
+	left: 0px;
+	top: 83px;
+	position: absolute;
+	overflow: visible;
+	width: 236px;
+	height: 43px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(255,255,255,1);
+}
+#contador-cupons {
+	position: absolute;
+	width: 226px;
+	height: 126px;
+	left: 225px;
+	top: 44px;
+	overflow: visible;
+}
+#n_99_cu {
+	left: 0px;
+	top: 20px;
+	position: absolute;
+	overflow: visible;
+	width: 120px;
+	height: 86px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+#buttom-aumentar {
+	position: absolute;
+	width: 23px;
+	height: 19px;
+	left: 48px;
+	top: 3px;
+	overflow: visible;
+}
+#buttom-aumentar-fundo {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-aumentar-fundo {
+	overflow: visible;
+	position: absolute;
+	width: 29px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#buttom-aumentar-shape {
+	fill: rgba(238,230,67,1);
+	stroke: rgba(6,53,101,1);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-aumentar-shape {
+	overflow: visible;
+	position: absolute;
+	width: 20px;
+	height: 18px;
+	left: 3px;
+	top: 2.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#buttom-diminuir {
+	transform: translate(-683px, -686px) matrix(1,0,0,1,731,792) rotate(180deg);
+	transform-origin: center;
+	position: absolute;
+	width: 23px;
+	height: 19px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#buttom-diminuir-fundo {
+	fill: rgba(255,255,255,1);
+	stroke: rgba(255,255,255,1);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-diminuir-fundo {
+	overflow: visible;
+	position: absolute;
+	width: 29px;
+	height: 25px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#buttom-diminuir-shape {
+	fill: rgba(238,230,67,1);
+	stroke: rgba(6,53,101,1);
+	stroke-width: 3px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-diminuir-shape {
+	overflow: visible;
+	position: absolute;
+	width: 20px;
+	height: 18px;
+	left: 3px;
+	top: 1.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#n_ {
+	left: 106px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(32,206,119,1);
+}
+#n_1 {
+	left: 106px;
+	top: 101px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(206,32,49,1);
+}
+#Cupons_c {
+	left: 130px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 72px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(255,255,255,1);
+}
+#buttom-cupons {
+	position: absolute;
+	width: 173px;
+	height: 86px;
+	left: 475px;
+	top: 65px;
+	overflow: visible;
+}
+#buttom-aplicar {
+	position: absolute;
+	width: 173px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#buttom-aplicar-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 4px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-aplicar-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 173px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#Aplicar {
+	left: 51px;
+	top: 11px;
+	position: absolute;
+	overflow: visible;
+	width: 73px;
+	height: 30px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#buttom-limpar {
+	position: absolute;
+	width: 98px;
+	height: 22px;
+	left: 37px;
+	top: 64px;
+	overflow: visible;
+}
+#buttom-limpar-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-limpar-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 98px;
+	height: 22px;
+	left: 0px;
+	top: 0px;
+}
+#Limpar {
+	left: 29px;
+	top: 2px;
+	position: absolute;
+	overflow: visible;
+	width: 39px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 13px;
+	color: rgba(255,255,255,1);
+}
+#Por_favor_digite_quantidade_de {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 626px;
+	height: 35px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 19px;
+	color: rgba(255,255,255,1);
+}

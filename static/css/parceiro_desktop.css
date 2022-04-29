@@ -1,0 +1,1004 @@
+.mediaViewInfo {
+	--web-view-name: parceiro_desktop;
+	--web-view-id: parceiro_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: parceiro_desktop;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#parceiro_desktop {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	background-color: rgba(238,230,67,1);
+	overflow: hidden;
+	--web-view-name: parceiro_desktop;
+	--web-view-id: parceiro_desktop;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#area-do-parceiro-fundo {
+	position: absolute;
+	width: 2000.851px;
+	height: 1079.801px;
+	left: -40.426px;
+	top: 0px;
+	overflow: visible;
+}
+#circulo-elemento {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento {
+	overflow: visible;
+	position: absolute;
+	width: 261.657px;
+	height: 261.657px;
+	left: 1229.668px;
+	top: 744.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_t {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_t {
+	overflow: visible;
+	position: absolute;
+	width: 392.485px;
+	height: 392.485px;
+	left: 1033.426px;
+	top: 74.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_u {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_u {
+	overflow: visible;
+	position: absolute;
+	width: 183.776px;
+	height: 183.776px;
+	left: 237.389px;
+	top: 97.053px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_v {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_v {
+	overflow: visible;
+	position: absolute;
+	width: 315.576px;
+	height: 315.576px;
+	left: 1505.846px;
+	top: 300.171px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#retangulo-fundo {
+	fill: rgba(9,78,147,1);
+}
+.retangulo-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 1155px;
+	height: 670px;
+	left: 423.426px;
+	top: 205px;
+}
+#retangulo-menor {
+	fill: rgba(7,69,131,1);
+}
+.retangulo-menor {
+	position: absolute;
+	overflow: visible;
+	width: 1111px;
+	height: 629px;
+	left: 445.426px;
+	top: 226px;
+}
+#circulo-elemento_y {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_y {
+	overflow: visible;
+	position: absolute;
+	width: 425.016px;
+	height: 425.016px;
+	left: 40.426px;
+	top: 636.984px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#shape-bottom {
+	fill: rgba(255,255,255,1);
+}
+.shape-bottom {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	transform: translate(40.426px, 0px) matrix(1,0,0,1,-40.4257,929) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#shape-top {
+	fill: rgba(255,255,255,1);
+}
+.shape-top {
+	overflow: visible;
+	position: absolute;
+	width: 2000.851px;
+	height: 150.801px;
+	left: 0px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#wrap-historico {
+	position: absolute;
+	width: 410px;
+	height: 590px;
+	left: 1090px;
+	top: 245px;
+	overflow: visible;
+}
+#historico-fundo {
+	fill: rgba(255,255,255,1);
+}
+.historico-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 410px;
+	height: 590px;
+	left: 0px;
+	top: 0px;
+}
+#divisor-1 {
+	fill: transparent;
+	stroke: rgba(0,0,0,0.341);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.divisor-1 {
+	overflow: visible;
+	position: absolute;
+	width: 305px;
+	height: 1px;
+	left: 65.5px;
+	top: 246.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#divisor-2 {
+	fill: transparent;
+	stroke: rgba(0,0,0,0.341);
+	stroke-width: 1px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.divisor-2 {
+	overflow: visible;
+	position: absolute;
+	width: 305px;
+	height: 1px;
+	left: 65.5px;
+	top: 415.5px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#info-historico-parceiro {
+	position: absolute;
+	width: 329px;
+	height: 100px;
+	left: 22px;
+	top: 115px;
+	overflow: visible;
+}
+#Cliente {
+	left: 43px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 67px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#Maria_-_IDC86 {
+	left: 113px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Data {
+	left: 43px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_7042022 {
+	left: 93px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Horrio {
+	left: 43px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_33312 {
+	left: 116px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Quantidade {
+	left: 43px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_5 {
+	left: 157px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Adicionados {
+	left: 183px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(32,206,119,1);
+}
+#Text {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(7,69,131,1);
+}
+#info-historico-parceiro_bg {
+	position: absolute;
+	width: 328px;
+	height: 100px;
+	left: 23px;
+	top: 284px;
+	overflow: visible;
+}
+#Data_bh {
+	left: 42px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_0032022 {
+	left: 92px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Horrio_bj {
+	left: 42px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_81342 {
+	left: 115px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Quantidade_bl {
+	left: 42px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_0 {
+	left: 156px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Removidos {
+	left: 182px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(206,32,49,1);
+}
+#Cliente_bo {
+	left: 42px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 67px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#Rogrio_-_IDC673 {
+	left: 112px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Text_bq {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(7,69,131,1);
+}
+#info-historico-parceiro_br {
+	position: absolute;
+	width: 329px;
+	height: 100px;
+	left: 22px;
+	top: 453px;
+	overflow: visible;
+}
+#Data_bs {
+	left: 43px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 51px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_1032022 {
+	left: 93px;
+	top: 25px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Horrio_bu {
+	left: 43px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 74px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_24302 {
+	left: 116px;
+	top: 50px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Quantidade_bw {
+	left: 43px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 112px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#n_1 {
+	left: 157px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 22px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Adicionados_by {
+	left: 180px;
+	top: 75px;
+	position: absolute;
+	overflow: visible;
+	width: 121px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(32,206,119,1);
+}
+#Cliente_bz {
+	left: 43px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 67px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,69,131,1);
+}
+#Lucas_-_IDC73 {
+	left: 113px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 214px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(7,7,7,1);
+}
+#Text_b {
+	left: 0px;
+	top: 31px;
+	position: absolute;
+	overflow: visible;
+	width: 44px;
+	height: 38px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(7,69,131,1);
+}
+#Histrico_do_Parceiro {
+	left: 36px;
+	top: 19px;
+	position: absolute;
+	overflow: visible;
+	width: 283px;
+	height: 33px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 27px;
+	color: rgba(7,69,131,1);
+}
+#logo-canto {
+	position: absolute;
+	width: 96px;
+	height: 80px;
+	left: 1408px;
+	top: 235px;
+	overflow: visible;
+}
+#logo-fundo {
+	fill: rgba(7,69,131,1);
+}
+.logo-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 96px;
+	height: 80px;
+	left: 0px;
+	top: 0px;
+}
+#logo {
+	position: absolute;
+	width: 63px;
+	height: 63px;
+	left: 21px;
+	top: 10px;
+	overflow: visible;
+}
+#area-do-parceiro {
+	position: absolute;
+	width: 547px;
+	height: 74px;
+	left: 447px;
+	top: 248px;
+	overflow: visible;
+}
+#rea_do_Parceiro {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 548px;
+	height: 55px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 45px;
+	color: rgba(255,255,255,1);
+}
+#Sair {
+	left: 0px;
+	top: 49px;
+	position: absolute;
+	overflow: visible;
+	width: 299px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#wrap-abas-parceiro {
+	position: absolute;
+	width: 639px;
+	height: 274px;
+	left: 425px;
+	top: 561px;
+	overflow: visible;
+}
+#aba-parceiro-1 {
+	position: absolute;
+	width: 639px;
+	height: 274px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#abas-fundo {
+	fill: rgba(6,53,101,1);
+}
+.abas-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 639px;
+	height: 222px;
+	left: 0px;
+	top: 52px;
+}
+#abas-cupons-fundo {
+	fill: rgba(6,53,101,1);
+}
+.abas-cupons-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 220px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#Cupons {
+	left: 75px;
+	top: 13px;
+	position: absolute;
+	overflow: visible;
+	width: 71px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
+	color: rgba(255,255,255,1);
+}
+#input-cpf-clinte {
+	position: absolute;
+	width: 552px;
+	height: 90px;
+	left: 22px;
+	top: 153px;
+	overflow: visible;
+}
+#input-cpf {
+	position: absolute;
+	width: 418px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	overflow: visible;
+}
+#input-1 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-1 {
+	position: absolute;
+	overflow: visible;
+	width: 418px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#CPF {
+	opacity: 0.49;
+	left: 25px;
+	top: 6px;
+	position: absolute;
+	overflow: visible;
+	width: 373px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#buttom-ok {
+	position: absolute;
+	width: 123px;
+	height: 52px;
+	left: 429px;
+	top: 0px;
+	overflow: visible;
+}
+#buttom-ok-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 8px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-ok-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 123px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+}
+#OK {
+	left: 41px;
+	top: 7px;
+	position: absolute;
+	overflow: visible;
+	width: 41px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(255,255,255,1);
+}
+#No_foi_possvel_encontrar_uma_c {
+	left: 0px;
+	top: 65px;
+	position: absolute;
+	overflow: visible;
+	width: 553px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(238,230,67,1);
+}
+#Por_favor_digite_o_CPF_do_clie {
+	left: 22px;
+	top: 66px;
+	position: absolute;
+	overflow: visible;
+	width: 553px;
+	height: 74px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#informacoes-parceiro {
+	position: absolute;
+	width: 547px;
+	height: 212px;
+	left: 447px;
+	top: 332px;
+	overflow: visible;
+}
+#Ol_Parceiro {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 548px;
+	height: 86px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 70px;
+	color: rgba(255,255,255,1);
+}
+#CNPJ {
+	left: 0px;
+	top: 102px;
+	position: absolute;
+	overflow: visible;
+	width: 57px;
+	white-space: nowrap;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#n__999999-9999 {
+	left: 64px;
+	top: 102px;
+	position: absolute;
+	overflow: visible;
+	width: 317px;
+	height: 30px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#E-mail {
+	left: 0px;
+	top: 142px;
+	position: absolute;
+	overflow: visible;
+	width: 82px;
+	height: 30px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#parceirobapkasorvetescombr {
+	left: 81px;
+	top: 142px;
+	position: absolute;
+	overflow: visible;
+	width: 347px;
+	height: 30px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#IDP_12 {
+	left: 398px;
+	top: 53px;
+	position: absolute;
+	overflow: visible;
+	width: 59px;
+	height: 19px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 15px;
+	color: rgba(238,230,67,1);
+}
+#Telefone {
+	left: 0px;
+	top: 182px;
+	position: absolute;
+	overflow: visible;
+	width: 102px;
+	height: 30px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#n_1_99999-9999 {
+	left: 111px;
+	top: 182px;
+	position: absolute;
+	overflow: visible;
+	width: 317px;
+	height: 30px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
