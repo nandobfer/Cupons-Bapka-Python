@@ -823,7 +823,7 @@
 	color: rgba(255,255,255,1);
 }
 #IDC_12 {
-	left: 225px;
+	right: 0;
 	top: 84px;
 	position: absolute;
 	overflow: visible;
@@ -890,8 +890,6 @@
 	top: 0px;
 }
 #Voltar {
-	left: 49px;
-	top: 3px;
 	position: absolute;
 	overflow: visible;
 	width: 54px;
@@ -1193,3 +1191,58 @@
 	font-size: 19px;
 	color: rgba(255,255,255,1);
 }
+
+a:link {
+	text-decoration: none;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:visited {
+	text-decoration: none;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:hover {
+	text-decoration: underline;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:active {
+	text-decoration: underline;
+	color: rgba(238,230,67,1);
+  }
+
+  .button {
+	background-color: rgba(9,78,147,1);
+	border: 4px solid rgba(238,230,67,1);
+	color: white;
+    font-family: Arciform Sans, "sans-serif";
+    border-radius: 71px;
+    cursor: pointer;
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 34px;
+	left: 0px;
+	top: 0px;
+	font-size: 22px;
+	transition: all .2s;
+  }
+  
+  .button:hover {
+    border-color: rgba(9,78,147,1);
+    background-color: rgba(238,230,67,1);
+	color: rgba(9,78,147,1);
+  }
+
+  #button-aplicar {
+	  width: 173px;
+	  height: 52px;
+  }
+
+  #button-limpar {
+	width: 98px;
+	height: 22px;
+	font-size: 13px;
+	border: 2px solid rgba(238,230,67,1);
+  }
