@@ -859,16 +859,16 @@
 	top: 235px;
 	overflow: visible;
 }
-#fundo-logo {
-	fill: rgba(7,69,131,1);
-}
+
 .fundo-logo {
+	background-color: rgba(7,69,131,1);
 	position: absolute;
 	overflow: visible;
 	width: 96px;
 	height: 80px;
 	left: 0px;
 	top: 0px;
+	border-radius: 0px 30px 0px 30px;
 }
 #logo {
 	position: absolute;
