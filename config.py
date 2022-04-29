@@ -12,6 +12,7 @@ TELEFONE = "Telefone"
 # employees database
 DATABASE_EMPLOYEES = 'database_employees.json'
 # constants
+CNPJ = "CNPJ"
 ID = "Id"
 DATA = "Data"
 HORARIO = "Horário"

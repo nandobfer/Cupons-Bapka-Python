@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>parceiro_desktop</title>
-<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="../static/css/parceiro_desktop.css"/>
-<script id="applicationScript" type="text/javascript" src="../static/js/parceiro_desktop.js"></script>
+<link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/parceiro_desktop.css"/>
+<script id="applicationScript" type="text/javascript" src="/static/js/parceiro_desktop.js"></script>
 </head>
 <body>
 <div id="parceiro_desktop">
@@ -66,107 +66,136 @@
 				<span>Cliente:</span>
 			</div>
 			<div id="Maria_-_IDC86">
-				<span>Maria - IDC:86</span>
+				<span>{{history1_name}} - IDC:{{history1_idc}}</span>
 			</div>
 			<div id="Data">
 				<span>Data:</span>
 			</div>
 			<div id="n_7042022">
-				<span>17/04/2022</span>
+				<span>{{history1_data}}</span>
 			</div>
 			<div id="Horrio">
 				<span>Horário:</span>
 			</div>
 			<div id="n_33312">
-				<span>13:33:12</span>
+				<span>{{history1_time}}</span>
 			</div>
 			<div id="Quantidade">
 				<span>Quantidade:</span>
 			</div>
 			<div id="n_5">
-				<span>05</span>
+				<span>{{history1_quantity_abs}}</span>
 			</div>
 			<div id="Adicionados">
-				<span>Adicionado(s)</span>
+				<span>{{history1_modified}}</span>
 			</div>
 			<div id="Text">
 				<span>●</span>
 			</div>
+			<script>
+				if (parseInt("{{history1_quantity}}") > 0) {
+				
+					document.getElementById("Adicionados").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+
+					document.getElementById("Adicionados").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 		</div>
 		<div id="info-historico-parceiro_bg">
 			<div id="Data_bh">
 				<span>Data:</span>
 			</div>
 			<div id="n_0032022">
-				<span>10/03/2022</span>
+				<span>{{history2_data}}</span>
 			</div>
 			<div id="Horrio_bj">
 				<span>Horário:</span>
 			</div>
 			<div id="n_81342">
-				<span>18:13:42</span>
+				<span>{{history2_time}}</span>
 			</div>
 			<div id="Quantidade_bl">
 				<span>Quantidade:</span>
 			</div>
 			<div id="n_0">
-				<span>50</span>
+				<span>{{history2_quantity_abs}}</span>
 			</div>
 			<div id="Removidos">
-				<span>Removido(s)</span>
+				<span>{{history2_modified}}</span>
 			</div>
 			<div id="Cliente_bo">
 				<span>Cliente:</span>
 			</div>
 			<div id="Rogrio_-_IDC673">
-				<span>Rogério - IDC:673</span>
+				<span>{{history2_name}} - IDC:{{history2_idc}}</span>
 			</div>
 			<div id="Text_bq">
 				<span>●</span>
 			</div>
+			<script>
+				if (parseInt("{{history2_quantity}}") > 0) {
+				
+					document.getElementById("Removidos").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+
+					document.getElementById("Removidos").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 		</div>
 		<div id="info-historico-parceiro_br">
 			<div id="Data_bs">
 				<span>Data:</span>
 			</div>
 			<div id="n_1032022">
-				<span>01/03/2022</span>
+				<span>{{history3_data}}/span>
 			</div>
 			<div id="Horrio_bu">
 				<span>Horário:</span>
 			</div>
 			<div id="n_24302">
-				<span>02:43:02</span>
+				<span>{{history3_time}}</span>
 			</div>
 			<div id="Quantidade_bw">
 				<span>Quantidade:</span>
 			</div>
 			<div id="n_1">
-				<span>01</span>
+				<span>{{history3_quantity_abs}}</span>
 			</div>
 			<div id="Adicionados_by">
-				<span>Adicionado(s)</span>
+				<span>{{history3_modified}}</span>
 			</div>
 			<div id="Cliente_bz">
 				<span>Cliente:</span>
 			</div>
 			<div id="Lucas_-_IDC73">
-				<span>Lucas - IDC:73</span>
+				<span>{{history3_name}} - IDC:{{history3_idc}}</span>
 			</div>
 			<div id="Text_b">
 				<span>●</span>
 			</div>
+			<script>
+				if (parseInt("{{history3_quantity}}") > 0) {
+				
+					document.getElementById("Adicionados_by").style.color = "rgba(32,206,119,1)";
+				}
+				else {
+
+					document.getElementById("Adicionados_by").style.color = "rgba(206,32,49,1)";
+				}
+			</script>
 		</div>
 		<div id="Histrico_do_Parceiro">
 			<span>Histórico do Parceiro</span>
 		</div>
 	</div>
 	<div id="logo-canto">
-		<svg class="logo-fundo">
-			<rect id="logo-fundo" rx="0" ry="0" x="0" y="0" width="96" height="80">
-			</rect>
-		</svg>
-		<img id="logo" src="../static/images/logo.webp" srcset="../static/images/logo.webp 1x">
+		<div class="logo-fundo">
+			
+		</div>
+		<img id="logo" src="/static/images/logo.webp" srcset="/static/images/logo.webp 1x">
 			
 	</div>
 	<div id="area-do-parceiro">
@@ -174,45 +203,36 @@
 			<span>Área do Parceiro</span>
 		</div>
 		<div id="Sair">
-			<span>Sair</span>
+			<a href="/home">
+				<span>Sair</span>
+			</a>
 		</div>
 	</div>
 	<div id="wrap-abas-parceiro">
 		<div id="aba-parceiro-1">
-			<svg class="abas-fundo">
-				<rect id="abas-fundo" rx="0" ry="0" x="0" y="0" width="639" height="222">
-				</rect>
-			</svg>
-			<svg class="abas-cupons-fundo">
-				<rect id="abas-cupons-fundo" rx="30" ry="30" x="0" y="0" width="220" height="52">
-				</rect>
-			</svg>
+			<div class="abas-fundo">
+				
+			</div>
+			<div class="abas-cupons-fundo">
+				
+			</div>
 			<div id="Cupons">
 				<span>Cupons</span>
 			</div>
-			<div id="input-cpf-clinte">
-				<div id="input-cpf">
-					<svg class="input-1">
-						<rect id="input-1" rx="26" ry="26" x="0" y="0" width="418" height="52">
-						</rect>
-					</svg>
-					<div id="CPF">
-						<span>CPF</span>
+			<form method="post">
+				<div id="input-cpf-clinte">
+					<div id="input-cpf">
+						<input type="text" class="input-1" id="input-1" name="form_cpf" placeholder="CPF" required>
+					</div>
+					<div id="buttom-ok">
+						<button type="submit" class="button" name="employee_panel" class="btn">OK</button>
+
+					</div>
+					<div id="No_foi_possvel_encontrar_uma_c">
+						<span>{{error}}</span>
 					</div>
 				</div>
-				<div id="buttom-ok">
-					<svg class="buttom-ok-fundo">
-						<rect id="buttom-ok-fundo" rx="26" ry="26" x="0" y="0" width="123" height="52">
-						</rect>
-					</svg>
-					<div id="OK">
-						<span>OK</span>
-					</div>
-				</div>
-				<div id="No_foi_possvel_encontrar_uma_c">
-					<span>Não foi possível encontrar uma conta com esse nome de usuário.</span>
-				</div>
-			</div>
+			</form>
 			<div id="Por_favor_digite_o_CPF_do_clie">
 				<span>Por favor digite o CPF do cliente para adicionar ou remover cupons</span>
 			</div>
@@ -220,28 +240,28 @@
 	</div>
 	<div id="informacoes-parceiro">
 		<div id="Ol_Parceiro">
-			<span>Olá, Parceiro!</span>
+			<span>Olá, {{name}}!</span>
 		</div>
 		<div id="CNPJ">
 			<span>CNPJ:</span>
 		</div>
 		<div id="n__999999-9999">
-			<span>9 999.999-9/999</span>
+			<span>{{cnpj}}</span>
 		</div>
 		<div id="E-mail">
 			<span>E-mail:</span>
 		</div>
 		<div id="parceirobapkasorvetescombr">
-			<span>parceiro@bapkasorvetes.com.br</span>
+			<span>{{email}}</span>
 		</div>
 		<div id="IDP_12">
-			<span>IDP: 12</span>
+			<span>IDP: {{employee_id}}</span>
 		</div>
 		<div id="Telefone">
 			<span>Telefone:</span>
 		</div>
 		<div id="n_1_99999-9999">
-			<span>41 99999-9999</span>
+			<span>{{telefone}}</span>
 		</div>
 	</div>
 </div>

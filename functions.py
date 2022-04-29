@@ -101,6 +101,16 @@ def formatCPF(cpf):
 
         return ''.join(cpf)
 
+def formatCNPJ(cnpj):
+        
+        cnpj = list(cnpj)
+        cnpj.insert(2, '.')
+        cnpj.insert(6, '.')
+        cnpj.insert(10, '/')
+        cnpj.insert(15, '-')
+
+        return ''.join(cnpj)
+
 def formatTelefone(telefone):
         #41 99999-9999
         telefone = list(telefone)

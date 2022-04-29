@@ -666,16 +666,15 @@
 	top: 235px;
 	overflow: visible;
 }
-#logo-fundo {
-	fill: rgba(7,69,131,1);
-}
 .logo-fundo {
+	background-color: rgba(7,69,131,1);
 	position: absolute;
 	overflow: visible;
 	width: 96px;
 	height: 80px;
 	left: 0px;
 	top: 0px;
+	border-radius: 0 30px 0 30px;
 }
 #logo {
 	position: absolute;
@@ -737,27 +736,25 @@
 	top: 0px;
 	overflow: visible;
 }
-#abas-fundo {
-	fill: rgba(6,53,101,1);
-}
 .abas-fundo {
+	background-color: rgba(6,53,101,1);
 	position: absolute;
 	overflow: visible;
 	width: 639px;
 	height: 222px;
 	left: 0px;
 	top: 52px;
-}
-#abas-cupons-fundo {
-	fill: rgba(6,53,101,1);
+	border-radius: 0 30px 30px 50px;
 }
 .abas-cupons-fundo {
+	background-color: rgba(6,53,101,1);
 	position: absolute;
 	overflow: visible;
 	width: 220px;
 	height: 52px;
 	left: 0px;
 	top: 0px;
+	border-radius: 30px 30px 0 0;
 }
 #Cupons {
 	left: 75px;
@@ -793,12 +790,20 @@
 	fill: rgba(255,255,255,0.941);
 }
 .input-1 {
+	background-color: rgba(255,255,255,0.941);
 	position: absolute;
 	overflow: visible;
 	width: 418px;
 	height: 52px;
 	left: 0px;
 	top: 0px;
+	border-radius: 71px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	padding: 25px;
 }
 #CPF {
 	opacity: 0.49;
@@ -961,7 +966,7 @@
 	color: rgba(255,255,255,1);
 }
 #IDP_12 {
-	left: 398px;
+	right: 0px;
 	top: 53px;
 	position: absolute;
 	overflow: visible;
@@ -1002,3 +1007,43 @@
 	font-size: 25px;
 	color: rgba(255,255,255,1);
 }
+a:link {
+	text-decoration: none;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:visited {
+	text-decoration: none;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:hover {
+	text-decoration: underline;
+	color: rgba(238,230,67,1);
+  }
+  
+  a:active {
+	text-decoration: underline;
+	color: rgba(238,230,67,1);
+  }
+  .button {
+	background-color: rgba(9,78,147,1);
+	border: 6px solid rgba(238,230,67,1);
+	color: white;
+    font-family: Arciform Sans, "sans-serif";
+    border-radius: 71px;
+    cursor: pointer;
+	position: absolute;
+	overflow: visible;
+	width: 123px;
+	height: 52px;
+	left: 0px;
+	top: 0px;
+	font-size: 32px;
+	transition: all .2s;
+  }
+  .button:hover {
+    border-color: rgba(9,78,147,1);
+    background-color: rgba(238,230,67,1);
+	color: rgba(9,78,147,1);
+  }

@@ -1,7 +1,8 @@
 {
     "00": {
         "Nome": "Fernando",
-        "CPF": "02576698506",
+        "CNPJ": "00000000000000",
+        "Telefone": "41988776655",
         "E-mail": "fernando@agenciazop.com.br",
         "password": "burgos",
         "Hist\u00d3rico": [
@@ -786,7 +787,8 @@
     },
     "01": {
         "Nome": "Yasmin",
-        "CPF": "12345678901",
+        "CNPJ": "00000000000000",
+        "Telefone": "41988776655",
         "E-mail": "yahabelaira@gmail.com",
         "password": "yahlinda",
         "Hist\u00d3rico": [
@@ -990,7 +992,8 @@
     },
     "02": {
         "Nome": "Priscila",
-        "CPF": "123",
+        "CNPJ": "00000000000000",
+        "Telefone": "41988776655",
         "E-mail": "priscila.varela@bapka.com.br",
         "password": "123",
         "Hist\u00d3rico": [
@@ -1446,7 +1449,8 @@
     },
     "03": {
         "Nome": "Mizael",
-        "CPF": "12345678901",
+        "CNPJ": "00000000000000",
+        "Telefone": "41988776655",
         "E-mail": "mizael@agenciazop.com.br",
         "password": "123",
         "Hist\u00d3rico": [
