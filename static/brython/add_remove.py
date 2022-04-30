@@ -13,12 +13,6 @@ def setIdentification(element, data):
         id = data['Id']
         element.textContent = f'{name} - IDP: {id}'
         
-def setColor(element, num):
-        if num < 0:
-                element.style.color = "rgba(32,206,119,1)"
-        else:
-                element.style.color = "rgba(206,32, 49,1)"
-        
 def setHistoryValues(element, data, key):
         if key == 'mod-cupons':
                 if data['Quantidade'] > 0:
@@ -40,18 +34,17 @@ def setHistoryValues(element, data, key):
         else:
                 element.textContent = data[config[key]]
                 
-        
-
-
-for container in document.select('.history'):
-        index = document.select('.history').index(container)
-        
-        for element in container.children:
-                element_class = element.class_name.split()
-                if len(element_class) > 1:
-                        if element_class[1] == 'history-data':
-                                if element_class[0] == 'name_id':
-                                        setIdentification(element, history[index])
-                                else:
-                                        setHistoryValues(element, history[index], element_class[0])
+def setHistory():
+        for container in document.select('.history'):
+                index = document.select('.history').index(container)
+                
+                for element in container.children:
+                        element_class = element.class_name.split()
+                        if len(element_class) > 1:
+                                if element_class[1] == 'history-data':
+                                        if element_class[0] == 'name_id':
+                                                setIdentification(element, history[index])
+                                        else:
+                                                setHistoryValues(element, history[index], element_class[0])
                                         
+setHistory()
