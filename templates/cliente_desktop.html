@@ -7,8 +7,10 @@
 <title>cliente_desktop</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/cliente_desktop.css"/>
 <script id="applicationScript" type="text/javascript" src="/static/js/cliente_desktop.js"></script>
+<script src="/static/brython/brython.js"></script>
+<script type="text/javascript" src="/static/brython/brython_stdlib.js"></script>
 </head>
-<body>
+<body onload="brython()">
 <div id="cliente_desktop">
 	<div id="area-do-cliente-fundo">
 		<svg class="circulo-elemento" viewBox="0 0 315.576 315.576">
@@ -104,32 +106,32 @@
 			</path>
 		</svg>
 		<div id="Grupo_14">
-			<div id="info-historico-cliente">
+			<div id="info-historico-cliente" class="history">
 				<div id="Atualizado_por_">
 					<span>Atualizado por: </span>
 				</div>
-				<div id="Luiz_-_IDP43">
+				<div id="Luiz_-_IDP43" class="name_id history-data">
 					<span>{{history2_name}} - IDP:{{history2_idp}}</span>
 				</div>
 				<div id="Data">
 					<span>Data:</span>
 				</div>
-				<div id="n_4042022">
+				<div id="n_4042022" class="date history-data">
 					<span>{{history2_data}}</span>
 				</div>
 				<div id="Horrio">
 					<span>Horário:</span>
 				</div>
-				<div id="n_21342">
+				<div id="n_21342" class="time history-data">
 					<span>{{history2_time}}</span>
 				</div>
 				<div id="Quantidade">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_0" class="quantidades">
+				<div id="n_0" class="quantidades history-data">
 					<span>{{history2_quantity_abs}}</span>
 				</div>
-				<div id="Removidos" class="mod-cupons">
+				<div id="Removidos" class="mod-cupons history-data">
 					<span>{{history2_modified}}</span>
 				</div>
 				<div id="Text">
@@ -146,32 +148,32 @@
 					}
 				</script>
 			</div>
-			<div id="info-historico-cliente_bw">
+			<div id="info-historico-cliente_bw" class="history">
 				<div id="Atualizado_por__bx">
 					<span>Atualizado por: </span>
 				</div>
-				<div id="Marcelo_-_IDP02">
+				<div id="Marcelo_-_IDP02" class="name_id history-data">
 					<span>{{history1_name}} - IDP:{{history1_idp}}</span>
 				</div>
 				<div id="Data_bz">
 					<span>Data:</span>
 				</div>
-				<div id="n_9042022">
+				<div id="n_9042022" class="date history-data">
 					<span>{{history1_data}}</span>
 				</div>
 				<div id="Horrio_b">
 					<span>Horário:</span>
 				</div>
-				<div id="n_63312">
+				<div id="n_63312" class="time history-data">
 					<span>{{history1_time}}</span>
 				</div>
 				<div id="Quantidade_b">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_3" class="quantidades">
+				<div id="n_3" class="quantidades history-data">
 					<span>{{history1_quantity_abs}}</span>
 				</div>
-				<div id="Adicionados" class="mod-cupons">
+				<div id="Adicionados" class="mod-cupons history-data">
 					<span>{{history1_modified}}</span>
 				</div>
 				<div id="Text_b">
@@ -188,32 +190,32 @@
 					}
 				</script>
 			</div>
-			<div id="info-historico-cliente_b">
+			<div id="info-historico-cliente_b" class="history">
 				<div id="Atualizado_por__b">
 					<span>Atualizado por: </span>
 				</div>
-				<div id="Joo_-_IDP41">
+				<div id="Joo_-_IDP41" class="name_id history-data">
 					<span>{{history3_name}} - IDP:{{history3_idp}}</span>
 				</div>
 				<div id="Data_ca">
 					<span>Data:</span>
 				</div>
-				<div id="n_1042022">
+				<div id="n_1042022" class="date history-data">
 					<span>{{history3_data}}</span>
 				</div>
 				<div id="Horrio_cc">
 					<span>Horário:</span>
 				</div>
-				<div id="n_94302">
+				<div id="n_94302" class="time history-data">
 					<span>{{history3_time}}</span>
 				</div>
 				<div id="Quantidade_ce">
 					<span>Quantidade:</span>
 				</div>
-				<div id="n_7" class="quantidades">
+				<div id="n_7" class="quantidades history-data">
 					<span>{{history3_quantity_abs}}</span>
 				</div>
-				<div id="Adicionados_cg" class="mod-cupons">
+				<div id="Adicionados_cg" class="mod-cupons history-data">
 					<span>{{history3_modified}}</span>
 				</div>
 				<div id="Text_ch">
@@ -229,6 +231,7 @@
 						document.getElementById("Adicionados_cg").style.color = "rgba(206,32,49,1)";
 					}
 				</script>
+				<script src="/static/brython/add_remove.py" type="text/python" id="add_remove" history="{{history}}"></script>
 			</div>
 			<div id="Seu_Histrico">
 				<span>Seu Histórico</span>

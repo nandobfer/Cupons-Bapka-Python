@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="/static/brython/brython.js"></script>
+    <script type="text/javascript" src="/static/brython_stdlib.js"></script>
 </head>
-<body>
+<body onload="brython()">
     <div class="container">
         <p>alterar_telefone</p>
     </div>
+    <script src="/static/brython/functions.py" id="py" type="text/python" select="1">
+        
+    </script>
+    <input id="zone">
+    <button id="button_alert">click !</button>
 </body>
 </html>
