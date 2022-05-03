@@ -6,9 +6,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>parceiro_cliente_desktop</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/parceiro_cliente_desktop.css"/>
+<script type="text/javascript" src="/static/brython/brython.js"></script>
+<script type="text/javascript" src="/static/brython/brython_stdlib.js"></script>
+<script src="/static/brython/add_remove.py" type="text/python"></script>
+<script type="text/python" src="/static/brython/mod_cupons.py"></script>
 <script id="applicationScript" type="text/javascript" src="/static/js/parceiro_cliente_desktop.js"></script>
 </head>
-<body>
+<body onload="brython()">
 <div id="parceiro_cliente_desktop">
 	<div id="area-do-parceiro-cliente-fundo">
 		<svg class="circulo-elemento" viewBox="0 0 261.657 261.657">
@@ -67,22 +71,22 @@
 			<rect id="historico-fundo" rx="30" ry="30" x="0" y="0" width="387" height="496">
 			</rect>
 		</svg>
-		<div id="info-historico-parceiro-client">
+		<div id="info-historico-parceiro-client" class="history">
 			<div id="grupo-texto-2">
-				<div id="Marcelo_-_IDP02">
+				<div id="Marcelo_-_IDP02" class="name_id history-data">
 					<span>{{history1_name}} - IDP:{{history1_idp}}</span>
 				</div>
-				<div id="n_9042022">
+				<div id="n_9042022" class="date history-data">
 					<span>{{history1_data}}</span>
 				</div>
-				<div id="n_63312">
+				<div id="n_63312" class="time history-data">
 					<span>{{history1_time}}</span>
 				</div>
-				<div id="n_3">
+				<div id="n_3" class="quantidades history-data">
 					<span>{{history1_quantity_abs}}</span>
 				</div>
 			</div>
-			<div id="Adicionados">
+			<div id="Adicionados" class="mod-cupons history-data">
 				<span>{{history1_modified}}</span>
 			</div>
 			<script>
@@ -113,22 +117,22 @@
 				</div>
 			</div>
 		</div>
-		<div id="info-historico-parceiro-client_bk">
+		<div id="info-historico-parceiro-client_bk" class="history">
 			<div id="grupo-texto-2_bl">
-				<div id="Luiz_-_IDP43">
+				<div id="Luiz_-_IDP43" class="name_id history-data">
 					<span>{{history2_name}} - IDP:{{history2_idp}}</span>
 				</div>
-				<div id="n_4042022">
+				<div id="n_4042022" class="date history-data">
 					<span>{{history2_data}}</span>
 				</div>
-				<div id="n_21342">
+				<div id="n_21342" class="time history-data">
 					<span>{{history2_time}}</span>
 				</div>
-				<div id="n_0">
+				<div id="n_0" class="quantidades history-data">
 					<span>{{history2_quantity_abs}}</span>
 				</div>
 			</div>
-			<div id="Removidos">
+			<div id="Removidos" class="mod-cupons history-data">
 				<span>{{history2_modified}}</span>
 			</div>
 			<script>
@@ -159,22 +163,22 @@
 				</div>
 			</div>
 		</div>
-		<div id="info-historico-parceiro-client_bx">
+		<div id="info-historico-parceiro-client_bx" class="history">
 			<div id="grupo-texto-2_by">
-				<div id="Joo_-_IDP41">
+				<div id="Joo_-_IDP41" class="name_id history-data">
 					<span>{{history3_name}} - IDP:{{history3_idp}}</span>
 				</div>
-				<div id="n_1042022">
+				<div id="n_1042022" class="date history-data">
 					<span>{{history3_data}}</span>
 				</div>
-				<div id="n_94302">
+				<div id="n_94302" class="time history-data">
 					<span>{{history3_time}}</span>
 				</div>
-				<div id="n_7">
+				<div id="n_7" class="quantidades history-data">
 					<span>{{history3_quantity_abs}}</span>
 				</div>
 			</div>
-			<div id="Adicionados_b">
+			<div id="Adicionados_b" class="mod-cupons history-data">
 				<span>{{history3_modified}}</span>
 			</div>
 			<script>
@@ -233,7 +237,7 @@
 		<div id="Usurio">
 			<span>{{name}}</span>
 		</div>
-		<div id="IDC_12">
+		<div id="IDC_12" class="sid" sid="{{client_id}}">
 			<span>IDC: {{client_id}}</span>
 		</div>
 		<div id="Cupons">
@@ -255,13 +259,14 @@
 	</div>
 	<div id="atualizar-cupons">
 		<div id="Cliente_possui">
-			<span>Cliente possui:</span>
+			<span>Quantidade:</span>
 		</div>
 		<div id="contador-cupons">
 			<div id="n_99_cu">
-				<span>999</span>
+				<span id="sinal"></span>
+				<span id="mod-value">0</span>
 			</div>
-			<div id="buttom-aumentar">
+			<div id="buttom-aumentar" class="button-cupons">
 				<svg class="buttom-aumentar-fundo" viewBox="0 0 23 19">
 					<path id="buttom-aumentar-fundo" d="M 11.49999904632568 0 L 23 19 L 0 19 Z">
 					</path>
@@ -271,7 +276,7 @@
 					</path>
 				</svg>
 			</div>
-			<div id="buttom-diminuir">
+			<div id="buttom-diminuir" class="button-cupons">
 				<svg class="buttom-diminuir-fundo" viewBox="0 0 23 19">
 					<path id="buttom-diminuir-fundo" d="M 11.49999904632568 0 L 23 19 L 0 19 Z">
 					</path>
@@ -280,12 +285,6 @@
 					<path id="buttom-diminuir-shape" d="M 8.499999046325684 0 L 17 15 L 0 15 Z">
 					</path>
 				</svg>
-			</div>
-			<div id="n_">
-				<span>+1</span>
-			</div>
-			<div id="n_1">
-				<span>-1</span>
 			</div>
 			<div id="Cupons_c">
 				<span>Cupons</span>

@@ -6,9 +6,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>parceiro_desktop</title>
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/parceiro_desktop.css"/>
+<script type="text/javascript" src="/static/brython/brython.js"></script>
+<script type="text/javascript" src="/static/brython/brython_stdlib.js"></script>
+<script src="/static/brython/add_remove.py" type="text/python"></script>
 <script id="applicationScript" type="text/javascript" src="/static/js/parceiro_desktop.js"></script>
 </head>
-<body>
+<body onload="brython()">
 <div id="parceiro_desktop">
 	<div id="area-do-parceiro-fundo">
 		<svg class="circulo-elemento" viewBox="0 0 261.657 261.657">
@@ -61,32 +64,32 @@
 			<path id="divisor-2" d="M 0 0 L 305 0">
 			</path>
 		</svg>
-		<div id="info-historico-parceiro">
+		<div id="info-historico-parceiro" class="history">
 			<div id="Cliente">
 				<span>Cliente:</span>
 			</div>
-			<div id="Maria_-_IDC86">
+			<div id="Maria_-_IDC86" class="name_id history-data">
 				<span>{{history1_name}} - IDC:{{history1_idc}}</span>
 			</div>
 			<div id="Data">
 				<span>Data:</span>
 			</div>
-			<div id="n_7042022">
+			<div id="n_7042022" class="date history-data">
 				<span>{{history1_data}}</span>
 			</div>
 			<div id="Horrio">
 				<span>Horário:</span>
 			</div>
-			<div id="n_33312">
+			<div id="n_33312"class="time history-data">
 				<span>{{history1_time}}</span>
 			</div>
 			<div id="Quantidade">
 				<span>Quantidade:</span>
 			</div>
-			<div id="n_5">
+			<div id="n_5" class="quantidades history-data">
 				<span>{{history1_quantity_abs}}</span>
 			</div>
-			<div id="Adicionados">
+			<div id="Adicionados" class="mod-cupons history-data">
 				<span>{{history1_modified}}</span>
 			</div>
 			<div id="Text">
@@ -103,32 +106,32 @@
 				}
 			</script>
 		</div>
-		<div id="info-historico-parceiro_bg">
+		<div id="info-historico-parceiro_bg" class="history">
 			<div id="Data_bh">
 				<span>Data:</span>
 			</div>
-			<div id="n_0032022">
+			<div id="n_0032022" class="date history-data">
 				<span>{{history2_data}}</span>
 			</div>
 			<div id="Horrio_bj">
 				<span>Horário:</span>
 			</div>
-			<div id="n_81342">
+			<div id="n_81342" class="time history-data">
 				<span>{{history2_time}}</span>
 			</div>
 			<div id="Quantidade_bl">
 				<span>Quantidade:</span>
 			</div>
-			<div id="n_0">
+			<div id="n_0" class="quantidades history-data">
 				<span>{{history2_quantity_abs}}</span>
 			</div>
-			<div id="Removidos">
+			<div id="Removidos" class="mod-cupons history-data">
 				<span>{{history2_modified}}</span>
 			</div>
 			<div id="Cliente_bo">
 				<span>Cliente:</span>
 			</div>
-			<div id="Rogrio_-_IDC673">
+			<div id="Rogrio_-_IDC673" class="name_id history-data">
 				<span>{{history2_name}} - IDC:{{history2_idc}}</span>
 			</div>
 			<div id="Text_bq">
@@ -145,32 +148,32 @@
 				}
 			</script>
 		</div>
-		<div id="info-historico-parceiro_br">
+		<div id="info-historico-parceiro_br" class="history">
 			<div id="Data_bs">
 				<span>Data:</span>
 			</div>
-			<div id="n_1032022">
+			<div id="n_1032022" class="date history-data">
 				<span>{{history3_data}}</span>
 			</div>
 			<div id="Horrio_bu">
 				<span>Horário:</span>
 			</div>
-			<div id="n_24302">
+			<div id="n_24302" class="time history-data">
 				<span>{{history3_time}}</span>
 			</div>
 			<div id="Quantidade_bw">
 				<span>Quantidade:</span>
 			</div>
-			<div id="n_1">
+			<div id="n_1" class="quantidades history-data">
 				<span>{{history3_quantity_abs}}</span>
 			</div>
-			<div id="Adicionados_by">
+			<div id="Adicionados_by" class="mod-cupons history-data">
 				<span>{{history3_modified}}</span>
 			</div>
 			<div id="Cliente_bz">
 				<span>Cliente:</span>
 			</div>
-			<div id="Lucas_-_IDC73">
+			<div id="Lucas_-_IDC73" class="name_id history-data">
 				<span>{{history3_name}} - IDC:{{history3_idc}}</span>
 			</div>
 			<div id="Text_b">
@@ -254,7 +257,7 @@
 		<div id="parceirobapkasorvetescombr">
 			<span>{{email}}</span>
 		</div>
-		<div id="IDP_12">
+		<div id="IDP_12" class="sid" sid="{{employee_id}}">
 			<span>IDP: {{employee_id}}</span>
 		</div>
 		<div id="Telefone">

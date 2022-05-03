@@ -979,15 +979,13 @@
 .buttom-aumentar-fundo {
 	overflow: visible;
 	position: absolute;
-	width: 29px;
-	height: 25px;
+	width: 23px;
+	height: 19px;
 	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #buttom-aumentar-shape {
-	fill: rgba(238,230,67,1);
-	stroke: rgba(6,53,101,1);
 	stroke-width: 3px;
 	stroke-linejoin: round;
 	stroke-linecap: round;
@@ -995,10 +993,12 @@
 	shape-rendering: auto;
 }
 .buttom-aumentar-shape {
+	fill: rgba(238,230,67,1);
+	stroke: rgba(6,53,101,1);
 	overflow: visible;
 	position: absolute;
-	width: 20px;
-	height: 18px;
+	width: 17px;
+	height: 15px;
 	left: 3px;
 	top: 2.5px;
 	transform: matrix(1,0,0,1,0,0);
@@ -1025,8 +1025,8 @@
 .buttom-diminuir-fundo {
 	overflow: visible;
 	position: absolute;
-	width: 29px;
-	height: 25px;
+	width: 23px;
+	height: 19px;
 	left: 0px;
 	top: 0px;
 	transform: matrix(1,0,0,1,0,0);
@@ -1043,8 +1043,8 @@
 .buttom-diminuir-shape {
 	overflow: visible;
 	position: absolute;
-	width: 20px;
-	height: 18px;
+	width: 17px;
+	height: 15px;
 	left: 3px;
 	top: 1.5px;
 	transform: matrix(1,0,0,1,0,0);
@@ -1240,6 +1240,19 @@ a:link {
 	color: rgba(9,78,147,1);
   }
 
+  .button-cupons {
+	transition: all .2s;
+
+  }
+
+  .button-cupons:hover #buttom-aumentar-shape,
+  .button-cupons:hover #buttom-diminuir-shape {
+	fill: rgba(6,53,101,1);
+	stroke: rgba(238,230,67,1);
+	cursor: pointer;
+
+  }
+
   #button-aplicar {
 	  width: 173px;
 	  height: 52px;
@@ -1250,4 +1263,10 @@ a:link {
 	height: 22px;
 	font-size: 13px;
 	border: 2px solid rgba(238,230,67,1);
+  }
+
+  #sinal {
+	  position: absolute;
+	  left: -15px;
+	  top: -7px;
   }

@@ -125,12 +125,15 @@ def getHistory(id, database = DATABASE):
                 return data[id][HISTORICO]
                 
 
-def getLastHistory(history):
+def getLastHistory(history, method = ""):
         list = []
         for i in range(len(history)-1, len(history)-4, -1):
                 list.append(history[i])
         
-        return list
+        if not method == 'ajax':
+                return list
+        else:
+                return {"data": list}
 
 def modifiedCouponHTML(quantity):
         if quantity > 0:
