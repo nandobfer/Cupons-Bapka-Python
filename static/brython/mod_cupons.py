@@ -134,4 +134,15 @@ def modCupom(ev):
         ajaxModCoupons()
     else:
         alert('Valor dos cupons igual a zero.')
+        
+@bind("#button-limpar", "click")
+def resetQuantity(ev):
+    global quantity
+    number = document['mod-value']
+    sinal = document['sinal']
+    
+    quantity = 0
+    document["mod-value"].text = quantity
+    number.style.color = 'white'
+    sinal.text =''
     
