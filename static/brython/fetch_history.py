@@ -1,5 +1,4 @@
 from browser import document, ajax
-from ast import literal_eval
 
 # ajax.get("/database.json", oncomplete=read)
 def on_complete(req):

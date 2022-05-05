@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/parceiro_cliente_desktop.css"/>
 <script type="text/javascript" src="/static/brython/brython.js"></script>
 <script type="text/javascript" src="/static/brython/brython_stdlib.js"></script>
-<script src="/static/brython/add_remove.py" type="text/python"></script>
+<script src="/static/brython/fetch_history.py" type="text/python"></script>
 <script type="text/python" src="/static/brython/mod_cupons.py"></script>
 <script id="applicationScript" type="text/javascript" src="/static/js/parceiro_cliente_desktop.js"></script>
 </head>
@@ -244,10 +244,10 @@
 			<span>Cupons:</span>
 		</div>
 		<div id="n_99">
-			<span>{{cupons}}</span>
+			<span id="cupons-value">{{cupons}}</span>
 		</div>
 		<div id="buttom-voltar">
-			<div id="Voltar">
+			<div id="Voltar" sid="{{employee_id}}">
 				<a href="/funcionario/home/?employee={{employee_id}}">
 					<button class="button">Voltar</button>
 				</a>

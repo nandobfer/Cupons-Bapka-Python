@@ -782,6 +782,559 @@
                 "Hor\u00e1rio": "22:02:23",
                 "Quantidade": 1,
                 "Pedido": "7"
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:19:20",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:20:09",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:20:12",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:20:17",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:23:02",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:23:53",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:31:08",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:32:28",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:32:41",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:32:51",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:34:51",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:34:53",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:34:54",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:35:16",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:35:17",
+                "Quantidade": 0,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:35:41",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:35:44",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:35:52",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:36:01",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:37:47",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:37:52",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:38:00",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:38:06",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:39:14",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:39:24",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:39:26",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:39:32",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:39:33",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:41:22",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:41:26",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:41:37",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:41:39",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:45:09",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:45:41",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:46:00",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:46:25",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:46:58",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:47:20",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:47:56",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:48:26",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:48:54",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:49:47",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:50:14",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:50:57",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:51:25",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:51:38",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:52:00",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:52:29",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:52:51",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:52:58",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:53:09",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:54:07",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:54:29",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:54:31",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:54:33",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:54:34",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:55:12",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:32",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:37",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:39",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:42",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:44",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:49",
+                "Quantidade": -3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:56:54",
+                "Quantidade": 3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:59:02",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:59:13",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "08:59:15",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:00:36",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:00:47",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:02:14",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:02:25",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:03:11",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:03:35",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:03:41",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:04:02",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:21:28",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:22:23",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:22:32",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "02",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:25:55",
+                "Quantidade": 4,
+                "Pedido": 0
             }
         ]
     },
@@ -1444,6 +1997,90 @@
                 "Hor\u00e1rio": "11:33:48.750395",
                 "Quantidade": 1,
                 "Pedido": "66"
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:05:54",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:06:21",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:06:51",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:07:44",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:16:43",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:17:57",
+                "Quantidade": -1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:18:42",
+                "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:18:52",
+                "Quantidade": -3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:19:24",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:19:24",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:23:55",
+                "Quantidade": 3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "09:24:04",
+                "Quantidade": -1,
+                "Pedido": 0
             }
         ]
     },

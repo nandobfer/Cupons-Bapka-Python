@@ -131,7 +131,10 @@ def homeEmployee():
 
         if not id:
             error = 'Não foi possível encontrar uma conta com esse nome de usuário.'
-            return render_template('parceiro_desktop.html', error=error)
+            return render_template('parceiro_desktop.html', name=data[NOME], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]), error=error,
+                           history1_name=history[0][NOME], history1_idc=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
+                           history2_name=history[1][NOME], history2_idc=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
+                           history3_name=history[2][NOME], history3_idc=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
         
         url = url_for('panelEmployee')
         return redirect(f'{url}?id={id}&employee={employee_id}')
@@ -212,6 +215,29 @@ def history():
             for i in range(len(history["data"])):
                 history["data"][i].update({'Nome': getName(history["data"][i][ID])})
             return history
+        
+@app.route('/mod_cupons/', methods=(['POST']))
+def modCupons():
+    
+    if request.method == 'POST':
+        if 'id' in request.form:
+            id = request.form["id"]
+            quantity = int(request.form["quantity"])
+            employee_id = request.form["employee_id"]
+            
+            new_coupons = modifyCoupons(id, quantity)
+            registerModification(id, quantity, employee_id, 0)
+            
+            history = getLastHistory(getHistory(id))
+            # append NOME to history dict
+            for i in range(len(history)):
+                history[i].update({'Nome': getName(history[i][ID])})
+
+            result = {
+                "history": history,
+                "new_coupons": new_coupons
+            }
+            return result
 
 @app.route('/database.json', methods=['GET'])
 def database():

@@ -40,6 +40,7 @@ def modifyCoupons(id, quantity: int):
         
         # save to database
         writeDatabase(data)
+        return data[id][CUPONS]
         
 def validateId(id):
         if not id:
