@@ -427,3 +427,13 @@
 	font-size: 52px;
 	color: rgba(255,255,255,1);
 }
+
+.input-field {
+	fill: rgba(255,255,255,0.941);
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 0px;
+}
