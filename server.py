@@ -189,7 +189,24 @@ def panelEmployee():
 @app.route('/funcionario/cadastro/', methods=['GET','POST'])
 def signUp():
     
-    
+    if request.method == 'POST':
+        try:
+            name = request.form.get('name')
+            telefone = request.form.get('telefone')
+            email = request.form.get('email')
+            password = request.form.get('password')
+            password_confirmation = request.form.get('passord-confirmation')
+            if not password == password_confirmation:
+                error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
+                return render_template('cadastro_desktop.html', error=error)
+
+            print(name, telefone, email, password)
+        except:
+            # erro alerta insert a quantity number
+            error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
+            return render_template('cadastro_desktop.html', error=error)
+
+
     return render_template("cadastro_desktop.html")
 
 @app.route('/cliente/recuperar_senha/', methods=['GET', 'POST'])

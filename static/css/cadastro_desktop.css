@@ -1,3 +1,7 @@
+@font-face {
+	font-family: Arciform Sans;
+	src: url("/static/fonts/Arciform.ttf") ;
+}
 .mediaViewInfo {
 	--web-view-name: cadastro_desktop;
 	--web-view-id: cadastro_desktop;
@@ -429,11 +433,64 @@
 }
 
 .input-field {
-	fill: rgba(255,255,255,0.941);
+	background-color: rgba(255,255,255,0.941);
 	position: absolute;
 	overflow: visible;
 	width: 470px;
 	height: 49px;
 	left: 0px;
 	top: 0px;
+	border-radius: 24.5px 24.5px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	padding: 10px 20px;
 }
+
+#input-telefone {
+	top: 98px;
+
+}
+
+#input-email {
+	top: 198px;
+
+}
+
+#input-password {
+	top: 298px;
+}
+
+#input-password-confirmation {
+	top: 398px;
+}
+
+.button {
+	background-color: rgba(9,78,147,1);
+	border: 8px solid rgba(238,230,67,1);
+	color: white;
+    font-family: Arciform Sans, "sans-serif";
+    border-radius: 71px;
+    cursor: pointer;
+	position: absolute;
+	width: 470px;
+	height: 52px;
+	left: 0px;
+	top: 475px;
+	overflow: visible;
+	font-size: 32px;
+	transition: all .2s;
+  }
+  
+  .button:hover {
+    border-color: rgba(9,78,147,1);
+    background-color: rgba(238,230,67,1);
+	color: rgba(9,78,147,1);
+  }
+  .button:active {
+    border-color: rgba(238,230,67,1);
+    background-color: rgba(238,230,67,1);
+	color: rgba(9,78,147,1);
+  }

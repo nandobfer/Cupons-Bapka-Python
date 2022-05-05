@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Cupons - Bapka Sorvetes</title>
+        <style>
+            nav {
+                float: left;
+                width: 30%;
+            }
+            table {
+                float: left;
+            }
+            section::after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <h1>Bapka Sorvetes - Parceiro</h1>
+        <!-- client's data panel -->
+        <!-- button VOLTAR -->
+        <div>
+            <a href="/funcionario/home/?employee={{employee_id}}" >
+                <button>Voltar</button>
+            </a>
+        </div>
+        <section>
+            <h1>Histórico</h1>
+            <div id="client_history">
+                <script>
+                    const history_json = '{{history|tojson}}';
+                    const history = JSON.parse(history_json);
+                    text = '<h3>';
+                    for (let i = history.length-1; i >= history.length-3; i--) {
+                        text += "<br>"
+                        text += 'Id: ' + history[i]['Id'] + "<br>"
+                        text += 'Data: ' + history[i]['Data'] + "<br>";
+                        text += 'Horário: ' + history[i]['Horário'] + "<br>";
+                        text += 'Quantidade: ' + history[i]['Quantidade'] + "<br>";
+                    }
+                    text += '</h3>'
+                    document.getElementById("client_history").innerHTML = text
+                </script>
+                </div>
+            </nav>
+        </section>
+        
+    </body>
+</html>

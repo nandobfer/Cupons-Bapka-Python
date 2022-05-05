@@ -52,58 +52,19 @@
 			</path>
 		</svg>
 	</div>
-	<div id="wrap-login-cadastro">
+	<form method="post" id="wrap-login-cadastro">
 		<div id="campos-login-cadastro">
-			<svg class="input-cadastro-1">
-				<rect id="input-cadastro-1" rx="24.5" ry="24.5" x="0" y="0" width="470" height="49">
-				</rect>
-			</svg>
-			<svg class="input-cadastro-2">
-				<rect id="input-cadastro-2" rx="24.5" ry="24.5" x="0" y="0" width="470" height="49">
-				</rect>
-			</svg>
-			<svg class="input-cadastro-3">
-				<rect id="input-cadastro-3" rx="25" ry="25" x="0" y="0" width="470" height="50">
-				</rect>
-			</svg>
-			<svg class="input-cadastro-4">
-				<rect id="input-cadastro-4" rx="24.5" ry="24.5" x="0" y="0" width="470" height="49">
-				</rect>
-			</svg>
-			<svg class="input-cadastro-5">
-				<rect id="input-cadastro-5" rx="24.5" ry="24.5" x="0" y="0" width="470" height="49">
-				</rect>
-			</svg>
-			<div id="Nome">
-				<span>Nome</span>
-			</div>
-			<div id="Telefone">
-				<span>Telefone</span>
-			</div>
-			<div id="E-mail">
-				<span>E-mail</span>
-			</div>
-			<div id="Senha">
-				<span>Senha</span>
-			</div>
-			<div id="Confirme_a_senha">
-				<span>Confirme a senha</span>
-			</div>
-			<input type="text" name="name" id="input-name" class="input-field">
+			<input type="text" name="name" id="input-name" class="input-field" placeholder="Nome">
+			<input type="text" name="telefone" id="input-telefone" class="input-field" placeholder="Telefone">
+			<input type="email" name="email" id="input-email" class="input-field" placeholder="E-mail">
+			<input type="text" name="password" id="input-password" class="input-field" placeholder="Senha">
+			<input type="text" name="password-confirmation" id="input-password-confirmation" class="input-field" placeholder="Confirme a Senha">
 		</div>
-		<div id="buttom-entrar-cadastro">
-			<svg class="buttom-fundo">
-				<rect id="buttom-fundo" rx="26" ry="26" x="0" y="0" width="470" height="52">
-				</rect>
-			</svg>
-			<div id="Cadastrar-se">
-				<span>Cadastrar-se</span>
-			</div>
-		</div>
+		<input type="submit" value="Cadastrar" class="button" id="button-signup">
 		<div id="No_foi_possvel_encontrar_uma_c">
-			<span>Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?</span>
+			<span>{{error}}</span>
 		</div>
-	</div>
+	</form>
 	<div id="title-logo">
 		<div id="texto-titulo">
 			<span>Lorem ipsum dolor sit amet</span>
