@@ -1335,6 +1335,41 @@
                 "Hor\u00e1rio": "09:25:55",
                 "Quantidade": 4,
                 "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "10:37:01",
+                "Quantidade": -4,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "10:37:06",
+                "Quantidade": 3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "10:41:02",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "10:41:06",
+                "Quantidade": -2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "05/05/2022",
+                "Hor\u00e1rio": "10:41:11",
+                "Quantidade": 4,
+                "Pedido": 0
             }
         ]
     },
