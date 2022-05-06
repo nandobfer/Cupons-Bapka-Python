@@ -3,6 +3,16 @@ import json
 
 quantity = eval(document["mod-value"].text)
 
+def reset():
+        global quantity
+        number = document['mod-value']
+        sinal = document['sinal']
+        
+        quantity = 0
+        document["mod-value"].text = quantity
+        number.style.color = 'white'
+        sinal.text =''
+
 @bind(".button-cupons", "click")
 def buttonClicked(ev):
     global quantity
@@ -133,17 +143,11 @@ def modCupom(ev):
             
     if not quantity == 0:
         ajaxModCoupons()
+        reset()
     else:
         alert('Valor dos cupons igual a zero.')
         
 @bind("#button-limpar", "click")
 def resetQuantity(ev):
-    global quantity
-    number = document['mod-value']
-    sinal = document['sinal']
-    
-    quantity = 0
-    document["mod-value"].text = quantity
-    number.style.color = 'white'
-    sinal.text =''
+    reset()
     

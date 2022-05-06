@@ -3,7 +3,7 @@
         "Nome": "Fernando",
         "CPF": "02576698506",
         "Telefone": "41984556795",
-        "Cupons": 72,
+        "Cupons": 76,
         "password": "burgos",
         "Hist\u00d3rico": [
             {
@@ -1250,6 +1250,34 @@
                 "Data": "06/05/2022",
                 "Hor\u00e1rio": "09:49:35",
                 "Quantidade": 2,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "06/05/2022",
+                "Hor\u00e1rio": "09:59:16",
+                "Quantidade": 1,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "06/05/2022",
+                "Hor\u00e1rio": "10:13:03",
+                "Quantidade": 3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "06/05/2022",
+                "Hor\u00e1rio": "10:14:05",
+                "Quantidade": 3,
+                "Pedido": 0
+            },
+            {
+                "Id": "00",
+                "Data": "06/05/2022",
+                "Hor\u00e1rio": "10:14:09",
+                "Quantidade": -3,
                 "Pedido": 0
             }
         ]

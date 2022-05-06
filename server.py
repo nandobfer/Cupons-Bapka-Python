@@ -30,7 +30,6 @@ def home():
         elif 'employee_panel' in request.form:
             email = request.form.get('email')
             password = request.form.get('password_employee')
-            print(email, password)
 
             id = employeeLogin(email, password)
             if not id:
@@ -177,7 +176,6 @@ def panelEmployee():
 
     if request.form.get('back'):
         url = url_for('homeEmployee')
-        print('url', url)
         return redirect(f'{url}?employee={employee_id}')
 
     ## return render_template("panel_employee.html")
@@ -198,16 +196,13 @@ def signUpPage():
             password_confirmation = request.form.get('password-confirmation')
             if not password == password_confirmation:
                 error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
-                print(password, password_confirmation)
                 return render_template('cadastro_desktop.html', error=error)
 
             signUp(name, telefone, cpf, password)
-            print('teste')
             error = 'Usuário cadastrado com sucesso!'
             return render_template('cadastro_desktop.html', error=error)
         except Exception as e:
             # erro alerta insert a quantity number
-            print(e)
             error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
             return render_template('cadastro_desktop.html', error=error)
 
@@ -259,7 +254,6 @@ def modCupons():
                 "history": history,
                 "new_coupons": new_coupons
             }
-            print(result)
             return result
 
 @app.route('/database.json', methods=['GET'])
