@@ -1,8 +1,8 @@
 from browser import document, ajax
+import json
 
-# ajax.get("/database.json", oncomplete=read)
 def on_complete(req):
-        history = eval(req.read())["data"]
+        history = json.loads(req.text)["data"]
         config = {
                 'date': 'Data',
                 'time': "Hor\u00e1rio",

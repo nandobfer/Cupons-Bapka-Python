@@ -148,3 +148,38 @@ def modifiedCouponHTML(quantity):
                 else:
                         text = 'Removidos'
         return text
+
+def signUp(name, telefone, cpf, password):
+        data = getDatabase()
+        id = len(data)
+        data[id] = {
+                NOME: name,
+                CPF: cpf,
+                TELEFONE: telefone,
+                CUPONS: 0,
+                SENHA: password,
+                HISTORICO: [
+                        {
+                                "Id": "00",
+                                "Data": "26/04/2022",
+                                "Hor\u00e1rio": "16:14:38",
+                                "Quantidade": 1,
+                                "Pedido": "832"
+                        },
+                        {
+                                "Id": "00",
+                                "Data": "26/04/2022",
+                                "Hor\u00e1rio": "16:14:42",
+                                "Quantidade": 1,
+                                "Pedido": "96"
+                        },
+                        {
+                                "Id": "00",
+                                "Data": "26/04/2022",
+                                "Hor\u00e1rio": "16:14:43",
+                                "Quantidade": 1,
+                                "Pedido": "396"
+                        }
+                ]
+        }
+        writeDatabase(data)

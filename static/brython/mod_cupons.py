@@ -1,4 +1,5 @@
 from browser import document, alert, html, bind, ajax
+import json
 
 quantity = eval(document["mod-value"].text)
 
@@ -36,7 +37,7 @@ def getId():
             return id
         
 def updateHistory(req):
-        history = eval(req.read())["history"]
+        history = json.loads(req.read())["history"]
         config = {
                 'date': 'Data',
                 'time': "Hor\u00e1rio",
@@ -116,7 +117,7 @@ def modCupom(ev):
     }
     
     def updateData(req):
-        new_coupons = eval(req.read())
+        new_coupons = json.loads(req.read())
         new_coupons = new_coupons["new_coupons"]
         document["cupons-value"].text = new_coupons
         updateHistory(req)
