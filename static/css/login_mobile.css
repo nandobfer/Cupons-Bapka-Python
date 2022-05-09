@@ -1,0 +1,472 @@
+.mediaViewInfo {
+	--web-view-name: login_mobile;
+	--web-view-id: login_mobile;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+:root {
+	--web-view-ids: login_mobile;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+}
+#login_mobile {
+	position: absolute;
+	width: 360px;
+	height: 874px;
+	background-color: rgba(238,230,67,1);
+	overflow: hidden;
+	--web-view-name: login_mobile;
+	--web-view-id: login_mobile;
+	--web-scale-to-fit: true;
+	--web-scale-to-fit-type: width;
+	--web-scale-on-resize: true;
+	--web-application: true;
+	--web-enable-deep-linking: true;
+}
+#login-fundo {
+	position: absolute;
+	width: 426.103px;
+	height: 874px;
+	left: -50.348px;
+	top: 0px;
+	overflow: visible;
+}
+#shape-bottom {
+	fill: rgba(255,255,255,1);
+}
+.shape-bottom {
+	overflow: visible;
+	position: absolute;
+	width: 375.16px;
+	height: 35.87px;
+	transform: translate(24.58px, 0px) matrix(1,0,0,1,18.1887,838.13) rotate(180deg);
+	transform-origin: center;
+	left: 0px;
+	top: 0px;
+}
+#shape-top {
+	fill: rgba(255,255,255,1);
+}
+.shape-top {
+	overflow: visible;
+	position: absolute;
+	width: 375.16px;
+	height: 35.865px;
+	left: 42.769px;
+	top: 0px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento {
+	overflow: visible;
+	position: absolute;
+	width: 76.403px;
+	height: 76.403px;
+	left: 349.7px;
+	top: 26.309px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_v {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_v {
+	overflow: visible;
+	position: absolute;
+	width: 86.262px;
+	height: 86.262px;
+	left: 214.005px;
+	top: 778.72px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#retangulo-fundo {
+	fill: rgba(9,78,147,1);
+}
+.retangulo-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 337px;
+	height: 802px;
+	left: 62.348px;
+	top: 36px;
+}
+#retangulo-menor {
+	fill: rgba(7,69,131,1);
+}
+.retangulo-menor {
+	position: absolute;
+	overflow: visible;
+	width: 307px;
+	height: 650px;
+	left: 77.348px;
+	top: 172px;
+}
+#circulo-elemento_y {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_y {
+	overflow: visible;
+	position: absolute;
+	width: 66.711px;
+	height: 66.711px;
+	left: 76.761px;
+	top: 7.3px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_z {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_z {
+	overflow: visible;
+	position: absolute;
+	width: 85.537px;
+	height: 85.537px;
+	left: 0px;
+	top: 753px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#circulo-elemento_ {
+	fill: rgba(255,255,255,1);
+}
+.circulo-elemento_ {
+	overflow: visible;
+	position: absolute;
+	width: 63.792px;
+	height: 63.792px;
+	left: 346.557px;
+	top: 810.208px;
+	transform: matrix(1,0,0,1,0,0);
+}
+#divisor-1 {
+	fill: rgba(9,78,147,1);
+}
+.divisor-1 {
+	width: 6px;
+	height: 293px;
+	position: absolute;
+	overflow: visible;
+	transform: translate(24.58px, 0px) matrix(1,0,0,1,203.2685,354.5) rotate(90deg);
+	transform-origin: center;
+}
+#title-logo {
+	position: absolute;
+	width: 230px;
+	height: 101.023px;
+	left: 66.208px;
+	top: 50.635px;
+	overflow: visible;
+}
+#Lorem_ipsum_dolor_sit_amet {
+	left: 0px;
+	top: 76.023px;
+	position: absolute;
+	overflow: visible;
+	width: 231px;
+	height: 25px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(255,255,255,1);
+}
+#logo {
+	position: absolute;
+	width: 76.023px;
+	height: 76.023px;
+	left: 75.78px;
+	top: 0px;
+	overflow: visible;
+}
+#wrap-login-cliente {
+	position: absolute;
+	width: 360px;
+	height: 276px;
+	left: 0px;
+	top: 202px;
+	overflow: visible;
+}
+#Cliente {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 361px;
+	height: 43px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(255,255,255,1);
+}
+#campos-login-cliente {
+	position: absolute;
+	width: 279px;
+	height: 78px;
+	left: 41px;
+	top: 61px;
+	overflow: visible;
+}
+#input-cleinte-2 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cleinte-2 {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 33px;
+	left: 0px;
+	top: 45px;
+}
+#input-cliente-1 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cliente-1 {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 33px;
+	left: 0px;
+	top: 0px;
+}
+#Telefone {
+	opacity: 0.49;
+	left: 15px;
+	top: 4px;
+	position: absolute;
+	overflow: visible;
+	width: 252px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(140,140,140,1);
+}
+#Senha {
+	opacity: 0.49;
+	left: 15px;
+	top: 49px;
+	position: absolute;
+	overflow: visible;
+	width: 252px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(140,140,140,1);
+}
+#buttom-entrar-cliente {
+	position: absolute;
+	width: 279px;
+	height: 35px;
+	left: 41px;
+	top: 182px;
+	overflow: visible;
+}
+#buttom-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 35px;
+	left: 0px;
+	top: 0px;
+}
+#Entrar {
+	left: 108.717px;
+	top: 3px;
+	position: absolute;
+	overflow: visible;
+	width: 64px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#No_foi_possvel_encontrar_uma_c {
+	left: 41px;
+	top: 231px;
+	position: absolute;
+	overflow: visible;
+	width: 280px;
+	height: 45px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(238,230,67,1);
+}
+#Esqueci_minha_senha {
+	left: 205px;
+	top: 153px;
+	position: absolute;
+	overflow: visible;
+	width: 116px;
+	height: 15px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(238,230,67,1);
+}
+#wrap-login-parceiro {
+	position: absolute;
+	width: 360px;
+	height: 276px;
+	left: 0px;
+	top: 524px;
+	overflow: visible;
+}
+#Parceiro {
+	left: 0px;
+	top: 0px;
+	position: absolute;
+	overflow: visible;
+	width: 361px;
+	height: 43px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 35px;
+	color: rgba(255,255,255,1);
+}
+#campos-login-parceiro {
+	position: absolute;
+	width: 279px;
+	height: 78px;
+	left: 41px;
+	top: 61px;
+	overflow: visible;
+}
+#input-parceiro-2 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-parceiro-2 {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 33px;
+	left: 0px;
+	top: 45px;
+}
+#input-parceiro-1 {
+	fill: rgba(255,255,255,0.941);
+}
+.input-parceiro-1 {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 33px;
+	left: 0px;
+	top: 0px;
+}
+#E-mail {
+	opacity: 0.49;
+	left: 15px;
+	top: 4px;
+	position: absolute;
+	overflow: visible;
+	width: 252px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(140,140,140,1);
+}
+#Senha_bn {
+	opacity: 0.49;
+	left: 15px;
+	top: 49px;
+	position: absolute;
+	overflow: visible;
+	width: 252px;
+	height: 25px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	color: rgba(140,140,140,1);
+}
+#buttom-entrar-parceiro {
+	position: absolute;
+	width: 279px;
+	height: 35px;
+	left: 41px;
+	top: 182px;
+	overflow: visible;
+}
+#buttom-fundo_bp {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-fundo_bp {
+	position: absolute;
+	overflow: visible;
+	width: 279px;
+	height: 35px;
+	left: 0px;
+	top: 0px;
+}
+#Entrar_bq {
+	left: 108.717px;
+	top: 3px;
+	position: absolute;
+	overflow: visible;
+	width: 64px;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 25px;
+	color: rgba(255,255,255,1);
+}
+#No_foi_possvel_encontrar_uma_c_br {
+	left: 41px;
+	top: 231px;
+	position: absolute;
+	overflow: visible;
+	width: 280px;
+	height: 45px;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 12px;
+	color: rgba(238,230,67,1);
+}
