@@ -536,39 +536,39 @@
 	top: 0px;
 	font-size: 32px;
 	transition: all .2s;
-  }
+}
   
   .button:hover {
     border-color: rgba(9,78,147,1);
     background-color: rgba(238,230,67,1);
 	color: rgba(9,78,147,1);
-  }
+}
   .button:active {
     border-color: rgba(238,230,67,1);
     background-color: rgba(238,230,67,1);
 	color: rgba(9,78,147,1);
-  }
+}
 
   .error {
 	  color:rgba(238,230,67,1);
-  }
+}
 
   a:link {
 	text-decoration: none;
 	color: rgba(238,230,67,1);
-  }
+}
   
   a:visited {
 	text-decoration: none;
 	color: rgba(238,230,67,1);
-  }
+}
   
   a:hover {
 	text-decoration: underline;
 	color: rgba(238,230,67,1);
-  }
+}
   
   a:active {
 	text-decoration: underline;
 	color: rgba(238,230,67,1);
-  }
+}

@@ -1,12 +1,18 @@
 import json
-import re 
 from config import *
 from datetime import date, datetime
+from mysql_handler import Mysql
 
 def getDatabase(database = DATABASE):
-        with open(database, "r") as read_file:
-                data = json.load(read_file)
-        return data
+    with open(database, "r") as read_file:
+            data = json.load(read_file)
+    return data
+    
+def getDatabaseMysql(table):
+    database = Mysql()
+    database.connect(mysql_bapkasor_cupons)
+    data = database.fetchTable(0, 'Clientes')
+    return data
     
 def writeDatabase(data, database = DATABASE):
     with open(database, "w") as write_file:
@@ -150,36 +156,46 @@ def modifiedCouponHTML(quantity):
         return text
 
 def signUp(name, telefone, cpf, password):
-        data = getDatabase()
-        id = len(data)
-        data[id] = {
-                NOME: name,
-                CPF: cpf,
-                TELEFONE: telefone,
-                CUPONS: 0,
-                SENHA: password,
-                HISTORICO: [
-                        {
-                                "Id": "00",
-                                "Data": "26/04/2022",
-                                "Hor\u00e1rio": "16:14:38",
-                                "Quantidade": 1,
-                                "Pedido": "832"
-                        },
-                        {
-                                "Id": "00",
-                                "Data": "26/04/2022",
-                                "Hor\u00e1rio": "16:14:42",
-                                "Quantidade": 1,
-                                "Pedido": "96"
-                        },
-                        {
-                                "Id": "00",
-                                "Data": "26/04/2022",
-                                "Hor\u00e1rio": "16:14:43",
-                                "Quantidade": 1,
-                                "Pedido": "396"
-                        }
-                ]
-        }
-        writeDatabase(data)
+    
+    database = Mysql()
+    database.connect(mysql_bapkasor_cupons)
+    id = len(database.fetchTable(0, CLIENTES))
+    data = (id, name, cpf, 0, telefone, password, '@')
+    database.insertClient(data)
+    database.disconnect()
+    
+        # data = getDatabase()
+        # id = len(data)
+        # data[id] = {
+        #         NOME: name,
+        #         CPF: cpf,
+        #         TELEFONE: telefone,
+        #         CUPONS: 0,
+        #         SENHA: password,
+        #         HISTORICO: [
+        #                 {
+        #                         "Id": "00",
+        #                         "Data": "26/04/2022",
+        #                         "Hor\u00e1rio": "16:14:38",
+        #                         "Quantidade": 1,
+        #                         "Pedido": "832"
+        #                 },
+        #                 {
+        #                         "Id": "00",
+        #                         "Data": "26/04/2022",
+        #                         "Hor\u00e1rio": "16:14:42",
+        #                         "Quantidade": 1,
+        #                         "Pedido": "96"
+        #                 },
+        #                 {
+        #                         "Id": "00",
+        #                         "Data": "26/04/2022",
+        #                         "Hor\u00e1rio": "16:14:43",
+        #                         "Quantidade": 1,
+        #                         "Pedido": "396"
+        #                 }
+        #         ]
+        # }
+        # writeDatabase(data)
+        
+print(getDatabaseMysql(CLIENTES))

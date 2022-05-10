@@ -19,6 +19,17 @@ HORARIO = "Horário"
 QUANTIDADE = "Quantidade"
 PEDIDO = "Pedido"
 
+# MYSQL DATABASE
+mysql_bapkasor_cupons = {
+    'host': '162.214.166.106',
+    'database': 'bapkasor_cupons',
+    'user': 'python',
+    'password': 'SucessoZOP2022!'
+}
+CLIENTES = 'Clientes'
+PARCEIROS = 'Parceiros'
+HISTORICOS = 'Historicos'
+
 
 
 
