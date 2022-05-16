@@ -1,5 +1,5 @@
 import RequirementsHandler
-from flask import Flask, request, url_for, redirect, render_template, jsonify
+from flask import Flask, request, url_for, redirect, render_template, request
 from config import *
 from functions import *
 import random
@@ -186,25 +186,29 @@ def panelEmployee():
 
 @app.route('/funcionario/cadastro/', methods=['GET','POST'])
 def signUpPage():
-    
     if request.method == 'POST':
-        try:
-            name = request.form.get('name')
-            telefone = request.form.get('telefone')
-            cpf = request.form.get('cpf')
-            password = request.form.get('password')
-            password_confirmation = request.form.get('password-confirmation')
-            if not password == password_confirmation:
+        if 'signup' in request.form:
+            try:
+                name = request.form.get('name')
+                telefone = request.form.get('telefone')
+                email = request.form.get('email')
+                cpf = request.form.get('cpf')
+                password = request.form.get('password')
+                password_confirmation = request.form.get('password-confirmation')
+                if not password == password_confirmation:
+                    error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
+                    return render_template('cadastro_desktop.html', error=error)
+
+                signUp(name, telefone, email, cpf, password)
+                error = 'Usuário cadastrado com sucesso!'
+                return render_template('cadastro_desktop.html', error=error)
+            except Exception as e:
+                # erro alerta insert a quantity number
                 error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
                 return render_template('cadastro_desktop.html', error=error)
 
-            signUp(name, telefone, cpf, password)
-            error = 'Usuário cadastrado com sucesso!'
-            return render_template('cadastro_desktop.html', error=error)
-        except Exception as e:
-            # erro alerta insert a quantity number
-            error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
-            return render_template('cadastro_desktop.html', error=error)
+        elif 'voltar' in request.form:
+            print('oi', request.remote_addr)
 
 
     return render_template("cadastro_desktop.html")

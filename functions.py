@@ -155,12 +155,12 @@ def modifiedCouponHTML(quantity):
                         text = 'Removidos'
         return text
 
-def signUp(name, telefone, cpf, password):
+def signUp(name, telefone, email, cpf, password):
     
     database = Mysql()
     database.connect(mysql_bapkasor_cupons)
     id = len(database.fetchTable(0, CLIENTES))
-    data = (id, name, cpf, 0, telefone, password, '@')
+    data = (id, name, cpf, 0, telefone, password, email)
     database.insertClient(data)
     database.disconnect()
     
@@ -198,4 +198,4 @@ def signUp(name, telefone, cpf, password):
         # }
         # writeDatabase(data)
         
-print(getDatabaseMysql(CLIENTES))
+# print(getDatabaseMysql(CLIENTES))
