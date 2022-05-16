@@ -2,6 +2,7 @@
 	font-family: Arciform Sans;
 	src: url("/static/fonts/Arciform.ttf") ;
 }
+
 .mediaViewInfo {
 	--web-view-name: cadastro_desktop;
 	--web-view-id: cadastro_desktop;
@@ -54,10 +55,10 @@
 	top: 744px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_w {
+#circulo-elemento_ {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_w {
+.circulo-elemento_ {
 	overflow: visible;
 	position: absolute;
 	width: 261.657px;
@@ -66,10 +67,10 @@
 	top: 744px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_x {
+#circulo-elemento_ba {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_x {
+.circulo-elemento_ba {
 	overflow: visible;
 	position: absolute;
 	width: 392.485px;
@@ -111,10 +112,10 @@
 	left: 1000.926px;
 	top: 226px;
 }
-#circulo-elemento_ {
+#circulo-elemento_bb {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_ {
+.circulo-elemento_bb {
 	overflow: visible;
 	position: absolute;
 	width: 425.016px;
@@ -123,16 +124,16 @@
 	top: 636.813px;
 	transform: matrix(1,0,0,1,0,0);
 }
-#circulo-elemento_ba {
+#circulo-elemento_bc {
 	fill: rgba(255,255,255,1);
 }
-.circulo-elemento_ba {
+.circulo-elemento_bc {
 	overflow: visible;
 	position: absolute;
 	width: 183.775px;
 	height: 183.776px;
-	left: 449.896px;
-	top: 96.881px;
+	left: 365.896px;
+	top: 75.4px;
 	transform: matrix(1,0,0,1,0,0);
 }
 #shape-bottom {
@@ -163,15 +164,15 @@
 #wrap-login-cadastro {
 	position: absolute;
 	width: 470px;
-	height: 584px;
+	height: 593px;
 	left: 1005px;
-	top: 257px;
+	top: 248px;
 	overflow: visible;
 }
 #campos-login-cadastro {
 	position: absolute;
 	width: 470px;
-	height: 446px;
+	height: 455px;
 	left: 0px;
 	top: 0px;
 	overflow: visible;
@@ -196,7 +197,7 @@
 	width: 470px;
 	height: 49px;
 	left: 0px;
-	top: 98px;
+	top: 84px;
 }
 #input-cadastro-3 {
 	fill: rgba(255,255,255,0.941);
@@ -207,7 +208,7 @@
 	width: 470px;
 	height: 50px;
 	left: 0px;
-	top: 198px;
+	top: 168px;
 }
 #input-cadastro-4 {
 	fill: rgba(255,255,255,0.941);
@@ -218,7 +219,7 @@
 	width: 470px;
 	height: 49px;
 	left: 0px;
-	top: 298px;
+	top: 248px;
 }
 #input-cadastro-5 {
 	fill: rgba(255,255,255,0.941);
@@ -229,7 +230,7 @@
 	width: 470px;
 	height: 49px;
 	left: 0px;
-	top: 397px;
+	top: 327px;
 }
 #Nome {
 	opacity: 0.49;
@@ -249,7 +250,7 @@
 #Telefone {
 	opacity: 0.49;
 	left: 22px;
-	top: 104px;
+	top: 89px;
 	position: absolute;
 	overflow: visible;
 	width: 426px;
@@ -264,7 +265,22 @@
 #E-mail {
 	opacity: 0.49;
 	left: 22px;
-	top: 204px;
+	top: 174px;
+	position: absolute;
+	overflow: visible;
+	width: 426px;
+	height: 39px;
+	text-align: left;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 32px;
+	color: rgba(140,140,140,1);
+}
+#CPF {
+	opacity: 0.49;
+	left: 22px;
+	top: 253px;
 	position: absolute;
 	overflow: visible;
 	width: 426px;
@@ -279,7 +295,7 @@
 #Senha {
 	opacity: 0.49;
 	left: 22px;
-	top: 301px;
+	top: 332px;
 	position: absolute;
 	overflow: visible;
 	width: 426px;
@@ -291,10 +307,21 @@
 	font-size: 32px;
 	color: rgba(140,140,140,1);
 }
+#input-cadastro-5_bn {
+	fill: rgba(255,255,255,0.941);
+}
+.input-cadastro-5_bn {
+	position: absolute;
+	overflow: visible;
+	width: 470px;
+	height: 49px;
+	left: 0px;
+	top: 406px;
+}
 #Confirme_a_senha {
 	opacity: 0.49;
 	left: 22px;
-	top: 402px;
+	top: 411px;
 	position: absolute;
 	overflow: visible;
 	width: 426px;
@@ -311,7 +338,7 @@
 	width: 470px;
 	height: 52px;
 	left: 0px;
-	top: 475px;
+	top: 484px;
 	overflow: visible;
 }
 #buttom-fundo {
@@ -331,7 +358,7 @@
 	left: 0px;
 	top: 0px;
 }
-#Cadastrar-se {
+#Cadastrar_Cliente {
 	left: 40px;
 	top: 7px;
 	position: absolute;
@@ -347,7 +374,7 @@
 }
 #No_foi_possvel_encontrar_uma_c {
 	left: 0px;
-	top: 544px;
+	top: 553px;
 	position: absolute;
 	overflow: visible;
 	width: 471px;
@@ -361,18 +388,18 @@
 }
 #title-logo {
 	position: absolute;
-	width: 577px;
-	height: 460px;
-	left: 401px;
-	top: 330px;
+	width: 600px;
+	height: 483px;
+	left: 405px;
+	top: 299px;
 	overflow: visible;
 }
 #texto-titulo {
 	left: 0px;
-	top: 64px;
+	top: 222px;
 	position: absolute;
 	overflow: visible;
-	width: 578px;
+	width: 601px;
 	height: 49px;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -381,12 +408,12 @@
 	font-size: 40px;
 	color: rgba(255,255,255,1);
 }
-#texto-titulo_bn {
+#texto-titulo_bv {
 	left: 41px;
-	top: 130px;
+	top: 288px;
 	position: absolute;
 	overflow: visible;
-	width: 496px;
+	width: 519px;
 	height: 90px;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -399,16 +426,16 @@
 	position: absolute;
 	width: 141px;
 	height: 141px;
-	left: 218px;
-	top: 319px;
+	left: 230px;
+	top: 0px;
 	overflow: visible;
 }
-#texto-titulo_bp {
+#texto-titulo_bx {
 	left: 66px;
-	top: 237px;
+	top: 395px;
 	position: absolute;
 	overflow: visible;
-	width: 447px;
+	width: 470px;
 	height: 37px;
 	text-align: center;
 	font-family: Arciform Sans;
@@ -417,18 +444,56 @@
 	font-size: 30px;
 	color: rgba(255,255,255,1);
 }
-#Crie_uma_conta {
-	left: 110px;
-	top: 0px;
+#Cadastrar_Novo_Cliente {
+	left: 19px;
+	top: 141px;
 	position: absolute;
 	overflow: visible;
-	width: 359px;
+	width: 564px;
 	height: 64px;
 	text-align: center;
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 52px;
+	color: rgba(255,255,255,1);
+}
+#buttom-voltar {
+	position: absolute;
+	width: 150px;
+	height: 34px;
+	left: 226px;
+	top: 449px;
+	overflow: visible;
+}
+#buttom-voltar-fundo {
+	fill: rgba(9,78,147,1);
+	stroke: rgba(238,230,67,1);
+	stroke-width: 3px;
+	stroke-linejoin: miter;
+	stroke-linecap: butt;
+	stroke-miterlimit: 4;
+	shape-rendering: auto;
+}
+.buttom-voltar-fundo {
+	position: absolute;
+	overflow: visible;
+	width: 150px;
+	height: 34px;
+	left: 0px;
+	top: 0px;
+}
+#Voltar {
+	left: 49px;
+	top: 3px;
+	position: absolute;
+	overflow: visible;
+	white-space: nowrap;
+	text-align: center;
+	font-family: Arciform Sans;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 22px;
 	color: rgba(255,255,255,1);
 }
 
@@ -450,21 +515,25 @@
 }
 
 #input-telefone {
-	top: 98px;
+	top: 80px;
 
 }
 
+#input-email {
+	top: 160px;
+}
+
 #input-cpf {
-	top: 198px;
+	top: 240px;
 
 }
 
 #input-password {
-	top: 298px;
+	top: 320px;
 }
 
 #input-password-confirmation {
-	top: 398px;
+	top: 400px;
 }
 
 .button {
@@ -475,22 +544,35 @@
     border-radius: 71px;
     cursor: pointer;
 	position: absolute;
-	width: 470px;
-	height: 52px;
-	left: 0px;
-	top: 475px;
 	overflow: visible;
-	font-size: 32px;
 	transition: all .2s;
-  }
-  
-  .button:hover {
-    border-color: rgba(9,78,147,1);
-    background-color: rgba(238,230,67,1);
-	color: rgba(9,78,147,1);
-  }
-  .button:active {
-    border-color: rgba(238,230,67,1);
-    background-color: rgba(238,230,67,1);
-	color: rgba(9,78,147,1);
-  }
+}
+
+#button-signup {
+	
+	font-size: 32px;
+	width: 470px;
+	height: 60px;
+	left: 0px;
+	top: 480px;
+}
+
+#voltar-button {
+	border: 3.5px solid rgba(238,230,67,1);
+	width: 150px;
+	height: 35.5px;
+	border-radius: 17px;
+	font-size: 22px;
+}
+
+.button:hover {
+border-color: rgba(9,78,147,1);
+background-color: rgba(238,230,67,1);
+color: rgba(9,78,147,1);
+}
+.button:active {
+border-color: rgba(238,230,67,1);
+background-color: rgba(238,230,67,1);
+color: rgba(9,78,147,1);
+}
+
