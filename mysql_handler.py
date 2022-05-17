@@ -49,8 +49,8 @@ class Mysql():
         else:
             records = cursor.fetchall()
             
-        print(f'Total number of rows in table: {cursor.rowcount}')
-        print(f'Rows fetched: {len(records)}')
+        # print(f'Total number of rows in table: {cursor.rowcount}')
+        # print(f'Rows fetched: {len(records)}')
         
         data = []
         for row in records:
@@ -69,8 +69,17 @@ class Mysql():
         self.connection.commit()
         cursor.close()
         
+    def insertParceiro(self, data):
+        ''' Função utilizada para inserir novo cliente no banco de dados.
+        DATA requer (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) '''
+        sql = f"INSERT INTO Parceiros (ID, LOJA, CNPJ, ENDEREÇO, TELEFONE, SENHA, EMAIL) VALUES {data}"
+        cursor = self.connection.cursor()
+        cursor.execute(sql)
+        self.connection.commit()
+        cursor.close()
+        
     def insertHistory(self, data):
-        sql = f"INSERT INTO Historico (ID_PARCEIRO, ID_CLIENTE, DATA, HORARIO, QUANTIDADE, PEDIDO) VALUES {data}"
+        sql = f"INSERT INTO Historicos (ID_PARCEIRO, ID_CLIENTE, DATA, HORARIO, QUANTIDADE, PEDIDO) VALUES {data}"
         cursor = self.connection.cursor()
         cursor.execute(sql)
         self.connection.commit()

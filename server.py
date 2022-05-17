@@ -20,7 +20,7 @@ def home():
             telefone = request.form.get('telefone')
             password = request.form.get('password_client')
 
-            id = clientLogin(telefone, password)
+            id = userLogin(telefone, password, CLIENTES)
             if not id:
                 error = 'Não foi possível encontrar uma conta com esse número de telefone.'
                 return render_template('login_desktop.html', error_client=error)

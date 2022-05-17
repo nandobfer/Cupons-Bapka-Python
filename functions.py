@@ -3,199 +3,231 @@ from config import *
 from datetime import date, datetime
 from mysql_handler import Mysql
 
-def getDatabase(database = DATABASE):
+
+def getDatabase(database=DATABASE):
     with open(database, "r") as read_file:
-            data = json.load(read_file)
+        data = json.load(read_file)
     return data
-    
-def getDatabaseMysql(table):
+
+
+def getTable(table):
     database = Mysql()
     database.connect(mysql_bapkasor_cupons)
-    data = database.fetchTable(0, 'Clientes')
+    data = database.fetchTable(0, table)
     return data
-    
-def writeDatabase(data, database = DATABASE):
+
+
+def writeDatabase(data, database=DATABASE):
     with open(database, "w") as write_file:
-            json.dump(data, write_file, indent=4)
+        json.dump(data, write_file, indent=4)
     return True
 
-def getId(cpf, database = DATABASE):
-        ''' function scans database looking for a matching cpf and returns the matched id '''
-        data = getDatabase(database)
-        for id in data:
-                if cpf == data[id][CPF]:
-                        return id
-        
-        return False
 
-def getName(id, database = DATABASE):
-        data = getDatabase(database)
-        if id in data:
-                return data[id][NOME]
+def getId(cpf, database=DATABASE):
+    ''' function scans database looking for a matching cpf and returns the matched id '''
+    data = getDatabase(database)
+    for id in data:
+        if cpf == data[id][CPF]:
+            return id
 
-def getData(id, database = DATABASE):
-        ''' function scans database looking for ID and returns it's table '''
-        data = getDatabase(database)
-        if id in data:
-                return data[id]
-        
+    return False
+
+
+def getName(id, database=DATABASE):
+    data = getDatabase(database)
+    if id in data:
+        return data[id][NOME]
+
+
+def getData(id, database=DATABASE):
+    ''' function scans database looking for ID and returns it's table '''
+    data = getDatabase(database)
+    if id in data:
+        return data[id]
+
+
 def modifyCoupons(id, quantity: int):
-        ''' function adds or removes specified amount of coupons '''
-        data = getDatabase()
-        data[id][CUPONS] += quantity
-        
-        # save to database
-        writeDatabase(data)
-        return data[id][CUPONS]
-        
-def validateId(id):
-        if not id:
-                return False
-        else:
-                return True
+    ''' function adds or removes specified amount of coupons '''
+    data = getDatabase()
+    data[id][CUPONS] += quantity
 
-def clientLogin(telefone, password):
-        data = getDatabase()
-        for id in data:
-                if telefone == data[id][TELEFONE]:
-                        if password == data[id][SENHA]:
-                                return id
+    # save to database
+    writeDatabase(data)
+    return data[id][CUPONS]
+
+
+def validateId(id):
+    if not id:
         return False
+    else:
+        return True
+
+
+def userLogin(user, try_password, table):
+    # data = getDatabase()
+    # for id in data:
+    #     if telefone == data[id][TELEFONE]:
+    #         if password == data[id][SENHA]:
+    #             return id
+    # return False
+    
+    global database
+    try:
+        if table == CLIENTES:
+            data = database.fetchTable(1, table, 'TELEFONE', user)[0]
+            password = data[5]
+        elif table == PARCEIROS:
+            data = database.fetchTable(1, table, 'EMAIL', user)[0]
+    except:
+        return False
+    if try_password == password:
+        id = data[0]
+        return id
+    
+    
 
 def employeeLogin(email, password):
-        data = getDatabase(DATABASE_EMPLOYEES)
-        for id in data:
-                if email == data[id][EMAIL]:
-                        if password == data[id][SENHA]:
-                                return id
-        return False
+    data = getDatabase(DATABASE_EMPLOYEES)
+    for id in data:
+        if email == data[id][EMAIL]:
+            if password == data[id][SENHA]:
+                return id
+    return False
+
 
 def registerModification(client_id, quantity, employee_id, order):
-        data = getDatabase(DATABASE_EMPLOYEES)
-        today = date.today()
-        now = str(datetime.now().time())
-        time = ''
-        for i in range(8):
-                time += now[i]
-        # Employee register
-        data_new = {
-                ID: client_id,
-                DATA: str(today.strftime("%d/%m/%Y")),
-                HORARIO: time,
-                QUANTIDADE: quantity,
-                PEDIDO: order
-        }
-        data[employee_id][HISTORICO].append(data_new)
-        writeDatabase(data, DATABASE_EMPLOYEES)
+    data = getDatabase(DATABASE_EMPLOYEES)
+    today = date.today()
+    now = str(datetime.now().time())
+    time = ''
+    for i in range(8):
+        time += now[i]
+    # Employee register
+    data_new = {
+        ID: client_id,
+        DATA: str(today.strftime("%d/%m/%Y")),
+        HORARIO: time,
+        QUANTIDADE: quantity,
+        PEDIDO: order
+    }
+    data[employee_id][HISTORICO].append(data_new)
+    writeDatabase(data, DATABASE_EMPLOYEES)
 
-        # Client reg
-        data_client = getDatabase(DATABASE)
-        data_new_client = {
-                ID: employee_id,
-                DATA: str(today.strftime("%d/%m/%Y")),
-                HORARIO: time,
-                QUANTIDADE: quantity,
-                PEDIDO: order
-        }
-        data_client[client_id][HISTORICO].append(data_new_client)
-        writeDatabase(data_client, DATABASE)
+    # Client reg
+    data_client = getDatabase(DATABASE)
+    data_new_client = {
+        ID: employee_id,
+        DATA: str(today.strftime("%d/%m/%Y")),
+        HORARIO: time,
+        QUANTIDADE: quantity,
+        PEDIDO: order
+    }
+    data_client[client_id][HISTORICO].append(data_new_client)
+    writeDatabase(data_client, DATABASE)
+
 
 def formatCPF(cpf):
-        cpf = list(cpf)
-        cpf.insert(3, '.')
-        cpf.insert(7, '.')
-        cpf.insert(11, '-')
+    cpf = list(cpf)
+    cpf.insert(3, '.')
+    cpf.insert(7, '.')
+    cpf.insert(11, '-')
 
-        return ''.join(cpf)
+    return ''.join(cpf)
+
 
 def formatCNPJ(cnpj):
-        
-        cnpj = list(cnpj)
-        cnpj.insert(2, '.')
-        cnpj.insert(6, '.')
-        cnpj.insert(10, '/')
-        cnpj.insert(15, '-')
 
-        return ''.join(cnpj)
+    cnpj = list(cnpj)
+    cnpj.insert(2, '.')
+    cnpj.insert(6, '.')
+    cnpj.insert(10, '/')
+    cnpj.insert(15, '-')
+
+    return ''.join(cnpj)
+
 
 def formatTelefone(telefone):
-        #41 99999-9999
-        telefone = list(telefone)
-        telefone.insert(2, ' ')
-        telefone.insert(8, '-')
-        
-        return ''.join(telefone)
-        
-def getHistory(id, database = DATABASE):
-        data = getDatabase(database)
-        if id in data:
-                return data[id][HISTORICO]
-                
+    # 41 99999-9999
+    telefone = list(telefone)
+    telefone.insert(2, ' ')
+    telefone.insert(8, '-')
 
-def getLastHistory(history, method = ""):
-        list = []
-        for i in range(len(history)-1, len(history)-4, -1):
-                list.append(history[i])
-        
-        if not method == 'ajax':
-                return list
-        else:
-                return {"data": list}
+    return ''.join(telefone)
+
+
+def getHistory(id, database=DATABASE):
+    data = getDatabase(database)
+    print(id)
+    if id in data:
+        print(data)
+        return data[id][HISTORICO]
+
+
+def getLastHistory(history, method=""):
+    list = []
+    for i in range(len(history)-1, len(history)-4, -1):
+        list.append(history[i])
+
+    if not method == 'ajax':
+        return list
+    else:
+        return {"data": list}
+
 
 def modifiedCouponHTML(quantity):
-        if quantity > 0:
-                if quantity == 1:
-                        text = 'Adicionado'
-                else:
-                        text = 'Adicionados'
+    if quantity > 0:
+        if quantity == 1:
+            text = 'Adicionado'
         else:
-                if quantity == -1:
-                        text = 'Removido'
-                else:
-                        text = 'Removidos'
-        return text
+            text = 'Adicionados'
+    else:
+        if quantity == -1:
+            text = 'Removido'
+        else:
+            text = 'Removidos'
+    return text
+
 
 def signUp(name, telefone, cpf, password):
+    global database
     
-    database = Mysql()
-    database.connect(mysql_bapkasor_cupons)
     id = len(database.fetchTable(0, CLIENTES))
     data = (id, name, cpf, 0, telefone, password, '@')
     database.insertClient(data)
-    database.disconnect()
-    
-        # data = getDatabase()
-        # id = len(data)
-        # data[id] = {
-        #         NOME: name,
-        #         CPF: cpf,
-        #         TELEFONE: telefone,
-        #         CUPONS: 0,
-        #         SENHA: password,
-        #         HISTORICO: [
-        #                 {
-        #                         "Id": "00",
-        #                         "Data": "26/04/2022",
-        #                         "Hor\u00e1rio": "16:14:38",
-        #                         "Quantidade": 1,
-        #                         "Pedido": "832"
-        #                 },
-        #                 {
-        #                         "Id": "00",
-        #                         "Data": "26/04/2022",
-        #                         "Hor\u00e1rio": "16:14:42",
-        #                         "Quantidade": 1,
-        #                         "Pedido": "96"
-        #                 },
-        #                 {
-        #                         "Id": "00",
-        #                         "Data": "26/04/2022",
-        #                         "Hor\u00e1rio": "16:14:43",
-        #                         "Quantidade": 1,
-        #                         "Pedido": "396"
-        #                 }
-        #         ]
-        # }
-        # writeDatabase(data)
-        
-print(getDatabaseMysql(CLIENTES))
+
+    # data = getDatabase()
+    # id = len(data)
+    # data[id] = {
+    #         NOME: name,
+    #         CPF: cpf,
+    #         TELEFONE: telefone,
+    #         CUPONS: 0,
+    #         SENHA: password,
+    #         HISTORICO: [
+    #                 {
+    #                         "Id": "00",
+    #                         "Data": "26/04/2022",
+    #                         "Hor\u00e1rio": "16:14:38",
+    #                         "Quantidade": 1,
+    #                         "Pedido": "832"
+    #                 },
+    #                 {
+    #                         "Id": "00",
+    #                         "Data": "26/04/2022",
+    #                         "Hor\u00e1rio": "16:14:42",
+    #                         "Quantidade": 1,
+    #                         "Pedido": "96"
+    #                 },
+    #                 {
+    #                         "Id": "00",
+    #                         "Data": "26/04/2022",
+    #                         "Hor\u00e1rio": "16:14:43",
+    #                         "Quantidade": 1,
+    #                         "Pedido": "396"
+    #                 }
+    #         ]
+    # }
+    # writeDatabase(data)
+
+database = Mysql()
+database.connect(mysql_bapkasor_cupons)
