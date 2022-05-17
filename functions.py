@@ -70,7 +70,7 @@ def userLogin(user, try_password, table):
     #         if password == data[id][SENHA]:
     #             return id
     # return False
-    
+
     global database
     try:
         if table == CLIENTES:
@@ -83,8 +83,7 @@ def userLogin(user, try_password, table):
     if try_password == password:
         id = data[0]
         return id
-    
-    
+
 
 def employeeLogin(email, password):
     data = getDatabase(DATABASE_EMPLOYEES)
@@ -188,11 +187,10 @@ def modifiedCouponHTML(quantity):
     return text
 
 
-def signUp(name, telefone, cpf, password):
+def signUp(name, telefone, email, cpf, password):
     global database
-    
     id = len(database.fetchTable(0, CLIENTES))
-    data = (id, name, cpf, 0, telefone, password, '@')
+    data = (id, name, cpf, 0, telefone, password, email)
     database.insertClient(data)
 
     # data = getDatabase()
@@ -228,6 +226,7 @@ def signUp(name, telefone, cpf, password):
     #         ]
     # }
     # writeDatabase(data)
+
 
 database = Mysql()
 database.connect(mysql_bapkasor_cupons)

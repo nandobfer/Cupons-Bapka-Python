@@ -1,8 +1,10 @@
 import RequirementsHandler
-from flask import Flask, request, url_for, redirect, render_template, jsonify
+from flask import Flask, request, url_for, redirect, render_template, request
 from config import *
 from functions import *
 import random
+
+session = []
 
 app = Flask(__name__)
 
@@ -16,6 +18,7 @@ def index():
 @app.route('/home/', methods=['GET', 'POST'])
 def home():
     if request.method == 'POST':
+        global session
         if 'client_panel' in request.form:
             telefone = request.form.get('telefone')
             password = request.form.get('password_client')
@@ -25,6 +28,7 @@ def home():
                 error = 'Não foi possível encontrar uma conta com esse número de telefone.'
                 return render_template('login_desktop.html', error_client=error)
             else:
+                session.append((request.remote_addr, id))
                 return redirect(url_for('panelClient', id=id))
             
         elif 'employee_panel' in request.form:
@@ -36,33 +40,16 @@ def home():
                 error = 'Não foi possível encontrar uma conta com esse email. Por favor, entre em contato com o administrador para recuperar o acesso.'
                 return render_template('login_desktop.html', error_partner=error)
             else:
+                session.append((request.remote_addr, id))
                 return redirect(url_for('homeEmployee', employee=id))
         
     return render_template('login_desktop.html')
 
-@app.route('/home2')
-def home2():
-    return render_template('login.html')
-
-# client home page
-@app.route('/cliente/home/', methods=['GET', 'POST'])
-def homeClient():
-    if request.method == 'POST':
-        telefone = request.form.get('telefone')
-        password = request.form.get('password')
-
-        id = clientLogin(telefone, password)
-        if not id:
-            error = 'E-mail ou senha inválido'
-            return render_template('cliente_desktop.html', error=error)
-        else:
-            return redirect(url_for('panelClient', id=id))
-
-    return render_template('cliente_desktop.html')
-
 # client panel page
 @app.route('/cliente/painel/', methods=['GET', 'POST'])
 def panelClient():
+    global session
+    print(type(session[0]))
     # get id from argument
     try:
         id = request.args.get('id')
@@ -186,25 +173,29 @@ def panelEmployee():
 
 @app.route('/funcionario/cadastro/', methods=['GET','POST'])
 def signUpPage():
-    
     if request.method == 'POST':
-        try:
-            name = request.form.get('name')
-            telefone = request.form.get('telefone')
-            cpf = request.form.get('cpf')
-            password = request.form.get('password')
-            password_confirmation = request.form.get('password-confirmation')
-            if not password == password_confirmation:
+        if 'signup' in request.form:
+            try:
+                name = request.form.get('name')
+                telefone = request.form.get('telefone')
+                email = request.form.get('email')
+                cpf = request.form.get('cpf')
+                password = request.form.get('password')
+                password_confirmation = request.form.get('password-confirmation')
+                if not password == password_confirmation:
+                    error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
+                    return render_template('cadastro_desktop.html', error=error)
+
+                signUp(name, telefone, email, cpf, password)
+                error = 'Usuário cadastrado com sucesso!'
+                return render_template('cadastro_desktop.html', error=error)
+            except Exception as e:
+                # erro alerta insert a quantity number
                 error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
                 return render_template('cadastro_desktop.html', error=error)
 
-            signUp(name, telefone, cpf, password)
-            error = 'Usuário cadastrado com sucesso!'
-            return render_template('cadastro_desktop.html', error=error)
-        except Exception as e:
-            # erro alerta insert a quantity number
-            error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
-            return render_template('cadastro_desktop.html', error=error)
+        elif 'voltar' in request.form:
+            print('oi', request.remote_addr)
 
 
     return render_template("cadastro_desktop.html")
