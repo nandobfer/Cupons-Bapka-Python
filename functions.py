@@ -64,25 +64,21 @@ def validateId(id):
 
 
 def userLogin(user, try_password, table):
-    # data = getDatabase()
-    # for id in data:
-    #     if telefone == data[id][TELEFONE]:
-    #         if password == data[id][SENHA]:
-    #             return id
-    # return False
-
     global database
+    data = False
     try:
         if table == CLIENTES:
             data = database.fetchTable(1, table, 'TELEFONE', user)[0]
-            password = data[5]
         elif table == PARCEIROS:
             data = database.fetchTable(1, table, 'EMAIL', user)[0]
-    except:
-        return False
+        if data:
+            password = data[5]
+    except Exception as error:
+        print(error)
+        return None
     if try_password == password:
         id = data[0]
-        return id
+        return str(id)
 
 
 def employeeLogin(email, password):
@@ -193,39 +189,26 @@ def signUp(name, telefone, email, cpf, password):
     data = (id, name, cpf, 0, telefone, password, email)
     database.insertClient(data)
 
-    # data = getDatabase()
-    # id = len(data)
-    # data[id] = {
-    #         NOME: name,
-    #         CPF: cpf,
-    #         TELEFONE: telefone,
-    #         CUPONS: 0,
-    #         SENHA: password,
-    #         HISTORICO: [
-    #                 {
-    #                         "Id": "00",
-    #                         "Data": "26/04/2022",
-    #                         "Hor\u00e1rio": "16:14:38",
-    #                         "Quantidade": 1,
-    #                         "Pedido": "832"
-    #                 },
-    #                 {
-    #                         "Id": "00",
-    #                         "Data": "26/04/2022",
-    #                         "Hor\u00e1rio": "16:14:42",
-    #                         "Quantidade": 1,
-    #                         "Pedido": "96"
-    #                 },
-    #                 {
-    #                         "Id": "00",
-    #                         "Data": "26/04/2022",
-    #                         "Hor\u00e1rio": "16:14:43",
-    #                         "Quantidade": 1,
-    #                         "Pedido": "396"
-    #                 }
-    #         ]
-    # }
-    # writeDatabase(data)
+
+def isLoggedIn(session, id, ip):
+    connection = {
+        str(ip): id
+    }
+    print(connection)
+    if connection in session:
+        print('logged in')
+        return True
+
+
+def getSession(session, ip):
+    ip = str(ip)
+    for connection in session:
+        print('for connection in session')
+        if ip in connection:
+            print('ip in connection')
+            print(connection)
+            print(connection[ip])
+            return connection[ip]
 
 
 database = Mysql()
