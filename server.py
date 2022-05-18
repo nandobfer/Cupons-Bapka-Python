@@ -3,6 +3,7 @@ from flask import Flask, request, url_for, redirect, render_template, request
 from config import *
 from functions import *
 import random
+from session_handler import *
 
 session = []
 
@@ -32,9 +33,12 @@ def home():
                 error = 'Não foi possível encontrar uma conta com esse número de telefone.'
                 return render_template('login_desktop.html', error_client=error)
             else:
-                login = {
-                    str(request.remote_addr): id
-                }
+                ip = str(request.remote_addr)
+                login = Connection(ip, id)
+                login.cliente = True
+                # login = {
+                #     str(request.remote_addr): (id, 'cliente')
+                # }
                 session.append(login)
                 return redirect(url_for('panelClient'))
 
@@ -49,13 +53,16 @@ def home():
                 return render_template('login_desktop.html', error_partner=error)
             else:
                 login = {
-                    str(request.remote_addr): id
+                    str(request.remote_addr): (id, 'parceiro')
                 }
                 session.append(login)
                 return redirect(url_for('homeEmployee', employee=id))
 
     elif request.method == 'GET':
-        session.pop(str(request.remote_addr))
+        ip = str(request.remote_addr)
+        for connection in session:
+            if connection.ip == ip:
+                session.remove(connection)
 
     return render_template('login_desktop.html')
 
@@ -65,13 +72,15 @@ def home():
 @app.route('/cliente/painel/', methods=['GET', 'POST'])
 def panelClient():
     global session
+    ip = str(request.remote_addr)
     try:
-        id = getSession(session, request.remote_addr)
+        # id = getSession(session, request.remote_addr)
+        connection = getConnection(session, ip)
+        id = connection.id
     except:
         return redirect(url_for('home'))
 
-    print(session, id, request.remote_addr)
-    if not isLoggedIn(session, id, request.remote_addr):
+    if not connection.cliente:
         return redirect(url_for('home'))
 
     data = getData(id)
@@ -284,6 +293,12 @@ def modCupons():
 @app.route('/database.json', methods=['GET'])
 def database():
     return getDatabase()
+
+
+@app.route('/session/', methods=['GET', 'POST'])
+def sessionurl():
+    global session
+    return str(session)
 
 
 if __name__ == '__main__':

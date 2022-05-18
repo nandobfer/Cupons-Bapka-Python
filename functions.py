@@ -154,7 +154,6 @@ def getHistory(id, database=DATABASE):
     data = getDatabase(database)
     print(id)
     if id in data:
-        print(data)
         return data[id][HISTORICO]
 
 
@@ -190,25 +189,21 @@ def signUp(name, telefone, email, cpf, password):
     database.insertClient(data)
 
 
-def isLoggedIn(session, id, ip):
+def isCliente(session, id, ip):
     connection = {
-        str(ip): id
+        str(ip): (id, 'cliente')
     }
-    print(connection)
     if connection in session:
-        print('logged in')
+        print(connection)
+        print(session)
         return True
 
 
 def getSession(session, ip):
     ip = str(ip)
     for connection in session:
-        print('for connection in session')
         if ip in connection:
-            print('ip in connection')
-            print(connection)
-            print(connection[ip])
-            return connection[ip]
+            return connection[ip][0]
 
 
 database = Mysql()
