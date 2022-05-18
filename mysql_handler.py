@@ -46,7 +46,7 @@ class Mysql():
 
         cursor = self.connection.cursor(buffered=True)
         cursor.execute(sql)
-        if rows > 0:
+        if rows > 1:
             records = cursor.fetchmany(rows)
         else:
             records = cursor.fetchall()

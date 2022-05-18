@@ -39,11 +39,21 @@ def getName(id, database=DATABASE):
         return data[id][NOME]
 
 
-def getData(id, database=DATABASE):
+def getData(id, table):
     ''' function scans database looking for ID and returns it's table '''
-    data = getDatabase(database)
-    if id in data:
-        return data[id]
+    # data = getDatabase(database)
+    # if id in data:
+    #     return data[id]
+    global database
+    data = database.fetchTable(1, table, 'ID', id)[0]
+    print(data)
+    formated_data = {
+        NOME: data[1],
+        CPF: data[2],
+        CUPONS: data[3],
+        TELEFONE: data[4]
+    }
+    return formated_data
 
 
 def modifyCoupons(id, quantity: int):
