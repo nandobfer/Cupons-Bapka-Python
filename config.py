@@ -1,3 +1,6 @@
+# session time limit in minutes
+TIMELIMIT = 1
+
 # database constants
 DATABASE = 'database.json'
 # database constant keys
@@ -31,10 +34,8 @@ PARCEIROS = 'Parceiros'
 HISTORICOS = 'Historicos'
 
 
-
-
 # color constants
-RED = '\033[0;31m' 
+RED = '\033[0;31m'
 GREEN = '\033[0;32m'
 YELLOW = '\033[0;33m'
 BLUE = '\033[0;34m'
