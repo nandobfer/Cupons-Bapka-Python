@@ -47,12 +47,21 @@ def getData(id, table):
     global database
     data = database.fetchTable(1, table, 'ID', id)[0]
     print(data)
-    formated_data = {
-        NOME: data[1],
-        CPF: data[2],
-        CUPONS: data[3],
-        TELEFONE: data[4]
-    }
+    if table == CLIENTES:
+        formated_data = {
+            NOME: data[1],
+            CPF: data[2],
+            CUPONS: data[3],
+            TELEFONE: data[4]
+        }
+    elif table == PARCEIROS:
+        formated_data = {
+            NOME: data[1],
+            CNPJ: data[2],
+            TELEFONE: data[4],
+            EMAIL: data[6]
+        }
+
     return formated_data
 
 

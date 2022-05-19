@@ -129,8 +129,19 @@ def loginEmployee():
 
 @app.route('/funcionario/home/', methods=['GET', 'POST'])
 def homeEmployee():
-    employee_id = request.args.get('employee')
-    data = getData(employee_id, DATABASE_EMPLOYEES)
+    global session
+    ip = str(request.remote_addr)
+    try:
+        # id = getSession(session, request.remote_addr)
+        connection = getConnection(session, ip)
+        employee_id = connection.id
+    except:
+        return redirect(url_for('home'))
+
+    if not connection.parceiro:
+        return redirect(url_for('home'))
+
+    data = getData(employee_id, PARCEIROS)
 
     history = getLastHistory(getHistory(employee_id, DATABASE_EMPLOYEES))
     # append NOME to history dict
@@ -296,7 +307,10 @@ def database():
 @app.route('/session/', methods=['GET', 'POST'])
 def sessionurl():
     global session
-    return str(session)
+    formated_session = []
+    for connection in session:
+        formated_session.append((connection.ip, connection.id))
+    return str(formated_session)
 
 
 if __name__ == '__main__':
