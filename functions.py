@@ -208,10 +208,14 @@ def getLastHistory(history, method="", cliente=False):
     print(history)
     lista = []
     id_index = 0
+    id_index_name = 1
     table = PARCEIROS
+    table_name = CLIENTES
     if cliente:
         id_index = 1
+        id_index_name = 0
         table = CLIENTES
+        table_name = PARCEIROS
 
     # for i in range(len(history)-1, len(history)-4, -1):
     for item in history:
@@ -221,7 +225,7 @@ def getLastHistory(history, method="", cliente=False):
             HORARIO: item[3],
             QUANTIDADE: item[4],
             PEDIDO: item[5],
-            NOME: getName(item[id_index], table)
+            NOME: getName(item[id_index_name], table_name).split()[0]
         }
         lista.append(dicionario)
         count += 1
@@ -242,8 +246,6 @@ def getLastHistory(history, method="", cliente=False):
             NOME: ''
         }
             lista.append(dicionario)
-
-        lista = lista[::-1]
 
     # reversing list
     lista = lista[::-1]

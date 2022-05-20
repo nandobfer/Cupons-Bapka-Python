@@ -82,7 +82,7 @@ def panelClient():
         return redirect(url_for('home'))
 
     data = getData(id, CLIENTES)
-    history = getLastHistory(getHistory(id, CLIENTES), True)
+    history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
 
     if request.method == 'POST':
         pass
@@ -184,11 +184,7 @@ def panelEmployee():
 
     data = getData(id, CLIENTES)
 
-    history = getLastHistory(getHistory(id))
-    # append NOME to history dict
-    for i in range(len(history)):
-        history[i].update(
-            {'Nome': getName(history[i][ID], DATABASE_EMPLOYEES)})
+    history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
 
     if request.method == 'POST':
 
@@ -271,7 +267,7 @@ def history():
         if 'id' in request.form:
             id = request.form["id"]
             # id = data["id"]
-            history = getLastHistory(getHistory(id), 'ajax')
+            history = getLastHistory(getHistory(id, CLIENTES), 'ajax', True)
             # append NOME to history dict
             for i in range(len(history["data"])):
                 history["data"][i].update(
@@ -292,11 +288,8 @@ def modCupons():
             registerModification(id, quantity, employee_id,
                                  random.random()*1000)
 
-            history = getLastHistory(getHistory(id))
-            # append NOME to history dict
-            for i in range(len(history)):
-                history[i].update({'Nome': getName(history[i][ID])})
-
+            history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
+            
             result = {
                 "history": history,
                 "new_coupons": new_coupons
