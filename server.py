@@ -141,10 +141,7 @@ def homeEmployee():
 
     data = getData(employee_id, PARCEIROS)
 
-    history = getLastHistory(getHistory(employee_id, DATABASE_EMPLOYEES))
-    # append NOME to history dict
-    for i in range(len(history)):
-        history[i].update({'Nome': getName(history[i][ID])})
+    history = getLastHistory(getHistory(employee_id, PARCEIROS))
 
     if request.method == 'POST':
         cpf = request.form['form_cpf']
