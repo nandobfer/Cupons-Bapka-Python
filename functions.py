@@ -34,10 +34,15 @@ def getId(cpf, table):
         return None
 
 
-def getName(id, database=DATABASE):
-    data = getDatabase(database)
-    if id in data:
-        return data[id][NOME]
+def getName(id, table):
+    global database
+    try:
+        data = database.fetchTable(1, table, 'ID', id)[0]
+        name = data[1]
+        print(name)
+        return name
+    except:
+        return None
 
 
 def getData(id, table):
@@ -109,7 +114,8 @@ def employeeLogin(email, password):
 
 
 def registerModification(client_id, quantity, employee_id, order):
-    global database
+    global database, pedido
+    pedido += 1
     today = date.today()
     formated_today = str(today.strftime("%d/%m/%Y"))
     now = str(datetime.now().time())
@@ -122,7 +128,7 @@ def registerModification(client_id, quantity, employee_id, order):
         formated_today,
         time,
         quantity,
-        order
+        pedido
     )
     database.insertHistory(data)
     # data = getDatabase(DATABASE_EMPLOYEES)
@@ -184,26 +190,75 @@ def formatTelefone(telefone):
     return ''.join(telefone)
 
 
-def getHistory(id, database=DATABASE):
-    data = getDatabase(database)
-    print(id)
-    if id in data:
-        return data[id][HISTORICO]
+def getHistory(id, table):
+    global database
+    column = 'ID_' + table[:-1].upper()
+    data = database.fetchTable(0, 'Historicos', column, id)
+    return data
+    # data = getDatabase(database)
+    # print(id)
+    # if id in data:
+    #     return data[id][HISTORICO]
 
 
-def getLastHistory(history, method=""):
-    list = []
-    for i in range(len(history)-1, len(history)-4, -1):
-        list.append(history[i])
+def getLastHistory(history, method="", cliente=False):
+    count = 1
+    incomplete = False
+    num_history = len(history)
+    print(history)
+    lista = []
+    id_index = 0
+    table = PARCEIROS
+    if cliente:
+        id_index = 1
+        table = CLIENTES
+
+    # for i in range(len(history)-1, len(history)-4, -1):
+    for item in history:
+        dicionario = {
+            ID: item[id_index],
+            DATA: item[2],
+            HORARIO: item[3],
+            QUANTIDADE: item[4],
+            PEDIDO: item[5],
+            NOME: getName(item[id_index], table)
+        }
+        lista.append(dicionario)
+        count += 1
+
+    if count > num_history:
+        incomplete = True
+        print('incomplete')
+        
+    if incomplete or num_history == 0:
+        print('COUNT = '+str(count))
+        for i in range(4-count):
+            dicionario = {
+            ID: '',
+            DATA: '',
+            HORARIO: '',
+            QUANTIDADE: 0,
+            PEDIDO: '',
+            NOME: ''
+        }
+            lista.append(dicionario)
+
+        lista = lista[::-1]
+
+    # reversing list
+    lista = lista[::-1]
+    print(lista)
 
     if not method == 'ajax':
-        return list
+        return lista
     else:
-        return {"data": list}
+        return {"data": lista}
 
 
 def modifiedCouponHTML(quantity):
-    if quantity > 0:
+    if quantity == 0:
+        text = ''
+    elif quantity > 0:
         if quantity == 1:
             text = 'Adicionado'
         else:
@@ -242,3 +297,4 @@ def getSession(session, ip):
 
 database = Mysql()
 database.connect(mysql_bapkasor_cupons)
+pedido = len(database.fetchTable(0, 'Historicos'))

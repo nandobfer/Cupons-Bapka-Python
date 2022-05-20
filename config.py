@@ -1,5 +1,5 @@
 # session time limit in minutes
-TIMELIMIT = 1
+TIMELIMIT = 15
 
 # database constants
 DATABASE = 'database.json'
