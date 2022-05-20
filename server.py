@@ -55,7 +55,7 @@ def home():
                 login = Connection(ip, id)
                 login.parceiro = True
                 session.append(login)
-                return redirect(url_for('homeEmployee', employee=id))
+                return redirect(url_for('homeEmployee'))
 
     elif request.method == 'GET':
         for connection in session:
@@ -151,7 +151,7 @@ def homeEmployee():
     if request.method == 'POST':
         cpf = request.form['form_cpf']
         try:
-            id = getId(cpf)
+            id = getId(cpf, CLIENTES)
 
         except:
             # error alert TODO
@@ -165,8 +165,8 @@ def homeEmployee():
                                    history3_name=history[2][NOME], history3_idc=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
 
         url = url_for('panelEmployee')
-        return redirect(f'{url}?id={id}&employee={employee_id}')
-    return render_template("parceiro_desktop.html", name=data[NOME], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]),
+        return redirect(f'{url}?id={id}')
+    return render_template("parceiro_desktop.html", name=data[NOME].split()[0], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]),
                            history1_name=history[0][NOME], history1_idc=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                            history2_name=history[1][NOME], history2_idc=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                            history3_name=history[2][NOME], history3_idc=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
@@ -175,10 +175,19 @@ def homeEmployee():
 @app.route('/funcionario/painel/', methods=['GET', 'POST'])
 def panelEmployee():
     # get id's
+    global session
     id = request.args.get('id')
-    employee_id = request.args.get('employee')
+    ip = str(request.remote_addr)
+    try:
+        connection = getConnection(session, ip)
+        employee_id = connection.id
+    except:
+        return redirect(url_for('home'))
 
-    data = getData(id)
+    if not connection.parceiro:
+        return redirect(url_for('home'))
+
+    data = getData(id, CLIENTES)
 
     history = getLastHistory(getHistory(id))
     # append NOME to history dict
@@ -209,10 +218,10 @@ def panelEmployee():
 
     if request.form.get('back'):
         url = url_for('homeEmployee')
-        return redirect(f'{url}?employee={employee_id}')
+        return redirect(f'{url}')
 
     # return render_template("panel_employee.html")
-    return render_template("parceiro_cliente_desktop.html", name=data[NOME], client_id=id, cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], employee_id=employee_id,
+    return render_template("parceiro_cliente_desktop.html", name=data[NOME].split()[0], client_id=id, cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], employee_id=employee_id,
                            history1_name=history[0][NOME], history1_idp=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                            history2_name=history[1][NOME], history2_idp=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                            history3_name=history[2][NOME], history3_idp=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
@@ -285,7 +294,8 @@ def modCupons():
             employee_id = request.form["employee_id"]
 
             new_coupons = modifyCoupons(id, quantity)
-            registerModification(id, quantity, employee_id, 0)
+            registerModification(id, quantity, employee_id,
+                                 random.random()*1000)
 
             history = getLastHistory(getHistory(id))
             # append NOME to history dict

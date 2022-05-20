@@ -87,6 +87,14 @@ class Mysql():
         self.connection.commit()
         cursor.close()
 
+    def updateTable(self, table, id, column, value, id_column):
+        command = f'Update {table} set {column} = {value} where {id_column} = {id}'
+        cursor = self.connection.cursor()
+        cursor.execute(command)
+        self.connection.commit()
+        # cursor.close()
+        print("Record Updated successfully ")
+
 # database = Mysql()
 # database.connect(config.mysql_bapkasor_cupons)
 # id = len(database.fetchTable(0, 'Historico'))

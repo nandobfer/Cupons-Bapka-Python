@@ -23,14 +23,15 @@ def writeDatabase(data, database=DATABASE):
     return True
 
 
-def getId(cpf, database=DATABASE):
+def getId(cpf, table):
     ''' function scans database looking for a matching cpf and returns the matched id '''
-    data = getDatabase(database)
-    for id in data:
-        if cpf == data[id][CPF]:
-            return id
-
-    return False
+    global database
+    try:
+        data = database.fetchTable(1, table, "CPF", cpf)[0]
+        id = data[0]
+        return str(id)
+    except:
+        return None
 
 
 def getName(id, database=DATABASE):
@@ -41,9 +42,6 @@ def getName(id, database=DATABASE):
 
 def getData(id, table):
     ''' function scans database looking for ID and returns it's table '''
-    # data = getDatabase(database)
-    # if id in data:
-    #     return data[id]
     global database
     data = database.fetchTable(1, table, 'ID', id)[0]
     print(data)
@@ -67,12 +65,13 @@ def getData(id, table):
 
 def modifyCoupons(id, quantity: int):
     ''' function adds or removes specified amount of coupons '''
-    data = getDatabase()
-    data[id][CUPONS] += quantity
+    global database
+    data = database.fetchTable(1, CLIENTES, 'ID', id)[0]
+    cupons = data[3] + quantity
 
     # save to database
-    writeDatabase(data)
-    return data[id][CUPONS]
+    database.updateTable(CLIENTES, id, 'CUPONS', cupons, 'ID')
+    return cupons
 
 
 def validateId(id):
@@ -110,34 +109,50 @@ def employeeLogin(email, password):
 
 
 def registerModification(client_id, quantity, employee_id, order):
-    data = getDatabase(DATABASE_EMPLOYEES)
+    global database
     today = date.today()
+    formated_today = str(today.strftime("%d/%m/%Y"))
     now = str(datetime.now().time())
     time = ''
     for i in range(8):
         time += now[i]
-    # Employee register
-    data_new = {
-        ID: client_id,
-        DATA: str(today.strftime("%d/%m/%Y")),
-        HORARIO: time,
-        QUANTIDADE: quantity,
-        PEDIDO: order
-    }
-    data[employee_id][HISTORICO].append(data_new)
-    writeDatabase(data, DATABASE_EMPLOYEES)
+    data = (
+        employee_id,
+        client_id,
+        formated_today,
+        time,
+        quantity,
+        order
+    )
+    database.insertHistory(data)
+    # data = getDatabase(DATABASE_EMPLOYEES)
+    # today = date.today()
+    # now = str(datetime.now().time())
+    # time = ''
+    # for i in range(8):
+    #     time += now[i]
+    # # Employee register
+    # data_new = {
+    #     ID: client_id,
+    #     DATA: str(today.strftime("%d/%m/%Y")),
+    #     HORARIO: time,
+    #     QUANTIDADE: quantity,
+    #     PEDIDO: order
+    # }
+    # data[employee_id][HISTORICO].append(data_new)
+    # writeDatabase(data, DATABASE_EMPLOYEES)
 
-    # Client reg
-    data_client = getDatabase(DATABASE)
-    data_new_client = {
-        ID: employee_id,
-        DATA: str(today.strftime("%d/%m/%Y")),
-        HORARIO: time,
-        QUANTIDADE: quantity,
-        PEDIDO: order
-    }
-    data_client[client_id][HISTORICO].append(data_new_client)
-    writeDatabase(data_client, DATABASE)
+    # # Client reg
+    # data_client = getDatabase(DATABASE)
+    # data_new_client = {
+    #     ID: employee_id,
+    #     DATA: str(today.strftime("%d/%m/%Y")),
+    #     HORARIO: time,
+    #     QUANTIDADE: quantity,
+    #     PEDIDO: order
+    # }
+    # data_client[client_id][HISTORICO].append(data_new_client)
+    # writeDatabase(data_client, DATABASE)
 
 
 def formatCPF(cpf):
