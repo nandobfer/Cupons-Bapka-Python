@@ -52,44 +52,65 @@
 		</svg>
 	</div>
 	<div id="wrap-abas-cliente">
+		<script>
+			function hideContainer(hide, show) {
+				document.getElementById(hide).style.display = "none";
+				document.getElementById(hide).style.visibility = "hidden";
+
+				document.getElementById(show).style.display = "block";
+				document.getElementById(show).style.visibility = "visible";
+			}
+			</script>
 		<div id="aba-cliente-2">
-			<div class="aba-clinte-2-fundo">
-				
+			<div id="aba-2" onclick="hideContainer('container-1', 'container-2')">
+				<div class="aba-clinte-2-fundo">
+					
+				</div>
+
+				<div id="Como_ganho_mais">
+					<span>Como ganho mais?</span>
 			</div>
-			<div class="abas-cliente-fundo-2">
-				
-			</div>
-			<div id="Como_ganho_mais">
-				<span>Como ganho mais?</span>
-			</div>
-			<div id="n_Lorem_ipsum_dolor_sit_amet_c">
-				<span>● Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
-			</div>
-			<div id="n_Lorem_ipsum_dolor_sit_amet_c_">
-				<span>● Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
-			</div>
-			<div id="Com_seus_cupons_voc_pode">
-				<span>Com seus cupons você pode:</span>
+			<div id="container-2">
+				<div class="abas-cliente-fundo-2">
+					
+				</div>
+				</div>
+				<div id="n_Lorem_ipsum_dolor_sit_amet_c">
+					<span>● Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+				</div>
+				<div id="n_Lorem_ipsum_dolor_sit_amet_c_">
+					<span>● Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span>
+				</div>
+				<div id="Com_seus_cupons_voc_pode">
+					<span>Com seus cupons você pode:</span>
+				</div>
+
 			</div>
 		</div>
 		<div id="aba-cliente-1">
-			<div class="abas-cliente-fundo-1">
+			<div id="aba-1" onclick="hideContainer('container-2', 'container-1')">
+				<div class="aba-clinte-1-fundo">
+					
+				</div>
+				<div id="Como_posso_usar">
+					<span>Como posso usar?</span>
+				</div>
+
+			</div>
+			<div id="container-1">
+				<div class="abas-cliente-fundo-1">
+					
+				</div>
+				<div id="n_Trocar_10_cupons_por_10_de_d">
+					<span>● Trocar 10 cupons por 10% de desconto em compras de até R$200,00</span>
+				</div>
+				<div id="n_Trocar_50_cupons_por_10_de_d">
+					<span>● Trocar 50 cupons por 10% de desconto em compras de até R$200,00</span>
+				</div>
+				<div id="Com_seus_cupons_voc_pode_bf">
+					<span>Com seus cupons você pode:</span>
+				</div>
 				
-			</div>
-			<div class="aba-clinte-1-fundo">
-				
-			</div>
-			<div id="Como_posso_usar">
-				<span>Como posso usar?</span>
-			</div>
-			<div id="n_Trocar_10_cupons_por_10_de_d">
-				<span>● Trocar 10 cupons por 10% de desconto em compras de até R$200,00</span>
-			</div>
-			<div id="n_Trocar_50_cupons_por_10_de_d">
-				<span>● Trocar 50 cupons por 10% de desconto em compras de até R$200,00</span>
-			</div>
-			<div id="Com_seus_cupons_voc_pode_bf">
-				<span>Com seus cupons você pode:</span>
 			</div>
 		</div>
 	</div>
@@ -246,13 +267,7 @@
 			
 	</div>
 	<div id="buttom-codigo-promocional">
-		<svg class="buttom-fundo-codigo-promociona">
-			<rect id="buttom-fundo-codigo-promociona" rx="17" ry="17" x="0" y="0" width="212" height="34">
-			</rect>
-		</svg>
-		<div id="Inserir_Cdigo_promocional">
-			<span>Inserir Código promocional</span>
-		</div>
+		<button class="button" id="button-codigo">Inserir Código promocional</button>
 	</div>
 	<div id="area-do-cliente">
 		<div id="rea_do_Cliente">
@@ -286,10 +301,23 @@
 		<div id="n_1_99999-9999">
 			<span>{{telefone}}</span>
 		</div>
-		<div id="Alterar">
+		<div class="Alterar" id="Alterar-Telefone">
 			<a href="/cliente/alterar_telefone/">
 				<span>Alterar</span>
 			</a>
+		</div>
+		<div id="email">
+			<p id="email-phrase">E-mail: {{email}}</p>
+			<div class="Alterar" id="Alterar-Email">
+				<a href="/cliente/alterar_telefone/">
+					<p>Alterar</p>
+				</a>
+			</div>
+			<script>
+				var width = document.getElementById('email-phrase').clientWidth + 30
+				width = width.toString()
+				document.getElementById('Alterar-Email').style.left = `${width}px`
+			</script>
 		</div>
 		<div id="Ol_Usurio_">
 			<span>Olá, {{name}}! </span>

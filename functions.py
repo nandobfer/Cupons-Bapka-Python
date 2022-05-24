@@ -55,7 +55,8 @@ def getData(id, table):
             NOME: data[1],
             CPF: data[2],
             CUPONS: data[3],
-            TELEFONE: data[4]
+            TELEFONE: data[4],
+            EMAIL: data[6]
         }
     elif table == PARCEIROS:
         formated_data = {
