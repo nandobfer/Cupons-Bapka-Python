@@ -477,6 +477,50 @@
 	color: rgba(255,255,255,1);
 }
 
+#buttom-ajuda {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 1458px;
+    top: 229px;
+    overflow: visible;
+	cursor: pointer;
+}
+
+#Text {
+    left: 16px;
+    top: 1px;
+    position: absolute;
+    overflow: visible;
+    width: 19px;
+    white-space: nowrap;
+    text-align: left;
+    font-family: Arciform Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    color: rgba(255,255,255,1);
+}
+
+.Elipse_1 {
+    position: absolute;
+    overflow: visible;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+
+#Elipse_1 {
+    fill: transparent;
+    stroke-width: 6px;
+    stroke-linejoin: miter;
+    stroke-linecap: butt;
+    stroke-miterlimit: 4;
+    shape-rendering: auto;
+    stroke: rgba(255,255,255,1);
+}
+
 .input-field {
 	background-color: #fffffff0;
 	position: absolute;
@@ -571,6 +615,11 @@
   a:active {
 	text-decoration: underline;
 	color: rgba(238,230,67,1);
+}
+
+#buttom-ajuda:hover svg ellipse, #buttom-ajuda:hover #Text {
+	color: rgba(238,230,67,1);
+	stroke: rgba(238,230,67,1);
 }
 
 @media screen and (max-width: 768px) {
