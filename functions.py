@@ -91,7 +91,7 @@ def userLogin(user, try_password, table):
     global database
     data = False
 
-    if not database.connection.is_connect():
+    if not database.connection.is_connected():
         database.connect()
 
     try:

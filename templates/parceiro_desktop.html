@@ -205,6 +205,11 @@
 		<div id="rea_do_Parceiro">
 			<span>Área do Parceiro</span>
 		</div>
+		<div class="cadastrar">
+			<a href="/funcionario/cadastro/">
+				<button class="button" id="button-cadastrar">Cadastrar novo cliente</button>
+			</a>
+		</div>
 		<div id="Sair">
 			<a href="/home">
 				<span>Sair</span>
@@ -243,7 +248,7 @@
 	</div>
 	<div id="informacoes-parceiro">
 		<div id="Ol_Parceiro">
-			<span>Olá, {{name}}!</span>
+			<span id="hello">Olá, {{name}}!</span>
 		</div>
 		<div id="CNPJ">
 			<span>CNPJ:</span>
@@ -259,6 +264,11 @@
 		</div>
 		<div id="IDP_12" class="sid" sid="{{employee_id}}">
 			<span>IDP: {{employee_id}}</span>
+			<script>
+				var width = document.getElementById('hello').offsetWidth + 30
+				width = width.toString()
+				document.getElementById('IDP_12').style.left = `${width}px`
+			</script>
 		</div>
 		<div id="Telefone">
 			<span>Telefone:</span>
