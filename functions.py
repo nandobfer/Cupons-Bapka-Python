@@ -90,6 +90,10 @@ def validateId(id):
 def userLogin(user, try_password, table):
     global database
     data = False
+
+    if not database.connection.is_connect():
+        database.connect()
+
     try:
         if table == CLIENTES:
             data = database.fetchTable(1, table, 'TELEFONE', user)[0]
