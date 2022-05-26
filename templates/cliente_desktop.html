@@ -280,6 +280,12 @@
 		</div>
 	</div>
 	<div id="informacoes-cliente">
+		<div id="Ol_Usurio_">
+			<span>Olá, {{name}}! </span>
+		</div>
+		<div id="IDC_02">
+			<span>IDC: {{id}}</span>
+		</div>
 		<div id="Voc_possui">
 			<span>Você possui</span>
 		</div>
@@ -289,41 +295,38 @@
 		<div id="cupons">
 			<span>cupons!</span>
 		</div>
-		<div id="CPF">
-			<span>CPF:</span>
-		</div>
-		<div id="n__999999-9">
-			<span>{{cpf}}</span>
-		</div>
-		<div id="Telefone">
-			<span>Telefone:</span>
-		</div>
-		<div id="n_1_99999-9999">
-			<span>{{telefone}}</span>
-		</div>
-		<div class="Alterar" id="Alterar-Telefone">
-			<a href="/cliente/alterar_telefone/">
-				<span>Alterar</span>
-			</a>
-		</div>
-		<div id="email">
-			<p id="email-phrase">E-mail: {{email}}</p>
-			<div class="Alterar" id="Alterar-Email">
+		<div class="user-container">
+			<div id="CPF">
+				<span>CPF:</span>
+			</div>
+			<div id="n__999999-9">
+				<span>{{cpf}}</span>
+			</div>
+			<div id="Telefone">
+				<span>Telefone:</span>
+			</div>
+			<div id="n_1_99999-9999">
+				<span>{{telefone}}</span>
+			</div>
+			<div class="Alterar" id="Alterar-Telefone">
 				<a href="/cliente/alterar_telefone/">
-					<p>Alterar</p>
+					<span>Alterar</span>
 				</a>
 			</div>
-			<script>
-				var width = document.getElementById('email-phrase').clientWidth + 30
-				width = width.toString()
-				document.getElementById('Alterar-Email').style.left = `${width}px`
-			</script>
-		</div>
-		<div id="Ol_Usurio_">
-			<span>Olá, {{name}}! </span>
-		</div>
-		<div id="IDC_02">
-			<span>IDC: {{id}}</span>
+			<div id="email">
+				<p id="email-phrase">E-mail: {{email}}</p>
+				<div class="Alterar" id="Alterar-Email">
+					<a href="/cliente/alterar_telefone/">
+						<p>Alterar</p>
+					</a>
+				</div>
+				<script>
+					var width = document.getElementById('email-phrase').clientWidth + 30
+					width = width.toString()
+					document.getElementById('Alterar-Email').style.left = `${width}px`
+				</script>
+			</div>
+
 		</div>
 	</div>
 </div>

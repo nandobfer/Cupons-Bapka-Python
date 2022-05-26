@@ -907,7 +907,7 @@
 }
 #Voc_possui {
 	left: 0px;
-	top: 206px;
+	top: 150px;
 	position: absolute;
 	overflow: visible;
 	width: 142px;
@@ -921,7 +921,7 @@
 }
 #n_99 {
 	left: 141px;
-	top: 183px;
+	top: 135px;
 	position: absolute;
 	overflow: visible;
 	width: 88px;
@@ -935,7 +935,7 @@
 }
 #cupons {
 	left: 232px;
-	top: 206px;
+	top: 150px;
 	position: absolute;
 	overflow: visible;
 	width: 142px;
@@ -1042,7 +1042,7 @@
 }
 #Ol_Usurio_ {
 	left: 0px;
-	top: 0px;
+	top: 50px;
 	position: absolute;
 	overflow: visible;
 	width: 548px;
@@ -1051,12 +1051,12 @@
 	font-family: Arciform Sans;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 70px;
+	font-size: 62px;
 	color: rgba(255,255,255,1);
 }
 #IDC_02 {
 	right: 0px;
-	top: 53px;
+	top: 103px;
 	position: absolute;
 	overflow: visible;
 	width: 59px;
@@ -1144,4 +1144,9 @@ a:link {
     border-color: rgba(238,230,67,1);
     background-color: rgba(238,230,67,1);
 	color: rgba(9,78,147,1);
+}
+
+.user-container {
+	display: none;
+	visibility: hidden;
 }
