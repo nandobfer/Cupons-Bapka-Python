@@ -147,20 +147,21 @@ def homeEmployee():
         cpf = request.form['form_cpf']
         try:
             id = getId(cpf, CLIENTES)
+            print(id)
 
         except:
-            # error alert TODO
-            return redirect(url_for('home'))
+            pass
 
         if not id:
-            error = 'Não foi possível encontrar uma conta com esse nome de usuário.'
+            error = 'Não foi possível encontrar um cliente com esse CPF nesta loja.'
             return render_template('parceiro_desktop.html', name=data[NOME], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]), error=error,
                                    history1_name=history[0][NOME], history1_idc=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                                    history2_name=history[1][NOME], history2_idc=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                                    history3_name=history[2][NOME], history3_idc=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
-
-        url = url_for('panelEmployee')
-        return redirect(f'{url}?id={id}')
+        else:
+            print(id, type(id))
+            url = url_for('panelEmployee')
+            return redirect(f'{url}?id={id}')
     return render_template("parceiro_desktop.html", name=data[NOME].split()[0], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]),
                            history1_name=history[0][NOME], history1_idc=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
                            history2_name=history[1][NOME], history2_idc=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
@@ -182,7 +183,7 @@ def panelEmployee():
     if not connection.parceiro:
         return redirect(url_for('home'))
 
-    data = getData(id, CLIENTES)
+    data = getData(id, CLIENTES, employee_id)
 
     history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
 
@@ -220,6 +221,17 @@ def panelEmployee():
 
 @app.route('/funcionario/cadastro/', methods=['GET', 'POST'])
 def signUpPage():
+    global session
+    ip = str(request.remote_addr)
+    try:
+        connection = getConnection(session, ip)
+        id = connection.id
+    except:
+        return redirect(url_for('home'))
+
+    if not connection.parceiro:
+        return redirect(url_for('home'))
+
     if request.method == 'POST':
         if 'signup' in request.form:
             try:
@@ -234,13 +246,13 @@ def signUpPage():
                     error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
                     return render_template('cadastro_desktop.html', error=error)
 
-                signUp(name, telefone, email, cpf, password)
+                signUp(name, telefone, email, cpf, password, id)
                 error = 'Usuário cadastrado com sucesso!'
                 return render_template('cadastro_desktop.html', error=error)
             except Exception as e:
                 # erro alerta insert a quantity number
                 error = 'Não foi possível encontrar uma conta com esse nome de usuário. Podemos ajudá-lo a recuperar seu nome de usuário?'
-                return render_template('cadastro_desktop.html', error=error)
+                return render_template('cadastro_desktop.html', error=e)
 
         elif 'voltar' in request.form:
             print('oi', request.remote_addr)

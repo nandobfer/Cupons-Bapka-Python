@@ -62,19 +62,27 @@ class Mysql():
         cursor.close()
         return data
 
-    def insertClient(self, data):
+    def insertClient(self, data, parceiro):
         ''' Função utilizada para inserir novo cliente no banco de dados.
         DATA requer (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) '''
-        sql = f"INSERT INTO Clientes (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) VALUES {data}"
+        
+        table = str(parceiro)+'_Clientes'
+        sql = f"INSERT INTO {table} (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) VALUES {data}"
         cursor = self.connection.cursor()
         cursor.execute(sql)
         self.connection.commit()
         cursor.close()
 
-    def insertParceiro(self, data):
+    def insertParceiro(self, data, id):
         ''' Função utilizada para inserir novo cliente no banco de dados.
         DATA requer (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) '''
         sql = f"INSERT INTO Parceiros (ID, LOJA, CNPJ, ENDEREÇO, TELEFONE, SENHA, EMAIL) VALUES {data}"
+        cursor = self.connection.cursor()
+        cursor.execute(sql)
+        self.connection.commit()
+        cursor.close()
+
+        sql = f"CREATE TABLE {id}_Clientes LIKE Clientes;"
         cursor = self.connection.cursor()
         cursor.execute(sql)
         self.connection.commit()
