@@ -34,6 +34,19 @@ def getId(cpf, table):
         return None
 
 
+def getParceiros():
+    ''' function fetch parceiros table and returns a list of dicts with each's name and id '''
+    global database
+    try:
+        data = database.fetchTable(0, 'Parceiros')
+        parceiros = []
+        for parceiro in data:
+            parceiros.append({'id': parceiro[0], 'name': parceiro[1]})
+        return parceiros
+    except:
+        return None
+
+
 def getName(id, table):
     global database
     try:
@@ -44,7 +57,7 @@ def getName(id, table):
         return None
 
 
-def getData(id, table, parceiro = None):
+def getData(id, table, parceiro=None):
     ''' function scans database looking for ID and returns it's table '''
     global database
     if parceiro:
@@ -141,6 +154,7 @@ def registerModification(client_id, quantity, employee_id, order):
     )
     database.insertHistory(data)
 
+
 def formatCPF(cpf):
     cpf = list(cpf)
     cpf.insert(3, '.')
@@ -177,7 +191,6 @@ def getHistory(id, table):
     return data
 
 
-
 def getLastHistory(history, method="", cliente=False):
     count = 1
     incomplete = False
@@ -209,17 +222,17 @@ def getLastHistory(history, method="", cliente=False):
     # if count > num_history:
     #     incomplete = True
     #     print('incomplete')
-        
+
     if incomplete or num_history == 0:
         for i in range(4-count):
             dicionario = {
-            ID: '',
-            DATA: '',
-            HORARIO: '',
-            QUANTIDADE: 0,
-            PEDIDO: '',
-            NOME: ''
-        }
+                ID: '',
+                DATA: '',
+                HORARIO: '',
+                QUANTIDADE: 0,
+                PEDIDO: '',
+                NOME: ''
+            }
             lista.append(dicionario)
 
     # reversing list

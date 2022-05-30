@@ -1,4 +1,4 @@
-import RequirementsHandler
+import reqcheq
 from flask import Flask, request, url_for, redirect, render_template, request
 from config import *
 from functions import *
@@ -6,6 +6,7 @@ import random
 from session_handler import *
 
 session = []
+parceiros = getParceiros()
 
 app = Flask(__name__)
 
@@ -64,6 +65,23 @@ def home():
 
     return render_template('login_desktop.html')
 
+
+@app.route('/cliente/loja/', methods=['GET', 'POST'])
+def chooseStore():
+    global session
+    # ip = str(request.remote_addr)
+    # try:
+    #     connection = getConnection(session, ip)
+    #     id = connection.id
+    # except:
+    #     return redirect(url_for('home'))
+
+    # if not connection.cliente:
+    #     return redirect(url_for('home'))
+
+    return render_template('choose_store_desktop.html')
+
+
 # client panel page
 
 
@@ -72,7 +90,6 @@ def panelClient():
     global session
     ip = str(request.remote_addr)
     try:
-        # id = getSession(session, request.remote_addr)
         connection = getConnection(session, ip)
         id = connection.id
     except:
@@ -89,9 +106,9 @@ def panelClient():
 
     if history:
         return render_template('cliente_desktop.html', history=history, name=data[NOME].split()[0], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], email=data[EMAIL], id=id,
-                           history1_name=history[0][NOME], history1_idp=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
-                           history2_name=history[1][NOME], history2_idp=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
-                           history3_name=history[2][NOME], history3_idp=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
+                               history1_name=history[0][NOME], history1_idp=history[0][ID], history1_data=history[0][DATA], history1_time=history[0][HORARIO], history1_quantity=history[0][QUANTIDADE], history1_modified=modifiedCouponHTML(history[0][QUANTIDADE]), history1_quantity_abs=abs(history[0][QUANTIDADE]),
+                               history2_name=history[1][NOME], history2_idp=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
+                               history3_name=history[2][NOME], history3_idp=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
     else:
         return render_template('cliente_desktop.html', history=history, name=data[NOME].split()[0], cpf=formatCPF(data[CPF]), telefone=formatTelefone(data[TELEFONE]), cupons=data[CUPONS], id=id)
 
@@ -301,7 +318,7 @@ def modCupons():
                                  random.random()*1000)
 
             history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
-            
+
             result = {
                 "history": history,
                 "new_coupons": new_coupons
@@ -312,6 +329,12 @@ def modCupons():
 @app.route('/database.json', methods=['GET'])
 def database():
     return getDatabase()
+
+
+@app.route('/parceiros/', methods=['POST'])
+def parceiros_route():
+    global parceiros
+    return str(parceiros)
 
 
 @app.route('/session/', methods=['GET', 'POST'])

@@ -20,6 +20,11 @@ email = input('Digite um E-mail para vincular: ')
 data = (id, loja, cnpj, endereco, telefone, senha, email)
 try:
     database.insertParceiro(data, id)
-    print('Parceiro cadastrado com sucesso!')
+    try:
+        database.insertClient((0, 'Placeholder', '12345678901', 0, '41988776655', '123', 'nada@nada.nada'), id)
+        print('Parceiro cadastrado com sucesso!')
+        
+    except:
+        print('Houve um erro ao tentar cadastrar o parceiro.')
 except:
     print('Houve um erro ao tentar cadastrar o parceiro.')
