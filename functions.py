@@ -39,10 +39,10 @@ def getParceiros():
     global database
     try:
         data = database.fetchTable(0, 'Parceiros')
-        parceiros = []
-        for parceiro in data:
-            parceiros.append({'id': parceiro[0], 'name': parceiro[1]})
-        return parceiros
+        # parceiros = []
+        # for parceiro in data:
+        #     parceiros.append({'id': parceiro[0], 'name': parceiro[1]})
+        return data
     except:
         return None
 
@@ -104,7 +104,7 @@ def validateId(id):
         return True
 
 
-def userLogin(user, try_password, table):
+def userLogin(user, try_password, table, loja=0):
     global database
     data = False
 
@@ -113,6 +113,7 @@ def userLogin(user, try_password, table):
 
     try:
         if table == CLIENTES:
+            table = f'{loja}_{table}'
             data = database.fetchTable(1, table, 'TELEFONE', user)[0]
         elif table == PARCEIROS:
             data = database.fetchTable(1, table, 'EMAIL', user)[0]

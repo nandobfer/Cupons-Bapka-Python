@@ -1,14 +1,31 @@
-from browser import document, ajax, html
+from browser import document, ajax, html, bind, window
 import json
+
+
+class Parceiro():
+    def __init__(self, data) -> None:
+        self.id = data[0]
+        self.name = data[1]
 
 
 def appendStore(parceiro):
     global n
     container = document['lojas']
-    element = html.BUTTON(f'{parceiro["name"]}')
-    element.classList.add("button")
+    element = html.BUTTON(f'{parceiro.name}',
+                          Id=f'button-{parceiro.id}', Class='button')
+    # element.classList.add("button")
 
     container <= element
+
+    @bind(f"#button-{parceiro.id}", "click")
+    def chooseStore(ev):
+        print(parceiro.name)
+
+        data = {
+            'loja': parceiro.id
+        }
+
+        ajaxChooseStore(data)
 
 
 def getParceiros(req):
@@ -16,11 +33,42 @@ def getParceiros(req):
     print(parceiros)
     print(type(parceiros))
 
-    for parceiro in parceiros:
+    for item in parceiros:
+        parceiro = Parceiro(item)
         appendStore(parceiro)
 
 
-def ajaxParceiros():
+def hideButtons():
+    buttons = document.select(".button")
+    for element in buttons:
+        element.style.display = 'none'
+        element.style.visibility = 'hidden'
+
+    element = html.P(f'Carregando')
+    element.style.color = 'white'
+    element.style.fontSize = "32px"
+    # element.classList.add("button")
+
+    document['lojas'] <= element
+
+
+def redirect(req):
+    response = eval(req.text)
+    if response:
+        hideButtons()
+        # document["result"].html = req.text  # Commented out example code.
+        window.location.href = "/cliente/painel/"
+
+
+def ajaxChooseStore(data):
+    req = ajax.Ajax()
+    req.bind('complete', redirect)
+    req.open('POST', '/cliente/loja/', True)
+    req.set_header('content-type', 'application/x-www-form-urlencoded')
+    req.send(data)
+
+
+def ajaxPopulateButtons():
     req = ajax.Ajax()
     req.bind('complete', getParceiros)
     req.open('POST', '/parceiros/', True)
@@ -28,4 +76,4 @@ def ajaxParceiros():
     req.send('test')
 
 
-ajaxParceiros()
+ajaxPopulateButtons()

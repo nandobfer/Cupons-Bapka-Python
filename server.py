@@ -5,6 +5,7 @@ from functions import *
 import random
 from session_handler import *
 
+clientes = []
 session = []
 parceiros = getParceiros()
 
@@ -25,23 +26,14 @@ def index():
 def home():
     ip = str(request.remote_addr)
     if request.method == 'POST':
-        global session
+        global session, clientes
         if 'client_panel' in request.form:
             telefone = request.form.get('telefone')
             password = request.form.get('password_client')
 
-            id = userLogin(telefone, password, CLIENTES)
-            if not id:
-                error = 'Não foi possível encontrar uma conta com esse número de telefone.'
-                return render_template('login_desktop.html', error_client=error)
-            else:
-                login = Connection(ip, id)
-                login.cliente = True
-                # login = {
-                #     str(request.remote_addr): (id, 'cliente')
-                # }
-                session.append(login)
-                return redirect(url_for('panelClient'))
+            clientes.append({ip: (telefone, password)})
+
+            return redirect(url_for('chooseStore'))
 
         elif 'employee_panel' in request.form:
             email = request.form.get('email')
@@ -68,16 +60,31 @@ def home():
 
 @app.route('/cliente/loja/', methods=['GET', 'POST'])
 def chooseStore():
-    global session
-    # ip = str(request.remote_addr)
-    # try:
-    #     connection = getConnection(session, ip)
-    #     id = connection.id
-    # except:
-    #     return redirect(url_for('home'))
+    global session, clientes
+    ip = str(request.remote_addr)
 
-    # if not connection.cliente:
-    #     return redirect(url_for('home'))
+    if request.method == 'POST':
+        for item in clientes:
+            if ip in item:
+                telefone = item[ip][0]
+                senha = item[ip][1]
+                clientes.remove(item)
+
+        loja = request.form['loja']
+        print(loja, telefone, senha)
+
+        id = userLogin(telefone, senha, CLIENTES, loja)
+        if not id:
+            error = 'Não foi possível encontrar uma conta com esse número de telefone.'
+            return render_template('login_desktop.html', error_client=error)
+        else:
+            login = Connection(ip, id)
+            login.cliente = True
+            # login = {
+            #     str(request.remote_addr): (id, 'cliente')
+            # }
+            session.append(login)
+            return 'True'
 
     return render_template('choose_store_desktop.html')
 
@@ -344,6 +351,12 @@ def sessionurl():
     for connection in session:
         formated_session.append((connection.ip, connection.id))
     return str(formated_session)
+
+
+@app.route('/clientes/', methods=['GET', 'POST'])
+def clientesurl():
+    global clientes
+    return str(clientes)
 
 
 if __name__ == '__main__':
