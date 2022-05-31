@@ -1,5 +1,4 @@
 from browser import document, ajax, html, bind, window
-import json
 
 
 class Parceiro():
@@ -9,7 +8,6 @@ class Parceiro():
 
 
 def appendStore(parceiro):
-    global n
     container = document['lojas']
     element = html.BUTTON(f'{parceiro.name}',
                           Id=f'button-{parceiro.id}', Class='button')

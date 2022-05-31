@@ -3,9 +3,10 @@ from config import TIMELIMIT
 
 
 class Connection():
-    def __init__(self, ip, id) -> None:
+    def __init__(self, ip, id, loja=0) -> None:
         self.ip = ip
         self.id = id
+        self.loja = loja
         self.parceiro = False
         self.cliente = False
         self.expira = datetime.now() + timedelta(minutes=TIMELIMIT)

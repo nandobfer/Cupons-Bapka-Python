@@ -42,6 +42,7 @@ def getParceiros():
         # parceiros = []
         # for parceiro in data:
         #     parceiros.append({'id': parceiro[0], 'name': parceiro[1]})
+        data.pop(0)
         return data
     except:
         return None
@@ -62,10 +63,9 @@ def getData(id, table, parceiro=None):
     global database
     if parceiro:
         table = f'{parceiro}_{table}'
-        print(table)
     try:
         data = database.fetchTable(1, table, 'ID', id)[0]
-        if table == CLIENTES:
+        if not table == PARCEIROS:
             formated_data = {
                 NOME: data[1],
                 CPF: data[2],
@@ -73,7 +73,7 @@ def getData(id, table, parceiro=None):
                 TELEFONE: data[4],
                 EMAIL: data[6]
             }
-        elif table == PARCEIROS:
+        else:
             formated_data = {
                 NOME: data[1],
                 CNPJ: data[2],

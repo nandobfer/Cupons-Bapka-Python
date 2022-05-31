@@ -78,7 +78,7 @@ def chooseStore():
             error = 'Não foi possível encontrar uma conta com esse número de telefone.'
             return render_template('login_desktop.html', error_client=error)
         else:
-            login = Connection(ip, id)
+            login = Connection(ip, id, loja)
             login.cliente = True
             # login = {
             #     str(request.remote_addr): (id, 'cliente')
@@ -99,13 +99,14 @@ def panelClient():
     try:
         connection = getConnection(session, ip)
         id = connection.id
+        loja = connection.loja
     except:
         return redirect(url_for('home'))
 
     if not connection.cliente:
         return redirect(url_for('home'))
 
-    data = getData(id, CLIENTES)
+    data = getData(id, CLIENTES, loja)
     history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
 
     if request.method == 'POST':
@@ -349,7 +350,8 @@ def sessionurl():
     global session
     formated_session = []
     for connection in session:
-        formated_session.append((connection.ip, connection.id))
+        formated_session.append(
+            (connection.ip, connection.id, connection.loja))
     return str(formated_session)
 
 
