@@ -34,13 +34,15 @@ class Mysql():
             self.connection.close()
             print("MySQL connection is closed")
 
-    def fetchTable(self, rows, table, condition=None, value=None):
+    def fetchTable(self, rows, table, condition=None, value=None, reversed=None):
         ''' Fetch a number of rows from a table that exists in database.
         Number of rows and table defined in config file.
         if number of rows equals to 0, will try to fetch all rows.'''
 
         if condition:
             sql = f'SELECT * FROM `{table}` WHERE {condition} = "{value}"'
+            if reversed:
+                sql = f'SELECT * FROM `{table}` WHERE {condition} = "{value}" ORDER BY {reversed} DESC'
         else:
             sql = f"SELECT * FROM `{table}` WHERE 1"
 
@@ -65,7 +67,7 @@ class Mysql():
     def insertClient(self, data, parceiro):
         ''' Função utilizada para inserir novo cliente no banco de dados.
         DATA requer (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) '''
-        
+
         table = str(parceiro)+'_Clientes'
         sql = f"INSERT INTO {table} (ID, NOME, CPF, CUPONS, TELEFONE, SENHA, EMAIL) VALUES {data}"
         cursor = self.connection.cursor()

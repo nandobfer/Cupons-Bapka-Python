@@ -86,14 +86,15 @@ def getData(id, table, parceiro=None):
         return None
 
 
-def modifyCoupons(id, quantity: int):
+def modifyCoupons(id, loja, quantity: int):
     ''' function adds or removes specified amount of coupons '''
     global database
-    data = database.fetchTable(1, CLIENTES, 'ID', id)[0]
+    table = f'{loja}_{CLIENTES}'
+    data = database.fetchTable(1, table, 'ID', id)[0]
     cupons = data[3] + quantity
 
     # save to database
-    database.updateTable(CLIENTES, id, 'CUPONS', cupons, 'ID')
+    database.updateTable(table, id, 'CUPONS', cupons, 'ID')
     return cupons
 
 
@@ -192,10 +193,10 @@ def getHistory(id, table):
     return data
 
 
-def getLastHistory(history, method="", cliente=False):
-    count = 1
-    incomplete = False
-    num_history = len(history)
+def getLastHistory(id, table, method="", cliente=False):
+    column = 'ID_' + table[:-1].upper()
+    history = database.fetchTable(
+        3, 'Historicos', column, id, reversed='Pedido')
     lista = []
     id_index = 0
     id_index_name = 1
@@ -218,26 +219,10 @@ def getLastHistory(history, method="", cliente=False):
             NOME: getName(item[id_index_name], table_name).split()[0]
         }
         lista.append(dicionario)
-        count += 1
-
-    # if count > num_history:
-    #     incomplete = True
-    #     print('incomplete')
-
-    if incomplete or num_history == 0:
-        for i in range(4-count):
-            dicionario = {
-                ID: '',
-                DATA: '',
-                HORARIO: '',
-                QUANTIDADE: 0,
-                PEDIDO: '',
-                NOME: ''
-            }
-            lista.append(dicionario)
 
     # reversing list
-    lista = lista[::-1]
+    # lista = lista[::-1]
+    # already coming reversed from query
 
     if not method == 'ajax':
         return lista

@@ -107,7 +107,14 @@ def panelClient():
         return redirect(url_for('home'))
 
     data = getData(id, CLIENTES, loja)
-    history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
+    print()
+    print()
+    print(data)
+    print()
+    history = getLastHistory(id, CLIENTES, cliente=True)
+    print(history)
+    print()
+    print()
 
     if request.method == 'POST':
         pass
@@ -166,7 +173,7 @@ def homeEmployee():
 
     data = getData(employee_id, PARCEIROS)
 
-    history = getLastHistory(getHistory(employee_id, PARCEIROS))
+    history = getLastHistory(employee_id, PARCEIROS)
 
     if request.method == 'POST':
         cpf = request.form['form_cpf']
@@ -210,7 +217,7 @@ def panelEmployee():
 
     data = getData(id, CLIENTES, employee_id)
 
-    history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
+    history = getLastHistory(id, CLIENTES, cliente=True)
 
     if request.method == 'POST':
 
@@ -304,11 +311,7 @@ def history():
         if 'id' in request.form:
             id = request.form["id"]
             # id = data["id"]
-            history = getLastHistory(getHistory(id, CLIENTES), 'ajax', True)
-            # append NOME to history dict
-            for i in range(len(history["data"])):
-                history["data"][i].update(
-                    {'Nome': getName(history["data"][i][ID])})
+            history = getLastHistory(id, CLIENTES, 'ajax', True)
             return history
 
 
@@ -321,11 +324,11 @@ def modCupons():
             quantity = int(request.form["quantity"])
             employee_id = request.form["employee_id"]
 
-            new_coupons = modifyCoupons(id, quantity)
+            new_coupons = modifyCoupons(id, employee_id, quantity)
             registerModification(id, quantity, employee_id,
                                  random.random()*1000)
 
-            history = getLastHistory(getHistory(id, CLIENTES), cliente=True)
+            history = getLastHistory(id, CLIENTES, cliente=True)
 
             result = {
                 "history": history,
