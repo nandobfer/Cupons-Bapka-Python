@@ -1,6 +1,9 @@
 # session time limit in minutes
 TIMELIMIT = 15
 
+# actual url
+URL = 'http://cupons.bapkasorvetes.com.br:5000'
+
 # database constants
 DATABASE = 'database.json'
 # database constant keys

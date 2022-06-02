@@ -339,6 +339,17 @@ def parceiros_route():
     return str(parceiros)
 
 
+@app.route('/flushparceiros/', methods=['POST'])
+def flush_parceiros_route():
+    global parceiros
+    try:
+        parceiros = getParceiros()
+        return 'parceiros flushed'
+    except Exception as error:
+        return
+    return str(error)
+
+
 @app.route('/session/', methods=['GET', 'POST'])
 def sessionurl():
     global session

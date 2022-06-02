@@ -1,4 +1,5 @@
 from mysql_handler import Mysql
+import requests
 from functions import registerModification
 from config import *
 
@@ -26,6 +27,8 @@ try:
             (0, 'Placeholder', '12345678901', 0, '41988776655', '123', 'nada@nada.nada'), id)
         for i in range(3):
             registerModification(0, 0, id)
+
+        requests.post(f'{URL}/flushparceiros/')
         print('Parceiro cadastrado com sucesso!')
 
     except:
