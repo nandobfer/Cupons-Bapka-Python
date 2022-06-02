@@ -52,12 +52,9 @@ def home():
 
     elif request.method == 'GET':
 
-        try:
-            error = request.args.get('error')
-            if error:
-                error = 'Não foi possível encontrar uma conta com esse número de telefone.'
-        except:
-            error = ' '
+        error = request.args.get('error')
+        if error:
+            error = 'Não foi possível encontrar uma conta com esse número de telefone.'
 
         for connection in session:
             if connection.ip == ip:
