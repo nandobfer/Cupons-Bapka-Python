@@ -139,7 +139,7 @@ def employeeLogin(email, password):
     return False
 
 
-def registerModification(client_id, quantity, employee_id, order):
+def registerModification(client_id, quantity, employee_id, order=None):
     global database, pedido
     pedido += 1
     today = date.today()
@@ -250,9 +250,12 @@ def modifiedCouponHTML(quantity):
 
 def signUp(name, telefone, email, cpf, password, parceiro):
     global database
-    id = len(database.fetchTable(0, CLIENTES))
+    table = f'{parceiro}_{CLIENTES}'
+    id = len(database.fetchTable(0, table))
     data = (id, name, cpf, 0, telefone, password, email)
     database.insertClient(data, parceiro)
+    for i in range(3):
+        registerModification(id, 0, 0)
 
 
 def isCliente(session, id, ip):
