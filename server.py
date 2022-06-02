@@ -51,11 +51,19 @@ def home():
                 return redirect(url_for('homeEmployee'))
 
     elif request.method == 'GET':
+
+        try:
+            error = request.args.get('error')
+            if error:
+                error = 'Não foi possível encontrar uma conta com esse número de telefone.'
+        except:
+            error = ''
+
         for connection in session:
             if connection.ip == ip:
                 session.remove(connection)
 
-    return render_template('login_desktop.html')
+    return render_template('login_desktop.html', error_client=error)
 
 
 @app.route('/cliente/loja/', methods=['GET', 'POST'])
@@ -75,7 +83,7 @@ def chooseStore():
         id = userLogin(telefone, senha, CLIENTES, loja)
         if not id:
             error = 'Não foi possível encontrar uma conta com esse número de telefone.'
-            return render_template('login_desktop.html', error_client=error)
+            return 'False'
         else:
             login = Connection(ip, id, loja)
             login.cliente = True
@@ -346,8 +354,7 @@ def flush_parceiros_route():
         parceiros = getParceiros()
         return 'parceiros flushed'
     except Exception as error:
-        return
-    return str(error)
+        return str(error)
 
 
 @app.route('/session/', methods=['GET', 'POST'])

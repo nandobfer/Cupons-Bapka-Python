@@ -56,6 +56,8 @@ def redirect(req):
         hideButtons()
         # document["result"].html = req.text  # Commented out example code.
         window.location.href = "/cliente/painel/"
+    else:
+        window.location.href = "/home/?error=1"
 
 
 def ajaxChooseStore(data):
