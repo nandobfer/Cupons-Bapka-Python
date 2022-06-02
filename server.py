@@ -71,7 +71,6 @@ def chooseStore():
                 clientes.remove(item)
 
         loja = request.form['loja']
-        print(loja, telefone, senha)
 
         id = userLogin(telefone, senha, CLIENTES, loja)
         if not id:
@@ -107,14 +106,7 @@ def panelClient():
         return redirect(url_for('home'))
 
     data = getData(id, CLIENTES, loja)
-    print()
-    print()
-    print(data)
-    print()
     history = getLastHistory(id, CLIENTES, cliente=True)
-    print(history)
-    print()
-    print()
 
     if request.method == 'POST':
         pass
