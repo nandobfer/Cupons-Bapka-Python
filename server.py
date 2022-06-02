@@ -170,7 +170,7 @@ def homeEmployee():
     if request.method == 'POST':
         cpf = request.form['form_cpf']
         try:
-            id = getId(cpf, CLIENTES)
+            id = getId(cpf, CLIENTES, parceiro=employee_id)
             print(id)
 
         except:
@@ -183,7 +183,6 @@ def homeEmployee():
                                    history2_name=history[1][NOME], history2_idc=history[1][ID], history2_data=history[1][DATA], history2_time=history[1][HORARIO], history2_quantity=history[1][QUANTIDADE], history2_modified=modifiedCouponHTML(history[1][QUANTIDADE]), history2_quantity_abs=abs(history[1][QUANTIDADE]),
                                    history3_name=history[2][NOME], history3_idc=history[2][ID], history3_data=history[2][DATA], history3_time=history[2][HORARIO], history3_quantity=history[2][QUANTIDADE], history3_modified=modifiedCouponHTML(history[2][QUANTIDADE]), history3_quantity_abs=abs(history[2][QUANTIDADE]))
         else:
-            print(id, type(id))
             url = url_for('panelEmployee')
             return redirect(f'{url}?id={id}')
     return render_template("parceiro_desktop.html", name=data[NOME].split()[0], cnpj=formatCNPJ(data[CNPJ]), email=data[EMAIL], employee_id=employee_id, telefone=formatTelefone(data[TELEFONE]),

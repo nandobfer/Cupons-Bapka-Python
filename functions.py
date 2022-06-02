@@ -23,9 +23,11 @@ def writeDatabase(data, database=DATABASE):
     return True
 
 
-def getId(cpf, table):
+def getId(cpf, table, parceiro=None):
     ''' function scans database looking for a matching cpf and returns the matched id '''
     global database
+    if parceiro:
+        table = f'{parceiro}_{table}'
     try:
         data = database.fetchTable(1, table, "CPF", cpf)[0]
         id = data[0]
