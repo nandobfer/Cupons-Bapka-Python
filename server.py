@@ -55,6 +55,8 @@ def home():
         error = request.args.get('error')
         if error:
             error = 'Não foi possível encontrar uma conta com esse número de telefone.'
+        else:
+            error = ''
 
         for connection in session:
             if connection.ip == ip:
