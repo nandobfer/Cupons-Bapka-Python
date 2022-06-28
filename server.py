@@ -335,9 +335,9 @@ def modCupons():
             return result
 
 
-@app.route('/database.json', methods=['GET'])
+@app.route('/keep_database/', methods=['GET'])
 def database():
-    return getDatabase()
+    return getParceiros()
 
 
 @app.route('/parceiros/', methods=['POST'])
