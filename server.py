@@ -337,7 +337,7 @@ def modCupons():
 
 @app.route('/keep_database/', methods=['GET'])
 def database():
-    return getParceiros()
+    return str(getParceiros())
 
 
 @app.route('/parceiros/', methods=['POST'])
