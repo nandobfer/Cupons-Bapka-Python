@@ -27,7 +27,7 @@ PEDIDO = "Pedido"
 
 # MYSQL DATABASE
 mysql_bapkasor_cupons = {
-    'host': '162.214.166.106',
+    'host': 'localhost',
     'database': 'bapkasor_cupons',
     'user': 'python',
     'password': 'SucessoZOP2022!'
