@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cupons - Bapka Sorvetes</title>
+    <link rel="stylesheet" type="text/css" id="applicationStylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="container-titulo">
+    		<img id="logo" src="../static/images/logo.webp" srcset="../static/images/logo.webp 1x">
+            <h1>Acesse seus cupons preenchendo os campos abaixo</h1>
+        </div>
+        <div class="container-forms">
+            <form method="post">
+                <h2>Cliente</h2>
+                <input type="text" class="input-field" id="input-telefone"
+                            name="telefone" placeholder="Telefone" required="">
+                
+                <input type="password" class="input-field" id="input-password-client"
+                            name="password_client" placeholder="Senha" required="">
+
+                <a href="/cliente/recuperar_senha/">
+                    <p>Esqueci minha senha</p>
+                </a>
+                <button type="submit" class="button" name="client_panel" class="btn">Entrar</button>
+            </form>
+            <form method="post">
+                <h2>Parceiro</h2>
+                <input type="email" class="input-field" id="input-email"
+                        name="email" placeholder="Email" required="">
+                <input type="password" class="input-field" id="input-password-partner"
+                        name="password_employee" placeholder="Senha" required="">
+                <button type="submit" class="button" name="employee_panel" class="btn">Entrar</button>
+                <p class="error">{{error_partner}}</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

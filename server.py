@@ -62,7 +62,8 @@ def home():
             if connection.ip == ip:
                 session.remove(connection)
 
-    return render_template('login_desktop.html', error_client=error)
+    # return render_template('login_desktop.html', error_client=error)
+    return render_template('index.html', error_client=error)
 
 
 @app.route('/cliente/loja/', methods=['GET', 'POST'])
