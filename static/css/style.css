@@ -160,6 +160,10 @@ body {
     color: var(--secondary-color)
 }
 
+a {
+    margin-top: -15px;
+}
+
 a:link {
 	text-decoration: none;
 	color: rgba(238,230,67,1);
@@ -201,5 +205,5 @@ a:link {
 }
 #separador {
     fill: var(--secondary-color);
-    height: 230%;
+    height: 220%;
 }
