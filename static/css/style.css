@@ -10,7 +10,7 @@
 }
 
 * {
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
   box-sizing: border-box;
   border: none;
@@ -23,9 +23,21 @@ html {
 
 body {
   display: flex;
+  flex-direction: column;
   max-width: 100%;
   margin: 0 auto;
   height: 100vh;
+}
+
+.shape-top {
+    /* position: absolute; */
+    fill: white;
+}
+
+.shape-bottom {
+    /* position: absolute; */
+    fill: white;
+    transform: rotate(180deg);
 }
 
 .container {
@@ -48,12 +60,14 @@ body {
 }
 
 .container-titulo img {
-    width: 8%;
+    width: 12%;
 }
 
 .container-titulo h1 {
-  font-size: 24px;
-  font-family: Arciform Sans, "sans-serif";
+    margin-top: -5px;  
+    font-size: 24px;
+    font-weight: normal;
+    font-family: Arciform Sans, "sans-serif";
 }
 
 .container-forms {
@@ -67,15 +81,18 @@ body {
 .container-forms form {
     display: flex;
     flex-direction: column;
-  max-width: 100%;
-  width: 100%;
+    max-width: 100%;
+    width: 100%;
     align-items: space-between;
+    margin: 0 15px;
 }
 
 .container-forms form h2 {
-  font-size: 26px;
+  font-size: 42px;
+  font-weight: normal;
   color: white;
   text-align: center;
+  margin-top: 0;
   margin-bottom: 16px;
   font-family: Arciform Sans, "sans-serif";
 }
@@ -120,7 +137,7 @@ body {
 .button {
   background-color: var(--secondary-color);
   border: 8px solid var(--primary-color);
-  padding: 4px 8px;
+  /* padding: 4px 8px; */
   color: white;
   font-family: Arciform Sans, "sans-serif";
   font-size: 32px;
@@ -166,4 +183,22 @@ a:link {
 .logo {
   max-width: 100%;
   height: auto;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.separador {
+    display: flex;
+    width: 15%;
+    justify-content: center;
+}
+
+#separador-svg {
+    width: 20%;
+}
+#separador {
+    fill: var(--secondary-color);
+    height: 230%;
 }
